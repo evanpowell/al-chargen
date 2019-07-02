@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { findAncestryByLibId, findAll, distinguishingFeaturesFunc } = require('./queries/rulebook-queries');
+const { findAncestryByLibId, getAllAncestries } = require('./queries/rulebook-queries');
 
 mongoose.connect('mongodb://chargen-sotps-user1:123Givemeyourpants@ds341557.mlab.com:41557/chargen-sotps');
 
@@ -15,7 +15,7 @@ db.once('open', () => {
   findAncestryByLibId(1).then((ancestry) => {
     console.log('ancestry', ancestry);
   });
-  findAll().then((docs) => {
+  getAllAncestries().then((docs) => {
     console.log('docs', docs);
   });
 });

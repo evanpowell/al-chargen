@@ -19,15 +19,15 @@ const findAncestryByLibId = (id) => {
   });
 }
 
-const findAll = () => {
-  return new Promise((resolve, reject) => {
+const getAllAncestries = () => {
+  return new Promise((resolve) => {
     AncestryLib.find().then((docs) => {
       resolve(docs);
-    })
-  })
+    });
+  });
 }
 
 module.exports = {
   findAncestryByLibId,
-  findAll
+  getAllAncestries
 };
