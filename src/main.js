@@ -7,6 +7,9 @@ import store from './store/root';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Styles
+import './styles/global.scss';
+
 Vue.config.productionTip = false;
 
 new Vue({
