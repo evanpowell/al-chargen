@@ -1,33 +1,27 @@
 const { Schema, model } = require('mongoose');
 
-const ancestryLibSchema = new Schema({
-  value: String,
-  libId: Number
-});
+const blankSchema= new Schema({});
 
-const AncestryLib = model('AncestryLib', ancestryLibSchema, 'ancestryLib');
+const AncestriesLib = model('AncestryLib', blankSchema, 'ancestriesLib');
+const AttributesLib = model('AttributesLib', blankSchema, 'attributesLib');
 
-const findAncestryByLibId = (id) => {
-  return new Promise((resolve, reject) => {
-    AncestryLib.findOne({ libId: id}, 'value', { lean: true }, (err, ancestryLibItem) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(ancestryLibItem.value);
-      }
-    });
-  });
+const getAncestriesLib = () => {
+  return getAllFromLib(AncestriesLib);
 }
 
-const getAllAncestries = () => {
+const getAttributesLib = () => {
+  return getAllFromLib(AttributesLib);
+}
+
+const getAllFromLib = (libModel) => {
   return new Promise((resolve) => {
-    AncestryLib.find().then((docs) => {
+    libModel.find().then((docs) => {
       resolve(docs);
-    });
-  });
+    })
+  })
 }
 
 module.exports = {
-  findAncestryByLibId,
-  getAllAncestries
+  getAncestriesLib,
+  getAttributesLib
 };
