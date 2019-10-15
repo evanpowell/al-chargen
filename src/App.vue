@@ -34,16 +34,9 @@ export default {
       console.log('bonusPenalties', bonusPenalties);
       const sex = s2.rollSex();
       console.log('sex', sex);
+      const appearance = s2.rollAppearance(ancestry);
+      console.log('appearance', appearance);
     }
-    // convertLibArrayToObject(libArray) {
-    //   const libObject = {};
-    //   libArray.forEach((libItem) => {
-    //     const { libId, value } = libItem;
-    //     libObject[libId] = value;
-    //   });
-
-    //   return libObject;
-    // }
   }
 }
 </script>

@@ -1,6 +1,7 @@
 import { ancestryConstants } from "../../../constants/rulebookConstants"
 import { DiceRoller } from "../../diceRoller";
 import { ancestralAdjustments } from "./ancestralAdjustments";
+import { appearance } from "./appearance";
 
 export class Step2 {
     constructor() {
@@ -66,5 +67,15 @@ export class Step2 {
         }
 
         return roll % 2 ? 'Male' : 'Female';
+    }
+
+    rollAppearance = (ancestry) => {
+        const { height, weight, baseAge } = appearance[ancestryConstants[ancestry]];
+        
+        return {
+            height: this.diceRoller.rollDice(height.number, height.sides, height.modifier),
+            weight: this.diceRoller.rollDice(weight.number, weight.sides, weight.modifier),
+            baseAge: this.diceRoller.rollDice(baseAge.number, baseAge.sides, baseAge.modifier)
+        }
     }
 }
