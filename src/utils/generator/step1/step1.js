@@ -1,4 +1,4 @@
-import { DiceRoller } from "../diceRoller"
+import { DiceRoller } from "../../diceRoller"
 
 export class Step1 {
     constructor() {

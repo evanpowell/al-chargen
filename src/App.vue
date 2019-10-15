@@ -11,8 +11,8 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import axios from 'axios';
-import { Step1 } from './utils/generator/step1';
-import { Step2 } from './utils/generator/step2';
+import { Step1 } from './utils/generator/step1/step1';
+import { Step2 } from './utils/generator/step2/step2';
 
 export default {
   components: {
@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     calculate: function(event) {
-      console.log(event);
       const s1 = new Step1();
       const s2 = new Step2();
       const initialScores = s1.generateAttributes();

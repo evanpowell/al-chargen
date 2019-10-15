@@ -1,4 +1,4 @@
-import { ancestryConstants } from '../../constants/rulebookConstants';
+import { ancestryConstants } from '../../../constants/rulebookConstants';
 
 export const ancestralAdjustments = {
     [ancestryConstants.H]: {

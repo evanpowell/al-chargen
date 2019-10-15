@@ -1,6 +1,6 @@
-import { ancestryConstants } from "../../constants/rulebookConstants"
-import { DiceRoller } from "../diceRoller";
-import { ancestralAdjustments } from "../rulebook/ancestralAdjustments";
+import { ancestryConstants } from "../../../constants/rulebookConstants"
+import { DiceRoller } from "../../diceRoller";
+import { ancestralAdjustments } from "./ancestralAdjustments";
 
 export class Step2 {
     constructor() {
