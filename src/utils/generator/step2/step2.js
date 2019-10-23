@@ -2,6 +2,7 @@ import { ancestryConstants } from "../../../constants/rulebookConstants"
 import { DiceRoller } from "../../diceRoller";
 import { ancestralAdjustments } from "./ancestralAdjustments";
 import { appearance } from "./appearance";
+import { distinguishingFeatures } from "./distinguishingFeatures";
 
 export class Step2 {
     constructor() {
@@ -77,5 +78,17 @@ export class Step2 {
             weight: this.diceRoller.rollDice(weight.number, weight.sides, weight.modifier),
             baseAge: this.diceRoller.rollDice(baseAge.number, baseAge.sides, baseAge.modifier)
         }
+    }
+
+    rollDistinguishingFeatures = () => {
+        const features = [];
+        for (let featureType in distinguishingFeatures) {
+            const roll = this.diceRoller.rollDie(100);
+            const feature = distinguishingFeatures[featureType][roll];
+            if (feature) {
+                features.push(feature);
+            }
+        }
+        return features;
     }
 }

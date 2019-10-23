@@ -36,6 +36,8 @@ export default {
       console.log('sex', sex);
       const appearance = s2.rollAppearance(ancestry);
       console.log('appearance', appearance);
+      const features = s2.rollDistinguishingFeatures();
+      console.log('features', features);
     }
   }
 }

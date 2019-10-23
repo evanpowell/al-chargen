@@ -205,3 +205,12 @@ const anomalies = {
     },
     '50': { description: 'Completely darkened or black sclera' }
 }
+
+
+export const distinguishingFeatures = {
+    quirks,
+    proportions,
+    scarsWeathering,
+    modificationsAdornments,
+    anomalies
+};
