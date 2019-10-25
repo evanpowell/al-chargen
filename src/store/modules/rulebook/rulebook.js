@@ -16,9 +16,8 @@ export const rulebook = {
       },
       distinguishingFeatures: [], // string array of distinguishing features
       literacy: '',
-      
       origins: {
-        birthDate: null, // object with keys for month, week, and weekday
+        birthDate: null, // object with dateString, holidayArray, and isMoonday boolean
         provincialOrigins: null, // object with region, regional languages array, and prevalent biomes,
         originalSettlement: '',
         parentage: {

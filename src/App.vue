@@ -10,9 +10,10 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue';
-import axios from 'axios';
+// import axios from 'axios';
 import { Step1 } from './utils/generator/step1/step1';
 import { Step2 } from './utils/generator/step2/step2';
+import { Step3 } from './utils/generator/step3/step3';
 
 export default {
   components: {
@@ -21,23 +22,41 @@ export default {
   mounted() {
   },
   methods: {
-    calculate: function(event) {
+    calculate: function() {
       const s1 = new Step1();
-      const s2 = new Step2();
       const initialScores = s1.generateAttributes();
-      console.log('initialScores', initialScores);
+
+      const s2 = new Step2();
       const ancestry = s2.rollAncestry();
-      console.log('ancestry', ancestry);
       const adjustedScores = s2.calculateAdjustedScores(initialScores, ancestry);
-      console.log('adjustedScores', adjustedScores);
       const bonusPenalties = s2.calculateBonusPenalties(adjustedScores);
-      console.log('bonusPenalties', bonusPenalties);
       const sex = s2.rollSex();
-      console.log('sex', sex);
       const appearance = s2.rollAppearance(ancestry);
-      console.log('appearance', appearance);
+      const finalAppearance = { ...appearance };
       const features = s2.rollDistinguishingFeatures();
-      console.log('features', features);
+      for (let feature of features) {
+        if (!feature.modifications) continue;
+        // console.log('MODIFICATION');
+        for (let modification of feature.modifications) {
+          const { appearanceDetail, multiplier } = modification;
+          finalAppearance[appearanceDetail] = Math.floor(finalAppearance[appearanceDetail] * multiplier);
+        }
+      }
+
+      const s3 = new Step3();
+      const birthDate = s3.rollBirthDate();
+
+      console.log('character', {
+        initialScores,
+        ancestry,
+        adjustedScores,
+        bonusPenalties,
+        sex,
+        appearance,
+        features,
+        finalAppearance,
+        birthDate
+      });
     }
   }
 }

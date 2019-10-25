@@ -24,7 +24,7 @@ export class Step2 {
         const adjustedScores = {...ancestralAdjustments[ancestryConstants[ancestry]]};
         
         for(let attribute in initialScores) {
-            adjustedScores[attribute] += initialScores[attribute]
+            adjustedScores[attribute] += initialScores[attribute];
         }
 
         return adjustedScores;
