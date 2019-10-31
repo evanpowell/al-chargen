@@ -1,5 +1,6 @@
 import { DiceRoller } from "../../diceRoller";
 import { Birthdate } from "./birthDate";
+import { provincialOrigins } from "./provincialOrigins";
 
 export class Step3 {
     constructor() {
@@ -8,5 +9,9 @@ export class Step3 {
 
     rollBirthDate = () => {
         return new Birthdate().rollBirthDate();
+    }
+
+    rollProvincialOrigins = () => {
+        return provincialOrigins[this.diceRoller.rollDie(20)];
     }
 }
