@@ -17,17 +17,17 @@ export const biomes = {
             'carved out of a'
         ],
         provincePrepositions: [
-            'in',
+            'in'
         ]
     },
     'rainy coast': {
-        biomePreposition: [
+        biomePrepositions: [
             'along the',
             'looking of over the',
             'overlooking the'
         ],
-        [provincePrepositions]: [
-            ' of'
+        provincePrepositions: [
+            'of'
         ]
     }
 }
