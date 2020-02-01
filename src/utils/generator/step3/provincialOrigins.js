@@ -87,16 +87,16 @@ export const provincialOrigins = {
     18: {
         location: 'the Schelk Islands',
         languages: ['Elmecian', 'Lorosian', 'Thelean', 'Ardonic'],
-        biomes: ['warm islands', 'volcanic crags', 'coral reefs', 'sandy beaches']
+        biomes: ['warm inlets', 'volcanic crags', 'coral reefs', 'sandy beaches']
     },
     19: {
         location: 'central Bosen',
         languages: ['Alldedan', 'Thelean', 'Elmecian', 'Creonic'],
-        biomes: ['rocky central highlands', 'river valleys', 'terraced vine fields']
+        biomes: ['rocky highlands', 'river valleys', 'terraced vine fields']
     },
     20: {
         location: 'the Northern Wilds',
         languages: ['Kimenian', 'Thelean', 'Ommultic', 'Alldedan'],
-        biomes: ['icy steppes', 'extreme hills', 'frozen forests', 'wildlands']
+        biomes: ['icy steppes', 'extreme hills', 'frozen forests', 'wastelands']
     }
 }
