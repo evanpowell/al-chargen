@@ -5,6 +5,7 @@
 
     Example 1: "Kiskuja grew up in a hamlet deep within a spruce forest in the Ommultic Front."
     Example 2: "Sairdunel hails from a large city along the rainy coast of Siadagal"
+    Example 3: "This is a test to see how changes are pushed"
 */
 
 export const biomes = {
