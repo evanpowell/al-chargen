@@ -21,6 +21,7 @@ export const biomes = {
                 'neighboring the',
 
                 // Does 'central' here imply central Ommultic Front?
+                // ---Nah, I imagined this sentence as "[in the clearings of the central] [spruce forests] of [the Ommultic Front]"
                 // If so, it might be better to remove the 'central' part, as it could clash with province prepositions
                 // based on how the code is dividing the logic currently. If you wanted, you could get a similar notion
                 // across by adding a new province preposition like 'in the central region of'.
