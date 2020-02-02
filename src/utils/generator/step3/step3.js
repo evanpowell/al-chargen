@@ -2,6 +2,7 @@ import { DiceRoller } from "../../diceRoller";
 import { Birthdate } from "./birthDate";
 import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
+import { settlements, settlementPrepositions } from "./settlements";
 
 export class Step3 {
     constructor() {
@@ -14,8 +15,7 @@ export class Step3 {
 
     rollProvince = () => {
         const provinceKeys = Object.keys(provincialOrigins);
-        const provinceKey = this.diceRoller.randomizeObjectKey(provinceKeys);
-        return provinceKey;
+        return this.diceRoller.randomizeObjectKey(provinceKeys);
     }
 
     rollBiome = (provinceKey) => {
@@ -23,14 +23,30 @@ export class Step3 {
         return province.biomes[this.diceRoller.randomizeIndex(province.biomes.length)];
     }
 
+    rollSettlement = () => {
+        const settlementKeys = Object.keys(settlements);
+        return this.diceRoller.randomizeObjectKey(settlementKeys);
+    }
+
+    
 
     // All methods below are for generating origins prose
 
-    generateOriginsProse = ({ province, biome }) => {
-        const biomePreposition = this.rollBiomePreposition(biome);
-        const provincePreposition = this.rollProvincePreposition(biome);
+    generateOriginsProse = ({ province, biome, settlement }) => {
+        const settlementPrep = this.rollSettlementPreposition(settlement);
+        const biomePrep = this.rollBiomePreposition(biome);
+        const provincePrep = this.rollProvincePreposition(biome);
 
-        return `Hodjai grew up in a small township ${biomePreposition} ${biome} ${provincePreposition} ${province}`;
+        return `Hodjai ${settlementPrep} ${settlement} ${biomePrep} ${biome} ${provincePrep} ${province}`;
+    }
+
+    rollSettlementPreposition = (settlement) => {
+        const settlementType = settlements[settlement].type;
+        const isNeutral = this.diceRoller.rollDie(100) > 40;
+        const finalType = isNeutral ? 'neutral' : settlementType;
+        const prepostions = settlementPrepositions[finalType];
+
+        return prepostions[this.diceRoller.randomizeIndex(prepostions.length)];
     }
 
     rollBiomePreposition = (biome) => {

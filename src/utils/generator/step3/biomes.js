@@ -9,7 +9,7 @@
             Feel free to remove the commented provinces inserted below if necessary.
 */
 
-// TODO: divide biome prepositions by type: 'location', 'group', and 'neutral'
+// TODO: divide biome prepositions by settlement type: 'location', 'group', and 'neutral'
 //       look to settlements.js -> settlementPrepositions for examples on formating
 
 export const biomes = {
@@ -27,7 +27,7 @@ export const biomes = {
                 'in the clearings of the central'
             ],
             group: [
-                
+                'that lives among the',
             ],
             neutral: [
                 'nestled within the',
@@ -42,12 +42,15 @@ export const biomes = {
         ]
     },
     'expansive tundra': {
-        biomePrepositions: [
-            'centered within the',
-            'among the ice fields of the',
-            'overlooking the',
-            'isolated on the'
-        ],
+        biomePrepositions: {
+
+        },
+        // [
+        //     'centered within the',
+        //     'among the ice fields of the',
+        //     'overlooking the',
+        //     'isolated on the'
+        // ],
         provincePrepositions: [
             'north of',
             'beyond Lost Lake and north of',

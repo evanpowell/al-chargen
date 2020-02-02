@@ -17,23 +17,39 @@ export const settlements = {
     'hamlet': {
         type: 'location'
     },
-    3: 'village',
-    4: 'small town',
-    5: 'large township',
-    6: 'small city',
-    7: 'large city',
-    8: 'nomadic group',
+    'village': {
+        type: 'location'
+    },
+    'small town': {
+        type: 'location'
+    },
+    'large township': {
+        type: 'location'
+    },
+    'small city': {
+        type: 'location'
+    },
+    'large city': {
+        type: 'location'
+    },
+    'nomadic group': {
+        type: 'group'
+    }
 }
 
 
 export const settlementPrepositions = {
     neutral: [
-        'hails from',
+        'hails from a',
+        'is from a',
+        'comes from a'
     ],
     group: [
-        'was born into a'
+        'was born into a',
+        'is a member of a'
     ],
     location: [
-
+        'grew up in a',
+        'spent their early years in a'
     ]
 }
