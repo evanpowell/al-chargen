@@ -16,4 +16,8 @@ export class DiceRoller {
   randomizeIndex = (arrayLength) => {
     return this.rollDie(arrayLength) - 1;
   }
+
+  randomizeObjectKey = (objectKeys) => {
+    return objectKeys[this.randomizeIndex(objectKeys.length)];
+  }
 }

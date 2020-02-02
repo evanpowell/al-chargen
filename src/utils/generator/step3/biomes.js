@@ -9,16 +9,31 @@
             Feel free to remove the commented provinces inserted below if necessary.
 */
 
+// TODO: divide biome prepositions by type: 'location', 'group', and 'neutral'
+//       look to settlements.js -> settlementPrepositions for examples on formating
+
 export const biomes = {
 /*--- the Ommultic Front ---*/
     'spruce forests': {
-        biomePrepositions: [
-            'nestled within the',
-            'deep within the',
-            'neighboring the',
-            'in the clearings of the central',
-            'felled from the'
-        ],
+        biomePrepositions: {
+            location: [
+                'felled from the',
+                'neighboring the',
+
+                // Does 'central' here imply central Ommultic Front?
+                // If so, it might be better to remove the 'central' part, as it could clash with province prepositions
+                // based on how the code is dividing the logic currently. If you wanted, you could get a similar notion
+                // across by adding a new province preposition like 'in the central region of'.
+                'in the clearings of the central'
+            ],
+            group: [
+                
+            ],
+            neutral: [
+                'nestled within the',
+                'deep within the'
+            ],
+        },
         provincePrepositions: [
             'north of',
             'east of',

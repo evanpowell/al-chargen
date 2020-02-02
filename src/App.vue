@@ -45,18 +45,25 @@ export default {
 
       const s3 = new Step3();
       const birthDate = s3.rollBirthDate();
+      const province = s3.rollProvince();
+      const biome = s3.rollBiome(province);
+      const originsProse = s3.generateOriginsProse({ province, biome });
 
-      console.log('character', {
-        initialScores,
-        ancestry,
-        adjustedScores,
-        bonusPenalties,
-        sex,
-        appearance,
-        features,
-        finalAppearance,
-        birthDate
-      });
+      // console.log('character', {
+      //   initialScores,
+      //   ancestry,
+      //   adjustedScores,
+      //   bonusPenalties,
+      //   sex,
+      //   appearance,
+      //   features,
+      //   finalAppearance,
+      //   birthDate,
+      //   province,
+      //   biome
+      // });
+
+      console.log(originsProse);
     }
   }
 }
