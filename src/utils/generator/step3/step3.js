@@ -42,16 +42,17 @@ export class Step3 {
 
     rollSettlementPreposition = (settlement) => {
         const settlementType = settlements[settlement].type;
-        const isNeutral = this.diceRoller.rollDie(100) > 40;
-        const finalType = isNeutral ? 'neutral' : settlementType;
-        const prepostions = settlementPrepositions[finalType];
+        const prepositions = settlementPrepositions[settlementType].concat(settlementPrepositions.neutral);
 
-        return prepostions[this.diceRoller.randomizeIndex(prepostions.length)];
+        return prepositions[this.diceRoller.randomizeIndex(prepostions.length)];
     }
 
     rollBiomePreposition = (biome) => {
-        const prepositions = biomes[biome].biomePrepositions;
-        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
+        const { biomePrepositions } = biomes[biome];
+        const settlementType = settlements[settlement].type;
+        const prepositions = biomePrepositions[settlementType].concat(biomePrepositions.neutral);
+
+        return prepositions[this.diceRoller.randomizeIndex(prepostions.length)];
     }
 
     rollProvincePreposition = (biome) => {
