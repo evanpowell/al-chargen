@@ -4,11 +4,8 @@
     [CHARACTER NAME] [SETTLEMENT PREPOSITION] [SETTLEMENT TYPE] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
 
     Example 1: "Kiskuja grew up in a hamlet deep within the spruce forests north of the Ommultic Front."
-    Example 2: "Sairdunel hails from a large city along the rainy coast of Siadagal
+    Example 2: "Sairdunel hails from a large city along the rainy coasts of Siadagal
 */
-
-// TODO: 1) finish assigining types to settlements
-//       2) flesh out settlement prepositons
 
 export const settlements = {
     'diasporic group': {
@@ -33,7 +30,7 @@ export const settlements = {
         type: 'location'
     },
     'nomadic group': {
-        type: 'group'
+        type: 'nomadic'
     }
 }
 
@@ -45,6 +42,10 @@ export const settlementPrepositions = {
         'comes from a'
     ],
     group: [
+        'was born into a',
+        'is a member of a'
+    ],
+    nomadic: [
         'was born into a',
         'is a member of a'
     ],
