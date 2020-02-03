@@ -9,11 +9,14 @@
     NOTE:
       -- Biomes are organized by province as noted with comment lines for ease of coding.
       -- Biome prepositions are organized by settlement type.
+         *  Biome prepositions that work well for every settlement type are 'neutral'.
+         *  Biome prepositions that work well for multiple settlement types but not all can be
+            repeated for each settlement type they work for.
 */
 
 
 
-// TODO: finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
+// TODO: Finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
 
 export const biomes = {
 /*--- the Ommultic Front ---*/
@@ -30,7 +33,8 @@ export const biomes = {
             nomadic: [
                 'that travels among the',
                 'which traverses the',
-                'that journies through the'
+                'that journies through the',
+                'among the'
             ],
             neutral: [
                 'nestled within the',

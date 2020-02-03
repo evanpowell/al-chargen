@@ -39,7 +39,8 @@ export const settlements = {
 }
 
 
-// settlementPrepositions to 'VERB/SETTLEMENT PREPOSITION'
+// settlementPrepositions correspond to 'VERB/SETTLEMENT PREPOSITION'
+// -- prepositions that work well for any settlement type are 'neutral'.
 export const settlementPrepositions = {
     neutral: [
         'hails from a',
