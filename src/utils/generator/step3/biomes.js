@@ -4,13 +4,11 @@
     [CHARACTER NAME] [PAST TENSE VERB] in a [SETTLEMENT TYPE] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
 
     Example 1: "Kiskuja grew up in a hamlet deep within the spruce forests north of the Ommultic Front."
-    Example 2: "Sairdunel hails from a large city along the rainy coast of Siadagal"
-    Note:   biomes are organized by province as noted with comment lines for ease of coding. 
-            Feel free to remove the commented provinces inserted below if necessary.
+    Example 2: "Sairdunel hails from a large city along the rainy coasts of Siadagal"
+    Note: Biomes are organized by province as noted with comment lines for ease of coding. 
 */
 
-// TODO: divide biome prepositions by settlement type: 'location', 'group', and 'neutral'
-//       look to settlements.js -> settlementPrepositions for examples on formating
+// TODO: divide biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
 
 export const biomes = {
 /*--- the Ommultic Front ---*/
@@ -19,21 +17,20 @@ export const biomes = {
             location: [
                 'felled from the',
                 'neighboring the',
-
-                // Does 'central' here imply central Ommultic Front?
-                // ---Nah, I imagined this sentence as "[in the clearings of the central] [spruce forests] of [the Ommultic Front]"
-                // If so, it might be better to remove the 'central' part, as it could clash with province prepositions
-                // based on how the code is dividing the logic currently. If you wanted, you could get a similar notion
-                // across by adding a new province preposition like 'in the central region of'.
-                'in the clearings of the central'
+                'in the clearings of the'
             ],
             group: [
-                'that lives among the',
+                'among the',
+            ],
+            nomadic: [
+                'that travels among the',
+                'which traverses the',
+                'that journies through the'
             ],
             neutral: [
                 'nestled within the',
                 'deep within the'
-            ],
+            ]
         },
         provincePrepositions: [
             'north of',
@@ -44,14 +41,21 @@ export const biomes = {
     },
     'expansive tundra': {
         biomePrepositions: {
+            location: [
+                'centered within the',
+                'overlooking the'
+            ],
+            group: [
 
+            ],
+            nomadic: [
+                'that travels over the',
+            ],
+            neutral: [
+                'isolated on the',
+                'among the ice fields of the',
+            ]
         },
-        // [
-        //     'centered within the',
-        //     'among the ice fields of the',
-        //     'overlooking the',
-        //     'isolated on the'
-        // ],
         provincePrepositions: [
             'north of',
             'beyond Lost Lake and north of',
@@ -59,59 +63,94 @@ export const biomes = {
         ]
     },
     'cold lakefronts': {
-        biomePrepositions: [
-            'sequestered along the',
-            'looking out over the',
-            'overlooking the',
-            'on the Tanethi greatbarges of the'
-        ],
+        biomePrepositions: {
+            location: [
+                'overlooking the',
+                'looking out over the',
+            ],
+            group: [
+                'that has made its home along the'
+            ],
+            nomadic: [
+                'that makes their way along the'
+            ],
+            neutral: [
+                'on the Tanethi greatbarges of the'
+            ]
+        },
         provincePrepositions: [
             'nearby'
         ]
     },
 /*--- central Wendajii ---*/
     'savannah grasslands': {
-        biomePrepositions: [
-            'across the',
-            'dividing the',
-            'overlooking the',
-            'isolated on the',
-            'within the lower oasis of'
-        ],
+        biomePrepositions: {
+            location: [
+                'overlooking the',
+                'within the lower oasis of the'
+            ],
+            group: [
+                'within the lower oasis of the'
+            ],
+            nomadic: [
+                'which wanders the'
+            ],
+            neutral: [
+                'isolated on the',
+            ]
+        },
         provincePrepositions: [
             'of'
         ]
     },
     'rolling storm plains': {
-        biomePrepositions: [
-            'in the heart of the',
-            'cloistered on the',
-            'sprawling throughout the',
-            'isolated on the'
-        ],
+        biomePrepositions: {
+            location: [],
+            group: [],
+            nomadic: [],
+            neutral: []
+        },
+        // [
+        //     'in the heart of the',
+        //     'cloistered on the',
+        //     'sprawling throughout the',
+        //     'isolated on the'
+        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'grassy hills': {
-        biomePrepositions: [
-            'within the densely settled',
-            'resting upon the',
-            'situated within the',
-            'in the sparse and distant'
-        ],
+        biomePrepositions: {
+            location: [],
+            group: [],
+            nomadic: [],
+            neutral: []
+        },
+        // [
+        //     'within the densely settled',
+        //     'resting upon the',
+        //     'situated within the',
+        //     'in the sparse and distant'
+        // ],
         provincePrepositions: [
             'of'
         ]
     },
 /*--- the Brolean Expanse ---*/
     'temperate rainforests': {
-        biomePrepositions: [
-            'among the',
-            'hidden within the',
-            'in the great canopies of the',
-            'cresting the thickets of the'
-        ],
+        biomePrepositions: {
+            location: [],
+            group: [],
+            nomadic: [],
+            neutral: []
+        },
+        // [
+        //     'among the',
+        //     'hidden within the',
+        //     'in the great canopies of the',
+        //     'cresting the thickets of the'
+        // ],
         provincePrepositions: [
             'of'
         ]
