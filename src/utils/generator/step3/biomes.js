@@ -19,7 +19,8 @@
 
 
 
-// TODO: Finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
+// TODO: Finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'.
+//       (Move the commented out prepositions to their corresponding type)
 
 export const biomes = {
 /*--- the Ommultic Front ---*/
