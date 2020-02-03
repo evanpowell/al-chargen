@@ -47,7 +47,8 @@ export default {
       const birthDate = s3.rollBirthDate();
       const province = s3.rollProvince();
       const biome = s3.rollBiome(province);
-      const originsProse = s3.generateOriginsProse({ province, biome });
+      const settlement = s3.rollSettlement();
+      const originsProse = s3.generateOriginsProse({ province, biome, settlement });
 
       // console.log('character', {
       //   initialScores,
