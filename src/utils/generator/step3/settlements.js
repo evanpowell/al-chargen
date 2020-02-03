@@ -1,12 +1,16 @@
 /*
     How this fits into the layout:
 
-    [CHARACTER NAME] [SETTLEMENT PREPOSITION] [SETTLEMENT TYPE] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
+    [CHARACTER NAME] [VERB/SETTLEMENT PREPOSITION] [SETTLEMENT] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
 
-    Example 1: "Kiskuja grew up in a hamlet deep within the spruce forests north of the Ommultic Front."
-    Example 2: "Sairdunel hails from a large city along the rainy coasts of Siadagal
+    Example 1: [Kiskuja] [grew up in a] [hamlet] [deep within the] [spruce forests] [north of] [the Ommultic Front]
+    Example 2: [Sairdunel] [hails from a] [large city] [along the] [rainy coasts] [of] [Siadagal]
+
+    NOTE: Settlements are categorized further by settlement type. This allows for a greater variety of
+          both settlement prepositions and biome prepositions.
 */
 
+// settlements correspond to 'SETTLEMENT'
 export const settlements = {
     'diasporic group': {
         type: 'group'
@@ -35,6 +39,7 @@ export const settlements = {
 }
 
 
+// settlementPrepositions to 'VERB/SETTLEMENT PREPOSITION'
 export const settlementPrepositions = {
     neutral: [
         'hails from a',

@@ -1,14 +1,19 @@
 /*
     How this fits into the layout:
 
-    [CHARACTER NAME] [PAST TENSE VERB] in a [SETTLEMENT TYPE] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
+    [CHARACTER NAME] [VERB/SETTLEMENT PREPOSITION] [SETTLEMENT] [BIOME PREPOSITION] [BIOME] [PROVINCE PREPOSITION] [PROVINCE]
 
-    Example 1: "Kiskuja grew up in a hamlet deep within the spruce forests north of the Ommultic Front."
-    Example 2: "Sairdunel hails from a large city along the rainy coasts of Siadagal"
-    Note: Biomes are organized by province as noted with comment lines for ease of coding. 
+    Example 1: [Kiskuja] [grew up in a] [hamlet] [deep within the] [spruce forests] [north of] [the Ommultic Front]
+    Example 2: [Sairdunel] [hails from a] [large city] [along the] [rainy coasts] [of] [Siadagal]
+    
+    NOTE:
+      -- Biomes are organized by province as noted with comment lines for ease of coding.
+      -- Biome prepositions are organized by settlement type.
 */
 
-// TODO: divide biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
+
+
+// TODO: finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'
 
 export const biomes = {
 /*--- the Ommultic Front ---*/
