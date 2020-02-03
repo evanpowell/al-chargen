@@ -12,6 +12,9 @@
          *  Biome prepositions that work well for every settlement type are 'neutral'.
          *  Biome prepositions that work well for multiple settlement types but not all can be
             repeated for each settlement type they work for.
+         *  As long as there are neutral biome prepositions, others types can be empty.
+         *  If there are no neutral biome prepositions, then all other types must have at least
+            one entry
 */
 
 
@@ -114,34 +117,43 @@ export const biomes = {
     },
     'rolling storm plains': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'in the heart of the',
+                'cloistered on the'
+            ],
+            group: [
+                'in the heart of the',
+                'cloistered on the',
+                'sprawling throughout the'
+            ],
+            nomadic: [
+                'sprawling throughout the'
+            ],
+            neutral: [
+                'isolated on the'
+            ]
         },
-        // [
-        //     'in the heart of the',
-        //     'cloistered on the',
-        //     'sprawling throughout the',
-        //     'isolated on the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'grassy hills': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'resting upon the',
+                'situated within the'
+            ],
+            group: [
+                'situated within the'
+            ],
+            nomadic: [
+                'that travels across the'
+            ],
+            neutral: [
+                'within the densely settled',
+                'in the sparse and distant'
+            ]
         },
-        // [
-        //     'within the densely settled',
-        //     'resting upon the',
-        //     'situated within the',
-        //     'in the sparse and distant'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -149,17 +161,22 @@ export const biomes = {
 /*--- the Brolean Expanse ---*/
     'temperate rainforests': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'in the great canopies of the',
+                'cresting the thickets of the'
+            ],
+            group: [
+
+            ],
+            nomadic: [
+
+            ],
+            neutral: [
+                'among the',
+                'hidden within the',
+                'within the'
+            ]
         },
-        // [
-        //     'among the',
-        //     'hidden within the',
-        //     'in the great canopies of the',
-        //     'cresting the thickets of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
