@@ -34,7 +34,7 @@ export class Step3 {
 
     generateOriginsProse = ({ province, biome, settlement }) => {
         const settlementPrep = this.rollSettlementPreposition(settlement);
-        const biomePrep = this.rollBiomePreposition(biome);
+        const biomePrep = this.rollBiomePreposition(biome, settlement);
         const provincePrep = this.rollProvincePreposition(biome);
 
         return `Hodjai ${settlementPrep} ${settlement} ${biomePrep} ${biome} ${provincePrep} ${province}`;
@@ -44,15 +44,15 @@ export class Step3 {
         const settlementType = settlements[settlement].type;
         const prepositions = settlementPrepositions[settlementType].concat(settlementPrepositions.neutral);
 
-        return prepositions[this.diceRoller.randomizeIndex(prepostions.length)];
+        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
     }
 
-    rollBiomePreposition = (biome) => {
+    rollBiomePreposition = (biome, settlement) => {
         const { biomePrepositions } = biomes[biome];
         const settlementType = settlements[settlement].type;
         const prepositions = biomePrepositions[settlementType].concat(biomePrepositions.neutral);
 
-        return prepositions[this.diceRoller.randomizeIndex(prepostions.length)];
+        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
     }
 
     rollProvincePreposition = (biome) => {
