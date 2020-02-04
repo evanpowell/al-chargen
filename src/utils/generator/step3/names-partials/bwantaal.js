@@ -102,5 +102,27 @@ export const bwantaalNames = {
         `Wodimbe`,
         `Zikachuru`,
         `Zimchaa`
+    ],
+    neutral: [
+        `Anahesh`,
+        `Bilsilkwe`,
+        `Bilsimje`,
+        `Dimpraam`,
+        `Farounde`,
+        `Foriis`,
+        `Haraamna`,
+        `Hesheke`,
+        `Ofouqwe`,
+        `Onliaan`,
+        `Ozembifouq`,
+        `Ozentimbwaan`,
+        `Rilinawi`,
+        `Rinalafamendwi`,
+        `Rindaaje`,
+        `Rosufoud`,
+        `Wimbwaan`,
+        `Yodadichaan`,
+        `Yomanje`,
+        `Yomurun`
     ]
 }
