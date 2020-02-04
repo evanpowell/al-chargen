@@ -1,83 +1,182 @@
 export const provincialOrigins = {
     'the Ommultic Front': {
-        languages: ['Ommultic', 'Thelean', 'Kimenian', 'Brolean'],
+        languages: [
+            { language: 'Ommultic', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Kimenian', probability: 7 },
+            { language: 'Brolean', probability: 3 }
+        ],
         biomes: ['expansive tundra', 'cold lakefronts', 'spruce forests']
     },
     'Central Wendajii': {
-        languages: ['Bwantaal', 'Thelean', 'Volaani', 'Brolean'],
+        languages: [
+            { language: 'Bwantaal', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Volaani', probability: 7 },
+            { language: 'Brolean', probability: 3 }
+        ],
         biomes: ['savannah grasslands', 'rolling storm plains', 'grassy hills']
     },
     'the Brolean Expanse': {
-        languages: ['Brolean', 'Thelean', 'Bwantaal', 'Chenachua'],
+        languages: [
+            { language: 'Brolean', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Bwantaal', probability: 7 },
+            { language: 'Chenachua', probability: 3 }
+        ],
         biomes: ['temperate rainforests', 'woodlands', 'fen glades']
     },
     'Delonian Hinn': {
-        languages: ['Delonian', 'Thelean', 'Kimenian', 'Volaani'],
+        languages: [
+            { language: 'Delonian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Kimenian', probability: 7 },
+            { language: 'Volaani', probability: 3 }
+        ],
         biomes: ['deep forest riverlands', 'meadowlands', 'mossy shale valleys']
     },
     'New Scorth': {
-        languages: [`High Es'ahn`, `Low Es'ahn`, 'Thelean', 'Alldedan'],
+        languages: [
+            { language: `High Es'ahn`, probability: 80 },
+            { language: `Low Es'ahn`, probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: 'Alldedan', probability: 3 }
+        ],
         biomes: ['craggy northlands', 'central farmlands', 'southern wetlands']
     },
     'the Weyell North': {
-        languages: ['Kimenian', 'Thelean', `High Es'ahn`, `Low Es'ahn`],
+        languages: [
+            { language: 'Kimenian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: `High Es'ahn`, probability: 7 },
+            { language: `Low Es'ahn`, probability: 3 }
+        ],
         biomes: ['northern temperate hills', 'forest groves', 'lakelands']
     },
     'Northern Valadagal': {
-        languages: ['Thelean', 'Torlish', 'Alldedan', `Es'ahn`],
+        languages: [
+            { language: 'Thelean', probability: 80 },
+            { language: 'Torlish', probability: 10 },
+            { language: 'Alldedan', probability: 7 },
+            { language: `Es'ahn`, probability: 3 }
+        ],
         biomes: ['cloudless hot deserts', 'lush southern dunes', 'clay fields']
     },
     'Mainland Schelk': {
-        languages: ['Lorosian', 'Thelean', 'Ardonic', `Es'ahn`],
+        languages: [
+            { language: 'Lorosian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Ardonic', probability: 7 },
+            { language: `Es'ahn`, probability: 3 }
+        ],
         biomes: ['warm woodlands', 'overcast gardens', 'rice paddies']
     },
     'New Voland': {
-        languages: ['Volaani', 'Thelean', 'Brolean', 'Bwantaal'],
+        languages: [
+            { language: 'Volaani', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Brolean', probability: 7 },
+            { language: 'Bwantaal', probability: 3 }
+        ],
         biomes: ['redwoods', 'hilly expanses', 'mild shrublands']
     },
     'the Djenndan Protectorate': {
-        languages: ['Alldedan', `High Es'ahn`, 'Thelean', `Low Es'ahn`],
+        languages: [
+            { language: 'Alldedan', probability: 80 },
+            { language: `High Es'ahn`, probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: `Low Es'ahn`, probability: 3 }
+        ],
         biomes: ['wide plains and foothills', 'temperate steppes', 'farmlands']
     },
     'coastal Bosen': {
-        languages: ['Elmecian', 'Thelean', 'Creonic', 'Alldedan'],
+        languages: [
+            { language: 'Elmecian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Creonic', probability: 7 },
+            { language: 'Alldedan', probability: 3 }
+        ],
         biomes: ['olive forests', 'nut groves', 'mild coastlands', 'balmy seas']
     },
     'Siadagal': {
-        languages: ['Ardonic', 'Lorosian', 'Thelean', 'Creonic'],
+        languages: [
+            { language: 'Ardonic', probability: 80 },
+            { language: 'Lorosian', probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: 'Creonic', probability: 3 }
+        ],
         biomes: ['lush farmlands', 'fields', 'rainy coasts', 'summer storms']
     },
     'the forests of Creona': {
-        location: 'the forests of Creona',
-        languages: ['Creonic', 'Thelean', 'Elmecian', 'Taluan'],
+        languages: [
+            { language: 'Creonic', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Elmecian', probability: 7 },
+            { language: 'Taluan', probability: 3 }
+        ],
         biomes: ['stormy woodlands', 'rocky coasts', 'lush river valleys']
     },
     'Plenith South': {
-        languages: ['Taluan', 'Creonic', 'Thelean', `Es'ahn`],
+        languages: [
+            { language: 'Taluan', probability: 80 },
+            { language: 'Creonic', probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: `Es'ahn`, probability: 3 }
+        ],
         biomes: ['tropical coasts and forests', 'rainforests', 'palm fields']
     },
     'Reviak Proper': {
-        languages: ['Uskelian', 'Elmecian', 'Thelean', 'Volaani'],
+        languages: [
+            { language: 'Uskelian', probability: 80 },
+            { language: 'Elmecian', probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: 'Volaani', probability: 3 }
+        ],
         biomes: ['steppes', 'flatlands', 'lightning stormlands', 'sandy plains']
     },
     'the Weyell Groves': {
-        languages: ['Thelean', 'Creonic', 'Ardonic', `Es'ahn`],
+        languages: [
+            { language: 'Thelean', probability: 80 },
+            { language: 'Creonic', probability: 10 },
+            { language: 'Ardonic', probability: 7 },
+            { language: `Es'ahn`, probability: 3 }
+        ],
         biomes: ['temperate wetlands', 'pine thrushes', 'swamps', 'mangroves']
     },
     'Southwest Hinn': {
-        languages: ['Delonian', 'Thelean', 'Kimenian', 'Volaani'],
+        languages: [
+            { language: 'Delonian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Kimenian', probability: 7 },
+            { language: 'Volaani', probability: 3 }
+        ],
         biomes: ['coastal wetlands', 'southern flatlands', 'eastern borderlands']
     },
     'the Schelk Islands': {
-        languages: ['Elmecian', 'Lorosian', 'Thelean', 'Ardonic'],
+        languages: [
+            { language: 'Elmecian', probability: 80 },
+            { language: 'Lorosian', probability: 10 },
+            { language: 'Thelean', probability: 7 },
+            { language: 'Ardonic', probability: 3 }
+        ],
         biomes: ['warm inlets', 'volcanic crags', 'coral reefs', 'sandy beaches']
     },
     'central Bosen': {
-        languages: ['Alldedan', 'Thelean', 'Elmecian', 'Creonic'],
+        languages: [
+            { language: 'Alldedan', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Elmecian', probability: 7 },
+            { language: 'Creonic', probability: 3 }
+        ],
         biomes: ['rocky highlands', 'river valleys', 'terraced vine fields']
     },
     'the Northern Wilds': {
-        languages: ['Kimenian', 'Thelean', 'Ommultic', 'Alldedan'],
+        languages: [
+            { language: 'Kimenian', probability: 80 },
+            { language: 'Thelean', probability: 10 },
+            { language: 'Ommultic', probability: 7 },
+            { language: 'Alldedan', probability: 3 }
+        ],
         biomes: ['icy steppes', 'extreme hills', 'frozen forests', 'wastelands']
     }
 }
