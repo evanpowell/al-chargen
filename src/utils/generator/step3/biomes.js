@@ -1163,12 +1163,18 @@ export const biomes = {
             'of'
         ]
     },
-    'river valleys': {
+    'lush river valleys': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'nestled among the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the isolated',
+                'in the heartland',
+                'in the wet and'
+            ]
         },
         provincePrepositions: [
             'of'
