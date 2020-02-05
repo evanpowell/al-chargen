@@ -16,22 +16,81 @@ import { torlishNames } from './names-partials/torlish';
 import { uskelianNames } from './names-partials/uskelian';
 import { volaaniNames } from './names-partials/volaani';
 
+/*
+
+The 'genderFlipChance' property represents the probability in one thousand (x / 1000)
+that a person would have a gendered name that is not aligned with their sex (male with
+feminine name or female with masculine name).
+
+Only languages with masculine and feminine names have a 'genderFlipChance' property.
+
+TODO: fine tune the 'genderFlipChance' values
+
+*/
+
 export const names = {
-    'Alldedan': alldedanNames,
-    'Ardonic': ardonicNames,
-    'Brolean': broleanNames,
-    'Bwantaal': bwantaalNames,
-    'Chenachua': chenachuaNames,
-    'Creonic': creonicNames,
-    'Delonian': delonianNames,
-    'Elmecian': elmecianNames,
-    [`Es'ahn`]: esahnNames,
-    'Kimenian': kimenianNames,
-    'Lorosian': lorosianNames,
-    'Ommultic': ommulticNames,
-    'Taluan': taluanNames,
-    'Thelean': theleanNames,
-    'Torlish': torlishNames,
-    'Uskelian': uskelianNames,
-    'Volaani': volaaniNames
+    'Alldedan': {
+        nameList: alldedanNames,
+        genderFlipChance: 1
+    },
+    'Ardonic': {
+        nameList: ardonicNames,
+        genderFlipChance: 10
+    },
+    'Brolean': {
+        nameList: broleanNames
+    },
+    'Bwantaal': {
+        nameList: bwantaalNames
+    },
+    'Chenachua': {
+        nameList: chenachuaNames,
+    },
+    'Creonic': {
+        nameList: creonicNames,
+        genderFlipChance: 10
+    },
+    'Delonian': {
+        nameList: delonianNames,
+        genderFlipChance: 10
+    },
+    'Elmecian': {
+        nameList: elmecianNames,
+        genderFlipChance: 10
+    },
+    [`Es'ahn`]: {
+        nameList: esahnNames,
+        genderFlipChance: 10
+    },
+    'Kimenian': {
+        nameList: kimenianNames,
+        genderFlipChance: 10
+    },
+    'Lorosian': {
+        nameList: lorosianNames,
+        genderFlipChance: 10
+    },
+    'Ommultic': {
+        nameList: ommulticNames,
+        genderFlipChance: 10
+    },
+    'Taluan': {
+        nameList: taluanNames,
+        genderFlipChance: 10
+    },
+    'Thelean': {
+        nameList: theleanNames,
+        genderFlipChance: 10
+    },
+    'Torlish': {
+        nameList: torlishNames,
+        genderFlipChance: 10
+    },
+    'Uskelian': {
+        nameList: uskelianNames,
+        genderFlipChance: 10
+    },
+    'Volaani': {
+        nameList: volaaniNames,
+    }
 }

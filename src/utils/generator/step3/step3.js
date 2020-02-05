@@ -76,22 +76,19 @@ export class Step3 {
     }
 
     rollName(language, sex) {
-        // High Es'ahn and Low Es'ahn both have the same Es'ahn names.
+        // Es'ahn names are shared between different dialects.
         if (language.includes(`Es'ahn`)) {
             language =  `Es'ahn`;
         }
 
-        const namesInLanguage = names[language];
+        const namesInLanguage = names[language].nameList;
+        const { genderFlipChance } = names[language];
 
         let namesPool = [];
 
-        // TODO: refactor to allow for name that does not align with sex
-        //       (only for languages with masculine and feminine naming conventions)
-
-        if (namesInLanguage.masculine && sex === 'Male') {
-            namesPool = namesInLanguage.masculine;
-        } else if (namesInLanguage.feminine && sex === 'Female') {
-            namesPool = namesInLanguage.feminine;
+        if (genderFlipChance !== undefined) {
+            const nameGender = this.getNameGender(genderFlipChance, sex);
+            namesPool = namesInLanguage[nameGender];
         } else {
             Object.entries(namesInLanguage).map(([category, names]) => {
                 if (category !== 'neutral') {
@@ -107,6 +104,18 @@ export class Step3 {
         return namesPool[this.diceRoller.randomizeIndex(namesPool.length)];
     }
 
+    // rollName helper
+    getNameGender(genderFlipChance, sex) {
+        let nameGender;
+
+        if (this.diceRoller.rollDie(1000) <= genderFlipChance) {
+            nameGender = (sex === 'Male') ? 'feminine' : 'masculine';
+        } else {
+            nameGender = (sex === 'Male') ? 'masculine' : 'feminine';
+        }
+
+        return nameGender;
+    }
     
 
     // All methods below are for generating origins prose
