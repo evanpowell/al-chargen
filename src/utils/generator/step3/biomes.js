@@ -1143,7 +1143,7 @@ export const biomes = {
             'of'
         ]
     },
-/*--- Central Bosen ---*/
+/*--- central Bosen ---*/
     'rocky highlands': {
         biomePrepositions: {
             location: [
