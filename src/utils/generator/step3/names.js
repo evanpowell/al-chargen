@@ -24,9 +24,9 @@ feminine name or female with masculine name).
 
 Only languages with masculine and feminine names have a 'genderFlipChance' property.
 
-TODO: fine tune the 'genderFlipChance' values
-
 */
+
+// TODO: fine-tune the 'genderFlipChance' values
 
 export const names = {
     'Alldedan': {
