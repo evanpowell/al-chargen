@@ -18,10 +18,6 @@
 */
 
 
-
-// TODO: Finish dividing biome prepositions by settlement type: 'location', 'group', 'nomadic', and 'neutral'.
-//       (Move the commented out prepositions to their corresponding type)
-
 export const biomes = {
 /*--- the Ommultic Front ---*/
     'spruce forests': {
@@ -771,48 +767,49 @@ export const biomes = {
             location: [],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the overcast',
+                'amid the',
+                'beyond the',
+                'in the sanctuary of the'
+            ]
         },
-        // [
-        //     'in the overcast',
-        //     'amid the',
-        //     'beyond the',
-        //     'in the sanctuary of the'
-        // ],
         provincePrepositions: [
             'in'
         ]
     },
     'rocky coasts': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'in the thickets of the',
+                'beneath the plateaus near the'
+            ],
+            group: [
+                'beneath the plateaus near the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'at the heart of the',
+                'in the central'
+            ]
         },
-        // [
-        //     'in the thickets of the',
-        //     'beneath the plateaus near the',
-        //     'at the heart of the',
-        //     'in the central'
-        // ],
         provincePrepositions: [
             'among'
         ]
     },
     'lush river valleys': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'nestled among the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the isolated',
+                'in the hearland',
+                'in the wet and'
+            ]
         },
-        // [
-        //     'in the isolated',
-        //     'in the heartland',
-        //     'nestled among the',
-        //     'in the wet and'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -820,51 +817,52 @@ export const biomes = {
 /*--- Plenith South ---*/
     'tropical coasts and forests': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'scorching among the',
+                'resting among the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'within the',
+                'nearby the'
+            ]
         },
-        // [
-        //     'within the',
-        //     'scorching among the',
-        //     'nearby the',
-        //     'resting among the'
-        // ],
         provincePrepositions: [
             'in'
         ]
     },
     'rainforests': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'vital to the',
+                'peering out from the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'lost within the',
+                'north of the'
+            ]
         },
-        // [
-        //     'lost within the',
-        //     'north of the',
-        //     'peering out from the',
-        //     'vital to the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'palm fields': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'sprawling out among the',
+                'overlooking the',
+                'basking in the',
+                'emerging from the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'within the'
+            ]
         },
-        // [
-        //     'sprawling out among the',
-        //     'overlooking',
-        //     'basking in the',
-        //     'emerging from the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -872,68 +870,77 @@ export const biomes = {
 /*--- Reviak Proper ---*/
     'steppes': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'overlooking the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'across the',
+                'beyond the',
+                'enduring on the'
+            ]
         },
-        // [
-        //     'across the',
-        //     'beyond the',
-        //     'overlooking the',
-        //     'enduring on the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'flatlands': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'planted in the center of the',
+                'where outlaws rule',
+                'boldly rising from the'
+            ],
+            group: [
+                'from the',
+                'from the wild'
+            ],
+            nomadic: [
+                'that travels the',
+                'that traverses the lawless'
+            ],
+            neutral: [
+                'central within the'
+            ]
         },
-        // [
-        //     'planted in the center of the',
-        //     'central within the',
-        //     'where outlaws rule the',
-        //     'boldly rising from the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'lightning stormlands': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'within the most holy',
+                'which is protected within the',
+                'overlooking the'
+            ],
             group: [],
-            nomadic: [],
-            neutral: []
+            nomadic: [
+                'that caravans through the'
+            ],
+            neutral: [
+                'isolated within the',
+                'within the'
+            ]
         },
-        // [
-        //     'within the most holy',
-        //     'which is protected within the',
-        //     'overlooking the',
-        //     'isolated within the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'sandy plains': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'captured on the',
+                'beneath the Joza trees in the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'west of the',
+                'beyond the dunes in the'
+            ]
         },
-        // [
-        //     'captured on the',
-        //     'west of the',
-        //     'beneath the Joza trees in the',
-        //     'beyond the dunes in the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -941,68 +948,71 @@ export const biomes = {
 /*--- the Weyell Groves ---*/
     'temperate wetlands': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'safely within the',
+                'planted in the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'among the',
+                'prospering in the'
+            ]
         },
-        // [
-        //     'among the',
-        //     'planted in the',
-        //     'safely within the',
-        //     'prospering in the'
-        // ],
         provincePrepositions: [
             'in'
         ]
     },
     'pine thrushes': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'beneath the winds among the'
+            ],
+            group: [
+                'among the greater peoples of the'
+            ],
+            nomadic: [
+                'among the greater peoples of the'
+            ],
+            neutral: [
+                'amid the',
+                'in the heart of the'
+            ]
         },
-        // [
-        //     'amid the',
-        //     'in the heart of the',
-        //     'among the greater peoples of the',
-        //     'beneath the winds among the'
-        // ],
         provincePrepositions: [
             'in'
         ]
     },
     'swamps': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'standing in the',
+                'in the harvest soil'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'just beyond the',
+                'in the bogs and'
+            ]
         },
-        // [
-        //     'standing in the',
-        //     'just beyond the',
-        //     'in the harvest soil',
-        //     'in the bogs and'
-        // ],
         provincePrepositions: [
             'southeast of'
         ]
     },
     'mangroves': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'shaped by the waterlogged',
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'within the enchanting',
+                'among the sunkissed',
+                'withdrawn beyond the'
+            ]
         },
-        // [
-        //     'within the enchanting',
-        //     'shaped by the waterlogged',
-        //     'among the sunkissed',
-        //     'withdrawn beyond the'
-        // ],
         provincePrepositions: [
             'in'
         ]
@@ -1010,51 +1020,55 @@ export const biomes = {
 /*--- southwest Hinn ---*/
     'coastal wetlands': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'among the harbors of the',
+                'bordering the standing waters in the'
+            ],
+            group: [
+                'among the harbors of the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'at the margins of the',
+                'among the seasonal fields of the'
+            ]
         },
-        // [
-        //     'at the margins of the',
-        //     'among the harbors of the',
-        //     'bordering the standing waters in the',
-        //     'among the seasonal fields of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'southern flatlands': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'bound within the clay-rich',
+                'at the edge of the salted fields in the'
+            ],
+            group: [
+                'at the edge of the salted fields in the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'across the',
+                'south of the hill near the'
+            ]
         },
-        // [
-        //     'across the',
-        //     'bound within the clay-rich',
-        //     'south of the hills near the',
-        //     'at the edge of the salted fields in the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'eastern borderlands': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'overlooking the',
+                'beneath the plateaued forests of the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'along the Marendian channel in the',
+                'north of Dhentin in the'
+            ]
         },
-        // [
-        //     'along the Marendian channel in the',
-        //     'north of Dhentin in the',
-        //     'overlooking the',
-        //     'beneath the plateaued forests of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -1062,67 +1076,69 @@ export const biomes = {
 /*--- the Schelk Islands ---*/
     'warm inlets': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'basking in the',
+                'overlooking the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'near the'
+            ]
         },
-        // [
-        //     'basking in the',
-        //     'near the',
-        //     'overlooking the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'volcanic crags': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'fortified atop the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'embedded in the',
+                'dependent on the',
+                'sequestered within the'
+            ]
         },
-        // [
-        //     'embedded in the',
-        //     'fortified atop the',
-        //     'dependent on the',
-        //     'sequestered within the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'coral reefs': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'adjacent to the',
+                'looking out over the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'dependent on the',
+                'in symbiosis with the'
+            ]
         },
-        // [
-        //     'adjacent to the',
-        //     'looking out over the',
-        //     'dependent on the',
-        //     'in symbiosis with the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'sandy beaches': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'resting on the',
+                'on the flat and',
+                'which emerged from a lasting pirate presence on the'
+            ],
             group: [],
-            nomadic: [],
-            neutral: []
+            nomadic: [
+                'that travels along the'
+            ],
+            neutral: [
+                'central to the'
+            ]
         },
-        // [
-        //     'resting on the',
-        //     'central to the',
-        //     'on the flat and',
-        //     'which emerged from a lasting pirate presence on the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -1130,17 +1146,19 @@ export const biomes = {
 /*--- Central Bosen ---*/
     'rocky highlands': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'atop the',
+                'at the summit of the',
+                'elevated among the'
+            ],
+            group: [
+                'in the middlemost settlements of the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'among the'
+            ]
         },
-        // [
-        //     'atop the',
-        //     'at the summit of the',
-        //     'in the middlemost settlements of the',
-        //     'elevated among the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -1152,30 +1170,24 @@ export const biomes = {
             nomadic: [],
             neutral: []
         },
-        // [
-        //     'deep within the',
-        //     'looking out over the',
-        //     'in the winding',
-        //     'beyond the',
-        //     'among the caves and'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'terraced vine fields': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'twisting through the',
+                'climbing above the',
+                'nestled in the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'isolated among the',
+                'within the'
+            ]
         },
-        // [
-        //     'twisting through the',
-        //     'climbing above the',
-        //     'nestled in the',
-        //     'isolated among the'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -1186,47 +1198,49 @@ export const biomes = {
             location: [],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the distant',
+                'east of Ember in the',
+                'beyond the wastelands and',
+                'at the edge of the'
+            ]
         },
-        // [
-        //     'in the distant',
-        //     'east of Ember in the',
-        //     'beyond the wastelands and',
-        //     'at the edge of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'extreme hills': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'at the standing stones south of the',
+                'consisting of subterranean dwellings in the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'among the',
+                'isolated in the high altitude and'
+            ]
         },
-        // [
-        //     'among the',
-        //     'at the standing stones south of the',
-        //     'consisting of subterranean dwellings in the',
-        //     'isolated in the high altitude and'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'frozen forests': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'in the hot wellsprings of the',
+                'at the edge of the'
+            ],
+            group: [
+                'in the hot wellsprings of the',
+                'at the edge of the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'hidden within the'
+            ]
         },
-        // [
-        //     'hidden within the',
-        //     'in the hot wellsprings of the',
-        //     'at the edge of the',
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -1236,14 +1250,13 @@ export const biomes = {
             location: [],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the wastelands',
+                'near the eastern',
+                'south of the',
+                'isolated among the'
+            ]
         },
-        // [
-        //     'in the',
-        //     'near the eastern',
-        //     'south of the',
-        //     'isolated from the'
-        // ],
         provincePrepositions: [
             'of'
         ]
