@@ -178,34 +178,37 @@ export const biomes = {
     },
     'woodlands': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'concealed among the',
+                'bordering the bleak'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'within the dark',
+                'above the shadowed'
+            ]
         },
-        // [
-        //     'concealed among the',
-        //     'bordering the bleak',
-        //     'within the dark',
-        //     'above the shadowed'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'fen glades': {
         biomePrepositions: {
-            location: [],
-            group: [],
-            nomadic: [],
-            neutral: []
+            location: [
+                'in the center of the dazzling'
+            ],
+            group: [
+                'in the center of the dazzling'
+            ],
+            nomadic: [
+                'that roams the'
+            ],
+            neutral: [
+                'among the life-giving',
+                'in the blissful'
+            ]
         },
-        // [
-        //     'protected within the',
-        //     'among the life-giving',
-        //     'in the center of the dazzling',
-        //     'in the blissful'
-        // ],
         provincePrepositions: [
             'of'
         ]
@@ -213,52 +216,53 @@ export const biomes = {
 /*--- Delonian Hinn ---*/
     'deep forest riverlands': {
         biomePrepositions: {
-            location: [],
-            group: [],
+            location: [
+                'on the waterside coasts of the',
+                'adjacent to the'
+            ],
+            group: [
+                'on the waterside coasts of the'
+            ],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'within the'
+            ]
         },
-        // [
-        //     'within the',
-        //     'bordering the',
-        //     'adjacent to the',
-        //     'on the waterside coasts of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'meadowlands': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'overlooking the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'in the',
+                'beyond the',
+                'in the central'
+            ]
         },
-        // [
-        //     'in the',
-        //     'overlooking the',
-        //     'beyond the',
-        //     'in the central'
-        // ],
         provincePrepositions: [
             'of'
         ]
     },
     'mossy shale valleys': {
         biomePrepositions: {
-            location: [],
+            location: [
+                'perched on the',
+                'overlooking the'
+            ],
             group: [],
             nomadic: [],
-            neutral: []
+            neutral: [
+                'beneath the',
+                'in the heart of the',
+                'beyond the waterfalls of the'
+            ]
         },
-        // [
-        //     'perched on the',
-        //     'beneath the',
-        //     'overlooking the',
-        //     'in the heart of the',
-        //     'beyond the waterfalls of the'
-        // ],
         provincePrepositions: [
             'of'
         ]
