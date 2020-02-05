@@ -46,9 +46,14 @@ export default {
       const s3 = new Step3();
       const birthDate = s3.rollBirthDate();
       const province = s3.rollProvince();
+      const languages = s3.rollLanguages(province);
       const biome = s3.rollBiome(province);
       const settlement = s3.rollSettlement();
-      const originsProse = s3.generateOriginsProse({ province, biome, settlement });
+      const name = s3.rollName(languages[0], sex);
+      console.log(name);
+      console.log(province, languages);
+
+      const originsProse = s3.generateOriginsProse({ name, province, biome, settlement });
 
       // console.log('character', {
       //   initialScores,
@@ -61,10 +66,11 @@ export default {
       //   finalAppearance,
       //   birthDate,
       //   province,
-      //   biome
+      //   biome,
+      //   name,
       // });
 
-      console.log(originsProse);
+      // console.log(originsProse);
     }
   }
 }

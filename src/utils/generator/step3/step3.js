@@ -3,6 +3,7 @@ import { Birthdate } from "./birthDate";
 import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
+import { names } from "./names";
 
 export class Step3 {
     constructor() {
@@ -18,6 +19,52 @@ export class Step3 {
         return this.diceRoller.randomizeObjectKey(provinceKeys);
     }
 
+    rollLanguages = (provinceKey) => {
+        const province = provincialOrigins[provinceKey];
+        const languages = province.languages.map((languageObj) => {
+            return {... languageObj};
+        })
+        let maxRoll = 100;
+        const characterLanguages = [];
+
+        // 95% chance character knows Thelean plus another language
+        const isSpeaksTwoLanguages = this.diceRoller.rollDie(100) > 5;
+
+        if (isSpeaksTwoLanguages) {
+            characterLanguages.push('Thelean');
+
+            const theleanLanguageObject = languages.find((languageObj) => languageObj.language === 'Thelean');
+            maxRoll -= theleanLanguageObject.probability;
+            theleanLanguageObject.probability = 0;
+        }
+
+        const roll = this.diceRoller.rollDie(maxRoll);
+
+
+        let min = 0;
+        let max = languages[0].probability;
+        languages.forEach((languageObj, i) => {
+
+            if (roll > min && roll <= max) {
+                if (languages[0].language === 'Thelean' && characterLanguages.length) {
+                    // if character already knows thelean and thelean is predominant language of region,
+                    // character's name will be thelean (first language in character language list)
+                    characterLanguages.push(languageObj.language);
+                } else {
+                    // otherwise, character's name will be from this language (added to front of language list)
+                    characterLanguages.unshift(languageObj.language);
+                }
+            }
+            
+            if (i < languages.length - 1) {
+                min = max;
+                max += languages[i+1].probability;
+            }
+        });
+
+        return characterLanguages;
+    }
+
     rollBiome = (provinceKey) => {
         const province = provincialOrigins[provinceKey];
         return province.biomes[this.diceRoller.randomizeIndex(province.biomes.length)];
@@ -28,16 +75,48 @@ export class Step3 {
         return this.diceRoller.randomizeObjectKey(settlementKeys);
     }
 
+    rollName(language, sex) {
+        // High Es'ahn and Low Es'ahn both have the same Es'ahn names.
+        if (language.includes(`Es'ahn`)) {
+            language =  `Es'ahn`;
+        }
+
+        const namesInLanguage = names[language];
+
+        let namesPool = [];
+
+        // TODO: refactor to allow for name that does not align with sex
+        //       (only for languages with masculine and feminine naming conventions)
+
+        if (namesInLanguage.masculine && sex === 'Male') {
+            namesPool = namesInLanguage.masculine;
+        } else if (namesInLanguage.feminine && sex === 'Female') {
+            namesPool = namesInLanguage.feminine;
+        } else {
+            Object.entries(namesInLanguage).map(([category, names]) => {
+                if (category !== 'neutral') {
+                    namesPool = namesPool.concat(names);
+                }
+            });
+        }
+
+        if (namesInLanguage.neutral) {
+            namesPool = namesPool.concat(namesInLanguage.neutral);
+        }
+
+        return namesPool[this.diceRoller.randomizeIndex(namesPool.length)];
+    }
+
     
 
     // All methods below are for generating origins prose
 
-    generateOriginsProse = ({ province, biome, settlement }) => {
+    generateOriginsProse = ({ name, province, biome, settlement }) => {
         const settlementPrep = this.rollSettlementPreposition(settlement);
         const biomePrep = this.rollBiomePreposition(biome, settlement);
         const provincePrep = this.rollProvincePreposition(biome);
 
-        return `Hodjai ${settlementPrep} ${settlement} ${biomePrep} ${biome} ${provincePrep} ${province}`;
+        return `${name} ${settlementPrep} ${settlement} ${biomePrep} ${biome} ${provincePrep} ${province}`;
     }
 
     rollSettlementPreposition = (settlement) => {
