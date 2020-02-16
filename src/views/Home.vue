@@ -1,24 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <InstantGeneratorButton />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import InstantGeneratorButton from '@/components/InstantGeneratorButton.vue';
+
 import { mapState } from 'vuex';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
-  },
-  computed: {
-    ...mapState('rulebook', [
-      'test'
-    ])
+    InstantGeneratorButton
   }
 }
 </script>
