@@ -62,6 +62,12 @@ export class Step3 {
             }
         });
 
+        // if INT is 16 or higher & 40% chance
+            // add another language (from regional non-thelean languages)
+
+        // if INT is 18 or higher & 40% chance
+            // add another language (70% chance regional non-thelean, 30% chance empire-wide non-thelean languages)
+
         return characterLanguages;
     }
 
