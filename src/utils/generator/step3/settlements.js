@@ -45,18 +45,29 @@ export const settlementPrepositions = {
     neutral: [
         'hails from a',
         'is from a',
-        'comes from a'
+        'comes from a',
+        'stems from a',
+        'springs from a'
     ],
     group: [
         'was born into a',
-        'is a member of a'
+        'is the child of a',
+        'was born among the refugees of a',
+        'is from the first generation of a',
+        'is from the second generation of a'
     ],
     nomadic: [
         'was born into a',
+        'was raised in a',
+        'was cared for among the hunters of a',
+        'was reared among the herders of a',
         'is a member of a'
     ],
     location: [
         'grew up in a',
-        'spent their early years in a'
+        'was brought up in a',
+        'hails from a community locality within a',
+        'is from an archaic community in a',
+        'is from the central district within a'
     ]
 }
