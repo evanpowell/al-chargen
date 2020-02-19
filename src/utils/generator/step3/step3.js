@@ -4,6 +4,7 @@ import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
 import { names } from "./names";
+import { allLanguages } from "./languages";
 
 export class Step3 {
     constructor() {
@@ -19,7 +20,8 @@ export class Step3 {
         return this.diceRoller.randomizeObjectKey(provinceKeys);
     }
 
-    rollLanguages = (provinceKey) => {
+    // TODO: break out repetitive code into helper functions
+    rollLanguages = (provinceKey, intelligence) => {
         const province = provincialOrigins[provinceKey];
         const languages = province.languages.map((languageObj) => {
             return {... languageObj};
@@ -41,8 +43,10 @@ export class Step3 {
         const roll = this.diceRoller.rollDie(maxRoll);
 
 
+        // min is exclusive, max is inclusive
         let min = 0;
         let max = languages[0].probability;
+
         languages.forEach((languageObj, i) => {
 
             if (roll > min && roll <= max) {
@@ -53,7 +57,10 @@ export class Step3 {
                 } else {
                     // otherwise, character's name will be from this language (added to front of language list)
                     characterLanguages.unshift(languageObj.language);
+
                 }
+
+                languageObj.probability = 0;
             }
             
             if (i < languages.length - 1) {
@@ -62,11 +69,102 @@ export class Step3 {
             }
         });
 
-        // if INT is 16 or higher & 40% chance
-            // add another language (from regional non-thelean languages)
+        // if INT is 16 or higher & 50% chance
+        if (intelligence >= 16 && this.diceRoller.rollDie(100) > 50) {
+            const remainingLanguages = languages.filter((languageObj) => {
+                if (languageObj.language === 'Thelean') {
+                    return false;
+                }
 
-        // if INT is 18 or higher & 40% chance
-            // add another language (70% chance regional non-thelean, 30% chance empire-wide non-thelean languages)
+                if (characterLanguages.includes(languageObj.language)) {
+                    return false;
+                }
+                
+                return true;
+            });
+            // add another language (from regional non-thelean languages)
+            let remainingProbabilityMax = languages.reduce((a, b) => {
+                return a + b.probability;
+            }, 0);
+            
+            min = 0;
+            max = remainingLanguages[0].probability;
+            
+            const remainingRegionalLanguagesRoll = this.diceRoller.rollDie(remainingProbabilityMax);
+
+            remainingLanguages.forEach((languageObj, i) => {
+
+                if (remainingRegionalLanguagesRoll > min && remainingRegionalLanguagesRoll <= max) {
+                    characterLanguages.push(languageObj.language);
+                    languageObj.probability = 0;
+                }
+                
+                if (i < remainingLanguages.length - 1) {
+                    min = max;
+                    max += remainingLanguages[i+1].probability;
+                }
+            });
+        }
+
+        // if INT is 18 or higher & 50% chance
+        if (intelligence >= 18 && this.diceRoller.rollDie(100) > 50) {
+            // add another language
+
+            if (this.diceRoller.rollDie(100) <= 70) {
+                // 70% chance regional non-thelean
+                const remainingLanguages = languages.filter((languageObj) => {
+                    if (languageObj.language === 'Thelean') {
+                        return false;
+                    }
+    
+                    if (characterLanguages.includes(languageObj.language)) {
+                        return false;
+                    }
+                    
+                    return true;
+                });
+                let remainingProbabilityMax = languages.reduce((a, b) => {
+                    return a + b.probability;
+                }, 0);
+                
+                min = 0;
+                max = remainingLanguages[0].probability;
+                
+                const remainingRegionalLanguagesRoll = this.diceRoller.rollDie(remainingProbabilityMax);
+    
+                remainingLanguages.forEach((languageObj, i) => {
+    
+                    if (remainingRegionalLanguagesRoll > min && remainingRegionalLanguagesRoll <= max) {
+                        characterLanguages.push(languageObj.language);
+                        languageObj.probability = 0;
+                    }
+                    
+                    if (i < remainingLanguages.length - 1) {
+                        min = max;
+                        max += remainingLanguages[i+1].probability;
+                    }
+                });
+
+            } else {
+                // 30% chance empire-wide non-thelean languages
+                const remainingLanguages = allLanguages.filter((language) => {
+                    if (language === 'Thelean') {
+                        return false;
+                    }
+    
+                    if (characterLanguages.includes(language)) {
+                        return false;
+                    }
+                    
+                    return true;
+                });
+
+                const language = remainingLanguages[this.diceRoller.randomizeIndex(remainingLanguages.length)];
+
+                characterLanguages.push(language);
+            }
+        }
+
 
         return characterLanguages;
     }
