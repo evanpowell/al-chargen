@@ -53,7 +53,7 @@ export const character = {
           type: '',
           statuses: {
             deceased: 2,
-            total
+            total: null
           } // object with status keys and number values
         },
         otherRelations: {
