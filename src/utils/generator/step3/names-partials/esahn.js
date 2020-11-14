@@ -1,5 +1,5 @@
 export const esahnNames = {
-    masculine: [
+    hallowed: [
         `Aa'dajei`,
         `Aa'thedaja`,
         `Bahaelen`,
@@ -51,7 +51,7 @@ export const esahnNames = {
         `Zi'thio`,
         `Zor'eshkaal`
     ],
-    feminine: [
+    mundane: [
         `Bredana`,
         `Bredana'spask`,
         `Dana'spask`,
