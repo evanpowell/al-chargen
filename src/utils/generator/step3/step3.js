@@ -1,5 +1,5 @@
 import { DiceRoller } from "../../diceRoller";
-import { Birthdate } from "./birthDate";
+import { Birthdate } from "./birthdate";
 import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
