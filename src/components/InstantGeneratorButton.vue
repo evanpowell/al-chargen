@@ -46,6 +46,7 @@ export default {
       const biome = s3.rollBiome(province);
       const settlement = s3.rollSettlement();
       const parentage = s3.rollParentage();
+      const relations = s3.rollRelations();
       // const name = s3.rollName(languages[0], sex);
 
       const originsProse = s3.generateOriginsProse({
@@ -72,13 +73,17 @@ export default {
           settlement,
           name,
           parentage,
+          relations,
           originsProse,
         },
       };
 
       console.log("-------------------------------");
 
-      console.log("character object:", character);
+      console.log(
+        "character object:",
+        JSON.stringify(character, null, 2).replace(/"/g, "")
+      );
 
       console.log("origins prose:", originsProse);
     },

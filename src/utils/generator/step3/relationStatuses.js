@@ -1,4 +1,4 @@
-export const relationStatuses = [
+export const relations = [
   'living',
   'missing',
   'estranged',

@@ -4,7 +4,7 @@ import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
 import { parentage } from "./parentage";
-import { relationStatuses } from "./relationStatuses";
+import { relations, petTypes, relationStatuses } from "./relations";
 import { names } from "./names";
 import { allLanguages } from "./languages";
 
@@ -191,9 +191,39 @@ export class Step3 {
             numberOfParents = parentObj.fixed;
         }
 
-        const statuses = [...Array(numberOfParents)]
+        const statuses = this.rollStatuses(numberOfParents, relationStatuses);
+        
+        return {
+            type,
+            statuses
+        };
+    }
+
+    rollRelations = () => {
+        return relations
+            .filter(() => this.diceRoller.rollDie(4) > 1)
+            .reduce((relationsObj,rel) => {
+                const numOfRelations = this.diceRoller.rollDie(rel.max) - 1;
+                let statuses;
+                if (rel.type === 'pets') {
+                    statuses = this.rollStatuses(numOfRelations, petTypes);
+                } else {
+                    statuses = this.rollStatuses(numOfRelations, relationStatuses);
+                }
+
+                if (numOfRelations) {
+                    relationsObj[rel.type] = statuses;
+                }
+                
+                return relationsObj;
+            }, {});
+
+    }
+
+    rollStatuses(quantity, statuses) {
+        return [...Array(quantity)]
             .map(() => {
-                return this.diceRoller.getRandomArrayValue(relationStatuses);
+                return this.diceRoller.getRandomArrayValue(statuses);
             })
             .reduce((statusObj, status) => {
                 if (statusObj[status]) {
@@ -204,11 +234,6 @@ export class Step3 {
 
                 return statusObj;
             }, {});
-        
-        return {
-            type,
-            statuses
-        };
     }
 
     rollName(language, sex) {
