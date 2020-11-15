@@ -20,4 +20,13 @@ export class DiceRoller {
   randomizeObjectKey = (objectKeys) => {
     return objectKeys[this.randomizeIndex(objectKeys.length)];
   }
+
+  getRandomArrayValue = (array) => {
+    return array[this.randomizeIndex(array.length)];
+  }
+
+  getRandomObjectEntry = (obj) => {
+    const entries = Object.entries(obj);
+    return entries[this.randomizeIndex(entries.length)];
+  }
 }
