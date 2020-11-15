@@ -26,69 +26,111 @@ Only languages with masculine and feminine names have a 'genderFlipChance' prope
 
 */
 
-// TODO: fine-tune the 'genderFlipChance' values
-
 export const names = {
     'Alldedan': {
         nameList: alldedanNames,
-        genderFlipChance: 1
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 5 },
+        ]
     },
     'Ardonic': {
         nameList: ardonicNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 15 },
+            { type: 'neutral', probability: 10 }
+        ]
     },
     'Brolean': {
-        nameList: broleanNames
+        nameList: broleanNames,
+        probabilities: [
+            { type: 'shamanic', probability: 15 }
+        ]
     },
     'Bwantaal': {
-        nameList: bwantaalNames
+        nameList: bwantaalNames,
+        isCommunityBased: true
     },
     'Chenachua': {
         nameList: chenachuaNames,
     },
     'Creonic': {
         nameList: creonicNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 20 }
+        ]
     },
     'Delonian': {
         nameList: delonianNames,
-        genderFlipChance: 10
+        probabilities: [
+            { type: 'genderFlip', probability: 15 },
+            { type: 'spiritual', probability: 10 }
+        ]
     },
     'Elmecian': {
         nameList: elmecianNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 15 },
+            { type: 'neutral', probability: 10 },
+        ]
     },
     [`Es'ahn`]: {
         nameList: esahnNames,
-        genderFlipChance: 10
+        isCommunityBased: true
     },
     'Kimenian': {
         nameList: kimenianNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 20 },
+            { type: 'neutral', probability: 20 }
+        ]
     },
     'Lorosian': {
         nameList: lorosianNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 15 },
+            { type: 'neutral', probability: 10 }
+        ]
     },
     'Ommultic': {
         nameList: ommulticNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 10 },
+            { type: 'neutral', probability: 15 }
+        ]
     },
     'Taluan': {
         nameList: taluanNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 20 },
+            { type: 'neutral', probability: 10 }
+        ]
     },
     'Thelean': {
         nameList: theleanNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 5 },
+            { type: 'neutral', probability: 15 }
+        ]
     },
     'Torlish': {
         nameList: torlishNames,
-        genderFlipChance: 10
+        isGendered: true,
+        probabilities: [
+            { type: 'genderFlip', probability: 35 }
+        ]
     },
     'Uskelian': {
         nameList: uskelianNames,
-        genderFlipChance: 10
+        isCommunityBased: true
     },
     'Volaani': {
         nameList: volaaniNames,
