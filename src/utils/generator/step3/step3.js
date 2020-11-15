@@ -3,6 +3,8 @@ import { Birthdate } from "./birthdate";
 import { provincialOrigins } from "./provincialOrigins";
 import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
+import { parentage } from "./parentage";
+import { relationStatuses } from "./relationStatuses";
 import { names } from "./names";
 import { allLanguages } from "./languages";
 
@@ -177,6 +179,36 @@ export class Step3 {
     rollSettlement = () => {
         const settlementKeys = Object.keys(settlements);
         return this.diceRoller.randomizeObjectKey(settlementKeys);
+    }
+
+    rollParentage = () => {
+        const parentObj = this.diceRoller.getRandomArrayValue(parentage);
+        const { type } = parentObj;
+        let numberOfParents = 0;
+        if (parentObj.max) {
+            numberOfParents = this.diceRoller.rollDie(parentObj.max);
+        } else if (parentObj.fixed) {
+            numberOfParents = parentObj.fixed;
+        }
+
+        const statuses = [...Array(numberOfParents)]
+            .map(() => {
+                return this.diceRoller.getRandomArrayValue(relationStatuses);
+            })
+            .reduce((statusObj, status) => {
+                if (statusObj[status]) {
+                    statusObj[status] += 1;
+                } else {
+                    statusObj[status] = 1;
+                }
+
+                return statusObj;
+            }, {});
+        
+        return {
+            type,
+            statuses
+        };
     }
 
     rollName(language, sex) {

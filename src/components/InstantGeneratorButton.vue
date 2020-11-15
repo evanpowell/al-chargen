@@ -5,21 +5,24 @@
 </template>
 
 <script>
-import { Step1 } from '@/utils/generator/step1/step1';
-import { Step2 } from '@/utils/generator/step2/step2';
-import { Step3 } from '@/utils/generator/step3/step3';
+import { Step1 } from "@/utils/generator/step1/step1";
+import { Step2 } from "@/utils/generator/step2/step2";
+import { Step3 } from "@/utils/generator/step3/step3";
 
 export default {
-  name: 'InstantGeneratorButton',
+  name: "InstantGeneratorButton",
 
   methods: {
-    calculate: function() {
+    calculate: function () {
       const s1 = new Step1();
       const initialScores = s1.generateAttributes();
 
       const s2 = new Step2();
       const ancestry = s2.rollAncestry();
-      const adjustedScores = s2.calculateAdjustedScores(initialScores, ancestry);
+      const adjustedScores = s2.calculateAdjustedScores(
+        initialScores,
+        ancestry
+      );
       const bonusPenalties = s2.calculateBonusPenalties(adjustedScores);
       const sex = s2.rollSex();
       const appearance = s2.rollAppearance(ancestry);
@@ -30,7 +33,9 @@ export default {
         // console.log('MODIFICATION');
         for (let modification of feature.modifications) {
           const { appearanceDetail, multiplier } = modification;
-          finalAppearance[appearanceDetail] = Math.floor(finalAppearance[appearanceDetail] * multiplier);
+          finalAppearance[appearanceDetail] = Math.floor(
+            finalAppearance[appearanceDetail] * multiplier
+          );
         }
       }
 
@@ -40,10 +45,16 @@ export default {
       const languages = s3.rollLanguages(province, adjustedScores.int);
       const biome = s3.rollBiome(province);
       const settlement = s3.rollSettlement();
-      const name = s3.rollName(languages[0], sex);
+      const parentage = s3.rollParentage();
+      // const name = s3.rollName(languages[0], sex);
 
-      const originsProse = s3.generateOriginsProse({ name, province, biome, settlement });
-      
+      const originsProse = s3.generateOriginsProse({
+        name,
+        province,
+        biome,
+        settlement,
+      });
+
       const character = {
         initialScores,
         ancestry,
@@ -60,19 +71,19 @@ export default {
           biome,
           settlement,
           name,
-          originsProse
-        }
-      }
+          parentage,
+          originsProse,
+        },
+      };
 
+      console.log("-------------------------------");
 
-      console.log('-------------------------------')
+      console.log("character object:", character);
 
-      console.log('character object:', character)
-
-      console.log('origins prose:', originsProse);
-    }
-  }
-}
+      console.log("origins prose:", originsProse);
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

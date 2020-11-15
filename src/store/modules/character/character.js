@@ -51,9 +51,11 @@ export const character = {
         originalSettlement: '',
         parentage: {
           type: '',
-          statuses: {
-            deceased: 2,
-            total: null
+          parentStatuses: {
+            deceased: null,
+            living: null,
+            missing: null,
+            estranged: null
           } // object with status keys and number values
         },
         otherRelations: {
