@@ -16,16 +16,6 @@ import { torlishNames } from './names-partials/torlish';
 import { uskelianNames } from './names-partials/uskelian';
 import { volaaniNames } from './names-partials/volaani';
 
-/*
-
-The 'genderFlipChance' property represents the probability in one thousand (x / 1000)
-that a person would have a gendered name that is not aligned with their sex (male with
-feminine name or female with masculine name).
-
-Only languages with masculine and feminine names have a 'genderFlipChance' property.
-
-*/
-
 export const names = {
     'Alldedan': {
         nameList: alldedanNames,
