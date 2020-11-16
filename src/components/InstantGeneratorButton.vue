@@ -84,8 +84,6 @@ export default {
         "character object:",
         JSON.stringify(character, null, 2).replace(/"/g, "")
       );
-
-      console.log("origins prose:", originsProse);
     },
   },
 };
