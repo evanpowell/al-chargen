@@ -5,8 +5,9 @@ import { biomes } from "./biomes";
 import { settlements, settlementPrepositions } from "./settlements";
 import { parentage } from "./parentage";
 import { relations, petTypes, relationStatuses } from "./relations";
-import { names } from "./names";
+import { names, communityNameInfluences } from "./names";
 import { allLanguages } from "./languages";
+import { communities } from "./communities";
 
 export class Step3 {
     constructor() {
@@ -236,48 +237,51 @@ export class Step3 {
             }, {});
     }
 
-    rollName(language, sex) {
+    rollName(language, sex, community) {
+        let namesPool = [];
+
         // Es'ahn names are shared between different dialects.
         if (language.includes(`Es'ahn`)) {
             language =  `Es'ahn`;
         }
 
-        const namesInLanguage = names[language].nameList;
-        const { genderFlipChance } = names[language];
-
-        let namesPool = [];
-
-        if (genderFlipChance !== undefined) {
-            const nameGender = this.getNameGender(genderFlipChance, sex);
-            namesPool = namesInLanguage[nameGender];
-        } else {
-            Object.entries(namesInLanguage).map(([category, names]) => {
-                if (category !== 'neutral') {
-                    namesPool = namesPool.concat(names);
-                }
-            });
+        if (isCommunityBased) {
+            namesPool = nameList[communityNameInfluences[community.id][language]];
+            return this.diceRoller.getRandomArrayValue(namesPool);
         }
 
-        if (namesInLanguage.neutral) {
-            namesPool = namesPool.concat(namesInLanguage.neutral);
-        }
-
-        return namesPool[this.diceRoller.randomizeIndex(namesPool.length)];
-    }
-
-    // rollName helper
-    getNameGender(genderFlipChance, sex) {
         let nameGender;
-
-        if (this.diceRoller.rollDie(1000) <= genderFlipChance) {
-            nameGender = (sex === 'Male') ? 'feminine' : 'masculine';
-        } else {
-            nameGender = (sex === 'Male') ? 'masculine' : 'feminine';
+        const { nameList, isGendered, isReversed, isCommunityBased, probabilities } = names[language];
+        if(isGendered && sex !== 'Intersex') {
+            if (isReversed) {
+                nameGender = sex === 'M' ? 'masculine' : 'feminine';                
+            } else {
+                nameGender = sex === 'M' ? 'feminine' : 'masculine';
+            }
         }
 
-        return nameGender;
+
+        // if (genderFlipChance !== undefined) {
+        //     const nameGender = this.getNameGender(genderFlipChance, sex);
+        //     namesPool = namesInLanguage[nameGender];
+        // } else {
+        //     Object.entries(namesInLanguage).map(([category, names]) => {
+        //         if (category !== 'neutral') {
+        //             namesPool = namesPool.concat(names);
+        //         }
+        //     });
+        // }
+
+        // if (namesInLanguage.neutral) {
+        //     namesPool = namesPool.concat(namesInLanguage.neutral);
+        // }
+
+        // return namesPool[this.diceRoller.randomizeIndex(namesPool.length)];
     }
-    
+
+    rollCommunity() {
+        return this.diceRoller.getRandomArrayValue(communities);
+    }
 
     // All methods below are for generating origins prose
 
