@@ -64,6 +64,8 @@ export const names = {
     },
     'Delonian': {
         nameList: delonianNames,
+        isGendered: true,
+        isReversed: true,
         probabilities: [
             { type: 'genderFlip', probability: 15 },
             { type: 'spiritual', probability: 10 }
@@ -108,6 +110,7 @@ export const names = {
     'Taluan': {
         nameList: taluanNames,
         isGendered: true,
+        isReversed: true,
         probabilities: [
             { type: 'genderFlip', probability: 20 },
             { type: 'neutral', probability: 10 }
@@ -135,4 +138,108 @@ export const names = {
     'Volaani': {
         nameList: volaaniNames,
     }
+}
+
+
+export const communityNameInfluences = {
+    1: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'classless'
+    },
+    2: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'lowClass'
+    },
+    3: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'lowClass'
+    },
+    4: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'lowClass'
+    },
+    5: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'lowClass'
+    },
+    6: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'lowClass'
+    },
+    7: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'lowClass'
+    },
+    8: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'highClass'
+    },
+    9: {
+        bwantaal: 'neutral',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'classless'
+    },
+    10: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'highClass'
+    },
+    11: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'ancient',
+        uskelian: 'classless'
+    },
+    12: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'mundane',
+        uskelian: 'lowClass'
+    },
+    13: {
+        bwantaal: 'neutral',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'highClass'
+    },
+    14: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'ancient',
+        uskelian: 'highClass'
+    },
+    15: {
+        bwantaal: 'elemental',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'highClass'
+    },
+    16: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'classless'
+    },
+    17: {
+        bwantaal: 'neutral',
+        [`es'ahn`]: 'ancient',
+        uskelian: 'highClass'
+    },
+    18: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'lowClass'
+    },
+    19: {
+        bwantaal: 'animal',
+        [`es'ahn`]: 'hallowed',
+        uskelian: 'highClass'
+    },
+    20: {
+        bwantaal: 'neutral',
+        [`es'ahn`]: 'ancient',
+        uskelian: 'highClass'
+    },
 }
