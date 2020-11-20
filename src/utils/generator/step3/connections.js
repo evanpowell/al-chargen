@@ -24,7 +24,7 @@ export const connections = [
     modifications: [
       {
         type: 'skill',
-        name: 'Bandage injury',
+        name: 'Bandage Injury',
         points: 1
       }
     ]

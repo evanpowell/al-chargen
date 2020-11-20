@@ -74,7 +74,7 @@ export default class Character {
     years: 0,
     outcome: {
       description: '',
-      modifications: {}
+      modifications: []
     }
   };
   palestoneEncounter = {

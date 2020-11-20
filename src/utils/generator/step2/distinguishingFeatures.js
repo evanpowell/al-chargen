@@ -151,7 +151,8 @@ const anomalies = {
         description: 'Particularly short',
         modifications: [
             {
-                appearanceDetail: 'height',
+                type: 'appearance',
+                name: 'height',
                 multiplier: .75
             }
         ]
@@ -160,11 +161,13 @@ const anomalies = {
         description: 'Dwarfism',
         modifications: [
             {
-                appearanceDetail: 'height',
+                type: 'appearance',
+                name: 'height',
                 multiplier: .6
             },
             {
-                appearanceDetail: 'weight',
+                type: 'appearance',
+                name: 'weight',
                 multiplier: .5
             }
         ]
@@ -184,7 +187,8 @@ const anomalies = {
         description: 'Particularly tall',
         modifications: [
             {
-                appearanceDetail: 'height',
+                type: 'appearance',
+                name: 'height',
                 multiplier: 1.25
             }
         ]
@@ -198,7 +202,8 @@ const anomalies = {
         description: 'Ectomorphic',
         modifications: [
             {
-                appearanceDetail: 'weight',
+                type: 'appearance',
+                name: 'weight',
                 multiplier: .75
             }
         ]

@@ -138,8 +138,8 @@ export const skills = {
     name: `Evoke`,
     baseAttribute: `wis`
   },
-  [`inscribe`]: {
-    name: `inscribe`,
+  [`Inscribe`]: {
+    name: `Inscribe`,
     baseAttribute: `wis`
   },
   [`Meditate`]: {

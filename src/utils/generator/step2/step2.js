@@ -34,7 +34,7 @@ export class Step2 extends Step1 {
             baseAge: this.rollDice(baseAge.number, baseAge.sides, baseAge.modifier)
         }
 
-        this.character.appearance.final = this.character.appearance.initial;
+        this.character.appearance.final = { ...this.character.appearance.initial };
     }
 
     rollDistinguishingFeatures = () => {
