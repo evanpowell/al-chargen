@@ -1,4 +1,3 @@
-import { skills } from "../shared/skills";
 import { Step3 } from "../step3/step3";
 import { aptitudes } from "./aptitudes";
 
@@ -25,9 +24,19 @@ export class Step4 extends Step3 {
       this.addSkillPoint(skillName);
     }
   }
+  
+  rollResistances() {
+    this.character.resistances = { ...this.aptitude.resistances };
+    let resistancePoints = this.rollDie(4);
+    for (let i = 0; i < resistancePoints; i++) {
+      const [resistance, points] = this.getRandomObjectEntry(this.character.resistances);
+      this.character.resistances[resistance] = points + 1;
+    }
+  }
 
   rollStep4 = () => {
     this.rollAptitude();
     this.rollSkills();
+    this.rollResistances();
   }
 }
