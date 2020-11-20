@@ -1,7 +1,5 @@
-import { ancestryConstants } from '../../../constants/rulebookConstants';
-
 export const appearance = {
-    [ancestryConstants.H]: {
+    [`Human`]: {
         height: {
             number: 3,
             sides: 6,
@@ -18,7 +16,7 @@ export const appearance = {
             modifier: 15
         }
     },
-    [ancestryConstants.A]: {
+    [`Ais'lun`]: {
         height: {
             number: 3,
             sides: 6,
@@ -35,7 +33,7 @@ export const appearance = {
             modifier: 30
         }
     },
-    [ancestryConstants.V]: {
+    [`Viantu`]: {
         height: {
             number: 4,
             sides: 6,
@@ -52,7 +50,7 @@ export const appearance = {
             modifier: 5
         }
     },
-    [ancestryConstants.D]: {
+    [`Djenndan`]: {
         height: {
             number: 3,
             sides: 6,
@@ -69,7 +67,7 @@ export const appearance = {
             modifier: 12
         }
     },
-    [ancestryConstants.K]: {
+    [`Kahlnissá`]: {
         height: {
             number: 4,
             sides: 6,
@@ -86,7 +84,7 @@ export const appearance = {
             modifier: 15
         }
     },
-    [ancestryConstants.P]: {
+    [`Pulnagá`]: {
         height: {
             number: 3,
             sides: 6,

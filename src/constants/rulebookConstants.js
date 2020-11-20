@@ -67,21 +67,21 @@ export const skillConstants = {
 }
 
 export const resistanceConstants = {
-    addiction: 'Addiction (END)',
-    aversion: 'Aversion (END)',
-    debility: 'Debility (END)',
-    explosion: 'Explosion (END)',
-    infection: 'Infection (END)',
-    toxin: 'Toxin (END)'
+    addiction: 'Addiction',
+    aversion: 'Aversion',
+    debility: 'Debility',
+    explosion: 'Explosion',
+    infection: 'Infection',
+    toxin: 'Toxin'
 }
 
 export const abilityConstants = {
-    assessThreat: 'Assess Threat (PER)',
-    collectInformation: 'Collect Information (PER)',
-    find: 'Find (PER)',
-    haggle: 'Haggle (PER)',
-    navigate: 'Navigate (PER)',
-    takeNotice: 'Take Notice (PER)'
+    assessThreat: 'Assess Threat',
+    collectInformation: 'Collect Information',
+    find: 'Find',
+    haggle: 'Haggle',
+    navigate: 'Navigate',
+    takeNotice: 'Take Notice'
 }
 
 export const proficiencyConstants = {

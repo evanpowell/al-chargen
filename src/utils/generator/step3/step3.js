@@ -1,210 +1,140 @@
-import { DiceRoller } from "../../diceRoller";
 import { Birthdate } from "./birthdate";
 import { provincialOrigins } from "./provincialOrigins";
-import { biomes } from "./biomes";
-import { settlements, settlementPrepositions } from "./settlements";
+import { settlements } from "./settlements";
 import { parentage } from "./parentage";
 import { relations, petTypes, relationStatuses } from "./relations";
 import { names, communityNameInfluences } from "./names";
 import { allLanguages } from "./languages";
 import { communities } from "./communities";
+import { culturalValues } from "./culturalValues";
+import { reputation } from "./reputation";
+import { connections } from "./connections";
+import { Step2 } from "../step2/step2";
 
-export class Step3 {
-    constructor() {
-        this.diceRoller = new DiceRoller();
-    }
+export class Step3 extends Step2 {
+
 
     rollBirthDate = () => {
-        return new Birthdate().rollBirthDate();
+        this.character.origins.birthdate = new Birthdate().rollBirthDate();
     }
 
     rollProvince = () => {
-        const provinceKeys = Object.keys(provincialOrigins);
-        return this.diceRoller.randomizeObjectKey(provinceKeys);
+        this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
     }
 
-    // TODO: break out repetitive code into helper functions
-    rollLanguages = (provinceKey, intelligence) => {
-        const province = provincialOrigins[provinceKey];
-        const languages = province.languages.map((languageObj) => {
+    rollLanguages = () => {
+        const { regionalLanguages } = this.character.origins.provincialOrigins;
+        const { int: intelligence } = this.character.attributes.final;
+        let languages = regionalLanguages.map((languageObj) => {
             return {... languageObj};
-        })
-        let maxRoll = 100;
+        });
+
         const characterLanguages = [];
 
         // 95% chance character knows Thelean plus another language
-        const isSpeaksTwoLanguages = this.diceRoller.rollDie(100) > 5;
+        const isSpeaksTwoLanguages = this.rollDie(100) <= 95;
+
+        let isTheleanPrimary = false;
 
         if (isSpeaksTwoLanguages) {
             characterLanguages.push('Thelean');
-
-            const theleanLanguageObject = languages.find((languageObj) => languageObj.language === 'Thelean');
-            maxRoll -= theleanLanguageObject.probability;
-            theleanLanguageObject.probability = 0;
+            languages = languages.filter(({ language }, i) => {
+                if (language === 'Thelean') {
+                    if (i === 0) {
+                        isTheleanPrimary = true;
+                    }
+                    return false;
+                }
+                return true;
+            });
         }
 
-        const roll = this.diceRoller.rollDie(maxRoll);
-
-
-        // min is exclusive, max is inclusive
-        let min = 0;
-        let max = languages[0].probability;
-
-        languages.forEach((languageObj, i) => {
-
-            if (roll > min && roll <= max) {
-                if (languages[0].language === 'Thelean' && characterLanguages.length) {
-                    // if character already knows thelean and thelean is predominant language of region,
-                    // character's name will be thelean (first language in character language list)
-                    characterLanguages.push(languageObj.language);
-                } else {
-                    // otherwise, character's name will be from this language (added to front of language list)
-                    characterLanguages.unshift(languageObj.language);
-
-                }
-
-                languageObj.probability = 0;
-            }
-            
-            if (i < languages.length - 1) {
-                min = max;
-                max += languages[i+1].probability;
-            }
+        let firstRolledLanguage = this.rollLanguage(languages);
+        if (isTheleanPrimary) {
+            characterLanguages.push(firstRolledLanguage);
+        } else {
+            characterLanguages.unshift(firstRolledLanguage);
+        }
+        languages = languages.filter(({ language }) =>  {
+            return (!characterLanguages.includes(language)) && language !== 'Thelean';
         });
 
         // if INT is 16 or higher & 50% chance
-        if (intelligence >= 16 && this.diceRoller.rollDie(100) > 50) {
-            const remainingLanguages = languages.filter((languageObj) => {
-                if (languageObj.language === 'Thelean') {
-                    return false;
-                }
-
-                if (characterLanguages.includes(languageObj.language)) {
-                    return false;
-                }
-                
-                return true;
-            });
+        if (intelligence >= 16 && this.rollDie(100) <= 50) {
             // add another language (from regional non-thelean languages)
-            let remainingProbabilityMax = languages.reduce((a, b) => {
-                return a + b.probability;
-            }, 0);
-            
-            min = 0;
-            max = remainingLanguages[0].probability;
-            
-            const remainingRegionalLanguagesRoll = this.diceRoller.rollDie(remainingProbabilityMax);
-
-            remainingLanguages.forEach((languageObj, i) => {
-
-                if (remainingRegionalLanguagesRoll > min && remainingRegionalLanguagesRoll <= max) {
-                    characterLanguages.push(languageObj.language);
-                    languageObj.probability = 0;
-                }
-                
-                if (i < remainingLanguages.length - 1) {
-                    min = max;
-                    max += remainingLanguages[i+1].probability;
-                }
-            });
+            characterLanguages.push(this.rollLanguage(languages));
+            languages = languages.filter(({ language }) => !characterLanguages.includes(language));
         }
 
         // if INT is 18 or higher & 50% chance
-        if (intelligence >= 18 && this.diceRoller.rollDie(100) > 50) {
+        if (intelligence >= 18 && this.rollDie(100) <= 50) {
             // add another language
 
-            if (this.diceRoller.rollDie(100) <= 70) {
+            if (this.rollDie(100) <= 70) {
                 // 70% chance regional non-thelean
-                const remainingLanguages = languages.filter((languageObj) => {
-                    if (languageObj.language === 'Thelean') {
-                        return false;
-                    }
-    
-                    if (characterLanguages.includes(languageObj.language)) {
-                        return false;
-                    }
-                    
-                    return true;
-                });
-                let remainingProbabilityMax = languages.reduce((a, b) => {
-                    return a + b.probability;
-                }, 0);
-                
-                min = 0;
-                max = remainingLanguages[0].probability;
-                
-                const remainingRegionalLanguagesRoll = this.diceRoller.rollDie(remainingProbabilityMax);
-    
-                remainingLanguages.forEach((languageObj, i) => {
-    
-                    if (remainingRegionalLanguagesRoll > min && remainingRegionalLanguagesRoll <= max) {
-                        characterLanguages.push(languageObj.language);
-                        languageObj.probability = 0;
-                    }
-                    
-                    if (i < remainingLanguages.length - 1) {
-                        min = max;
-                        max += remainingLanguages[i+1].probability;
-                    }
-                });
+                characterLanguages.push(this.rollLanguage(languages));
 
             } else {
                 // 30% chance empire-wide non-thelean languages
-                const remainingLanguages = allLanguages.filter((language) => {
-                    if (language === 'Thelean') {
-                        return false;
-                    }
-    
-                    if (characterLanguages.includes(language)) {
-                        return false;
-                    }
-                    
-                    return true;
+                const empireWideLanguages = allLanguages.filter((language) => {
+                    return language !== 'Thelean' && !characterLanguages.includes(language);
                 });
 
-                const language = remainingLanguages[this.diceRoller.randomizeIndex(remainingLanguages.length)];
-
+                const language = this.getRandomArrayValue(empireWideLanguages);
                 characterLanguages.push(language);
             }
         }
 
 
-        return characterLanguages;
+        this.character.languages = characterLanguages;
     }
 
-    rollBiome = (provinceKey) => {
-        const province = provincialOrigins[provinceKey];
-        return province.biomes[this.diceRoller.randomizeIndex(province.biomes.length)];
+    rollLanguage = (languages) => {
+        const sides = languages.reduce((sides, languageObj) => {
+            return sides + languageObj.probability;
+        }, 0);
+
+        const roll = this.rollDie(sides);
+
+        let min = 0;
+        let max = 0;
+
+        for (const langObj of languages) {
+            min = max;
+            max += langObj.probability;
+            if (roll > min && roll <= max) {
+                return langObj.language;
+            }
+        }
     }
 
     rollSettlement = () => {
-        const settlementKeys = Object.keys(settlements);
-        return this.diceRoller.randomizeObjectKey(settlementKeys);
+        this.character.origins.settlement = this.getRandomArrayValue(settlements);
     }
 
     rollParentage = () => {
-        const parentObj = this.diceRoller.getRandomArrayValue(parentage);
+        const parentObj = this.getRandomArrayValue(parentage);
         const { type } = parentObj;
         let numberOfParents = 0;
         if (parentObj.max) {
-            numberOfParents = this.diceRoller.rollDie(parentObj.max);
+            numberOfParents = this.rollDie(parentObj.max);
         } else if (parentObj.fixed) {
             numberOfParents = parentObj.fixed;
         }
 
         const statuses = this.rollStatuses(numberOfParents, relationStatuses);
         
-        return {
+        this.character.origins.parentage = {
             type,
             statuses
         };
     }
 
     rollRelations = () => {
-        return relations
-            .filter(() => this.diceRoller.rollDie(4) > 1)
+        this.character.origins.relations = relations
+            .filter(() => this.rollDie(100) <= 75) // 75% chance of rolling any particular relation type
             .reduce((relationsObj,rel) => {
-                const numOfRelations = this.diceRoller.rollDie(rel.max) - 1;
+                const numOfRelations = this.rollDie(rel.max) - 1;
                 let statuses;
                 if (rel.type === 'pets') {
                     statuses = this.rollStatuses(numOfRelations, petTypes);
@@ -224,7 +154,7 @@ export class Step3 {
     rollStatuses(quantity, statuses) {
         return [...Array(quantity)]
             .map(() => {
-                return this.diceRoller.getRandomArrayValue(statuses);
+                return this.getRandomArrayValue(statuses);
             })
             .reduce((statusObj, status) => {
                 if (statusObj[status]) {
@@ -247,7 +177,7 @@ export class Step3 {
 
         if (isCommunityBased) {
             namesPool = nameList[communityNameInfluences[community.id][language]];
-            return this.diceRoller.getRandomArrayValue(namesPool);
+            return this.getRandomArrayValue(namesPool);
         }
 
         let nameGender;
@@ -276,40 +206,38 @@ export class Step3 {
         //     namesPool = namesPool.concat(namesInLanguage.neutral);
         // }
 
-        // return namesPool[this.diceRoller.randomizeIndex(namesPool.length)];
+        // return namesPool[this.randomizeIndex(namesPool.length)];
     }
 
     rollCommunity() {
-        return this.diceRoller.getRandomArrayValue(communities);
+        this.character.origins.community = this.getRandomArrayValue(communities);
     }
 
-    // All methods below are for generating origins prose
-
-    generateOriginsProse = ({ name, province, biome, settlement }) => {
-        const settlementPrep = this.rollSettlementPreposition(settlement);
-        const biomePrep = this.rollBiomePreposition(biome, settlement);
-        const provincePrep = this.rollProvincePreposition(biome);
-
-        return `${name} ${settlementPrep} ${settlement} ${biomePrep} ${biome} ${provincePrep} ${province}`;
+    rollCulturalValues() {
+        this.character.origins.culturalValues = this.getRandomArrayValue(culturalValues);
     }
 
-    rollSettlementPreposition = (settlement) => {
-        const settlementType = settlements[settlement].type;
-        const prepositions = settlementPrepositions[settlementType].concat(settlementPrepositions.neutral);
-
-        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
+    rollReputation() {
+        this.character.origins.reputation = this.getRandomArrayValue(reputation);
     }
 
-    rollBiomePreposition = (biome, settlement) => {
-        const { biomePrepositions } = biomes[biome];
-        const settlementType = settlements[settlement].type;
-        const prepositions = biomePrepositions[settlementType].concat(biomePrepositions.neutral);
-
-        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
+    rollConnection() {
+        // 40% chance of optional connection
+        if (this.rollDie(100) <= 40) {
+            this.character.origins.connection = this.getRandomArrayValue(connections);
+        }
     }
 
-    rollProvincePreposition = (biome) => {
-        const prepositions = biomes[biome].provincePrepositions;
-        return prepositions[this.diceRoller.randomizeIndex(prepositions.length)];
+    rollStep3 = () => {
+        this.rollBirthDate();
+        this.rollProvince();
+        this.rollLanguages();
+        this.rollSettlement();
+        this.rollParentage();
+        this.rollRelations();
+        this.rollCommunity();
+        this.rollCulturalValues();
+        this.rollReputation();
+        this.rollConnection();
     }
 }

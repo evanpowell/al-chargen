@@ -1,15 +1,15 @@
 export const connections = [
   {
     description: 'local merchant',
-    notes: '15% discount on trades'
+    notes: '15% discount on trades (local merchant connection)'
   },
   {
     description: 'local mount trainer',
-    notes: '15% discount on mounts'
+    notes: '15% discount on mounts (local mount trainer connection)'
   },
   {
     description: `ship captain's cousin`,
-    notes: 'free ship passage'
+    notes: `free ship passage (ship captain's cousin connection)`
   },
   {
     description: 'trusted friend',
@@ -17,7 +17,7 @@ export const connections = [
   },
   {
     description: 'thoughtful guide',
-    notes: 'two additional rolls on Navigation'
+    notes: 'two additional rolls on Navigation (thoughtful guide connection)'
   },
   {
     description: 'medical instructor',
@@ -53,6 +53,6 @@ export const connections = [
   },
   {
     description: 'guild member',
-    notes: 'free board in any city'
+    notes: 'free board in any city (guild member connection)'
   }
 ];

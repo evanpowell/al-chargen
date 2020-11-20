@@ -1,14 +1,11 @@
-import { DiceRoller } from "../../diceRoller"
+import CharacterGeneratorAbstract from "../characterGeneratorAbstract";
 
-export class Step1 {
-    constructor() {
-        this.diceRoller = new DiceRoller();
-    }
+export default class Step1 extends CharacterGeneratorAbstract {
     rollAttribute = () => {
-        return this.diceRoller.rollDice(3, 6);
+        return this.rollDice(3, 6);
     }
-    generateAttributes = () => {
-        return {
+    rollInitialAttributes = () => {
+        this.character.attributes.initial = {
             str: this.rollAttribute(),
             end: this.rollAttribute(),
             agi: this.rollAttribute(),
@@ -18,5 +15,9 @@ export class Step1 {
             per: this.rollAttribute(),
             cha: this.rollAttribute(),
         }
+    }
+
+    rollStep1 = () => {
+        this.rollInitialAttributes();
     }
 }
