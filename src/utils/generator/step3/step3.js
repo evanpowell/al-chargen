@@ -228,6 +228,11 @@ export class Step3 extends Step2 {
         }
     }
 
+    rollLiteracy() {
+        this.character.isLiterate = this.character.origins.community.id >= 13
+            || (this.character.attributes.final.int >= 13 && this.rollDie(100) <= 40);
+    }
+
     rollStep3 = () => {
         this.rollBirthDate();
         this.rollProvince();
@@ -239,5 +244,6 @@ export class Step3 extends Step2 {
         this.rollCulturalValues();
         this.rollReputation();
         this.rollConnection();
+        this.rollLiteracy();
     }
 }

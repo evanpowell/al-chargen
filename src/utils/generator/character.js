@@ -32,6 +32,7 @@ export default class Character {
     relations: {},
     reputation: '',
     community: {
+      id: null,
       description: '',
       areasofExpertise: []
     },
