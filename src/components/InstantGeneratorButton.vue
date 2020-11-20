@@ -16,10 +16,8 @@ export default {
   methods: {
     calculate: function () {
       const charGen = new CharacterGenerator();
-      charGen.rollStep1();
-      charGen.rollStep2();
-      charGen.rollStep3();
-      console.log(JSON.stringify(charGen, null, 2).replace(/["]/g, ""));
+      charGen.rollAll();
+      charGen.printCharacter();
     },
   },
 };
