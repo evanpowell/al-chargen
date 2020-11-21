@@ -1,5 +1,5 @@
 export const chenachuaNames = {
-    neutral: [
+    traditional: [
         `Dju'Rik`,
         `Dju'Rik-lek`,
         `Dju'uvi`,
