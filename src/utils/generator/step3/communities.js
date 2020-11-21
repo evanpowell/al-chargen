@@ -2,101 +2,101 @@ export const communities = [
   {
     id: 1,
     description: 'caretakers and healers',
-    areasOfExpertise: ['stewardship', 'alchemy'],
+    areasOfExpertise: ['Stewardship', 'Alchemy'],
   },
   {
     id: 2,
     description: 'cultists and mystics',
-    areasOfExpertise: ['spellwork', 'lore']
+    areasOfExpertise: ['Spellwork', 'Lore']
   },
   {
     id: 3,
     description: 'entertainers and artists',
-    areasOfExpertise: ['lore', 'influence']
+    areasOfExpertise: ['Lore', 'Influence']
   },
   {
     id: 4,
     description: 'farmers and fishers',
-    areasOfExpertise: ['stewardship', 'lore']
+    areasOfExpertise: ['Stewardship', 'Lore']
   },
   {
     id: 5,
     description: 'gardeners and shepherds',
-    areasOfExpertise: ['alchemy', 'crafts']
+    areasOfExpertise: ['Alchemy', 'Crafts']
   },
   {
     id: 6,
     description: 'guardians and sellswords',
-    areasOfExpertise: ['combat', 'manipulation']
+    areasOfExpertise: ['Combat', 'Manipulation']
   },
   {
     id: 7,
     description: 'laborers and servants',
-    areasOfExpertise: ['stewardship', 'influence']
+    areasOfExpertise: ['Stewardship', 'Influence']
   },
   {
     id: 8,
     description: 'dyers and weavers',
-    areasOfExpertise: ['manipulation', 'alchemy']
+    areasOfExpertise: ['Manipulation', 'Alchemy']
   },
   {
     id: 9,
     description: 'paupers and beggars',
-    areasOfExpertise: ['combat', 'manipulation']
+    areasOfExpertise: ['Combat', 'Manipulation']
   },
   {
     id: 10,
     description: 'veterans and enforcers',
-    areasOfExpertise: ['combat', 'influence']
+    areasOfExpertise: ['Combat', 'Influence']
   },
   {
     id: 11,
     description: 'fortune tellers and diviners',
-    areasOfExpertise: ['spellwork', 'alchemy']
+    areasOfExpertise: ['Spellwork', 'Alchemy']
   },
   {
     id: 12,
     description: 'dock workers and cargo haulers',
-    areasOfExpertise: ['manipulation', 'crafts']
+    areasOfExpertise: ['Manipulation', 'Crafts']
   },
   {
     id: 13,
     description: 'artisans and makers',
-    areasOfExpertise: ['crafts', 'stewardship']
+    areasOfExpertise: ['Crafts', 'Stewardship']
   },
   {
     id: 14,
     description: 'intellectuals and architects',
-    areasOfExpertise: ['spellwork', 'crafts']
+    areasOfExpertise: ['Spellwork', 'Crafts']
   },
   {
     id: 15,
     description: 'luminaries and nobles',
-    areasOfExpertise: ['lore', 'influence']
+    areasOfExpertise: ['Lore', 'Influence']
   },
   {
     id: 16,
     description: 'merchants and curio peddlers',
-    areasOfExpertise: ['spellwork', 'manipulation']
+    areasOfExpertise: ['Spellwork', 'Manipulation']
   },
   {
     id: 17,
     description: 'philosophers and scholars',
-    areasOfExpertise: ['lore', 'alchemy']
+    areasOfExpertise: ['Lore', 'Alchemy']
   },
   {
     id: 18,
     description: 'curio traders and smugglers',
-    areasOfExpertise: ['spellwork', 'combat']
+    areasOfExpertise: ['Spellwork', 'Combat']
   },
   {
     id: 19,
     description: 'traders and innkeepers',
-    areasOfExpertise: ['stewardship', 'influence']
+    areasOfExpertise: ['Stewardship', 'Influence']
   },
   {
     id: 20,
     description: 'travelers and adventurers',
-    areasOfExpertise: ['combat', 'crafts']
+    areasOfExpertise: ['Combat', 'Crafts']
   },
 ]
