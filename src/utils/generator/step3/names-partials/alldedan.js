@@ -1,5 +1,5 @@
 export const alldedanNames = {
-    masculine: [
+    feminine: [
         `Aksuldji`, 
         `An-nokahashe`, 
         `Aseke-nokidi`, 
@@ -61,7 +61,7 @@ export const alldedanNames = {
         `Urg'uon`, 
         `Urg'ushadi`
     ],
-    feminine: [
+    masculine: [
         `Ash-gurchadok`, 
         `Asha`, 
         `Asha-kal`, 
