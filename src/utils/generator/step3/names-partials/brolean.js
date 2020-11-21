@@ -1,5 +1,5 @@
 export const broleanNames = {
-    arboreal: [
+    traditional: [
         `Aeifean`,
         `Aellean`,
         `Bel'thissen`,
