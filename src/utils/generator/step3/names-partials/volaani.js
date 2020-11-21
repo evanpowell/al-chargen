@@ -1,5 +1,5 @@
 export const volaaniNames = {
-    neutral: [
+    traditional: [
         `Ak'keprevix`,
         `Ak'kixivari`,
         `Ak'ravi`,
