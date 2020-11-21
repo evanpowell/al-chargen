@@ -1,6 +1,6 @@
 export const alchemy = {
   name: `Alchemy`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Bribe',
     'Bandage Injury',
     'Fish',
@@ -30,7 +30,7 @@ export const alchemy = {
   proficiencies: {
     'Compounds': 0,
     'Elixirs': 0,
-    'Herbalisam': 1,
+    'Herbalism': 1,
     'Salves': 0,
     'Tonics': 0
   },

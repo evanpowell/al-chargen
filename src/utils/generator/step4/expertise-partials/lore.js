@@ -1,6 +1,6 @@
 export const lore = {
   name: `Lore`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Bandage Injury',
     'Climb',
     'Comfort',

@@ -1,6 +1,6 @@
 export const influence = {
   name: `Influence`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Aim',
     'Attune',
     'Catch/Throw',

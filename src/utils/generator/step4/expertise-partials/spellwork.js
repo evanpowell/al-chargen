@@ -1,6 +1,6 @@
 export const spellwork = {
   name: `Spellwork`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Aim',
     'Attune',
     'Bandage Injury',
@@ -30,7 +30,7 @@ export const spellwork = {
   proficiencies: {
     'Artifice': 1,
     'Charms': 0,
-    'Emerence': 0,
+    'Emergence': 0,
     'Spellcasting': 0,
     'Transference': 0
   },

@@ -1,6 +1,6 @@
 export const manipulation = {
   name: `Manipulation`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Acrobatic Feat',
     'Appraise',
     'Bandage Injury',

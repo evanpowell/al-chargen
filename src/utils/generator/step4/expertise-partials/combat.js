@@ -1,6 +1,6 @@
 export const combat = {
   name: `Combat`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Acrobatic Feat',
     'Aim',
     'Bandage Injury',

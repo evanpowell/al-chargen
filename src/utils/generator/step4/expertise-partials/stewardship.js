@@ -1,6 +1,6 @@
 export const stewardship = {
   name: `Stewardship`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Bandage Injury',
     'Comfort',
     'Fish',

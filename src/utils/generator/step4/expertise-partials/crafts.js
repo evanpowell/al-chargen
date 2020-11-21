@@ -1,6 +1,6 @@
 export const crafts = {
   name: `Crafts`,
-  auxillarySkillsPool: [
+  auxiliarySkillsPool: [
     'Acrobatic Feat',
     'Aim',
     'Alter Mechanism',
