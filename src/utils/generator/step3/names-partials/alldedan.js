@@ -121,6 +121,6 @@ export const alldedanNames = {
         `Urdonak`, 
         `Zodj-ik`, 
         `Zor-chadjen`, 
-        `Zug'dan
+        `Zug'dan`
     ]
 }
