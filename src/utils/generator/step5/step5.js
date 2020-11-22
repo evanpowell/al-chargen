@@ -22,11 +22,13 @@ export default class Step5 extends Step4 {
     const discoveryVerb = this.getRandomArrayValue(palestoneEncounter.discoveryVerbs);
 
     const prose = `${sharedExposure} ${discoveryVerb} ${description} ${locale} ${impact}`;
+    const filledProse = this.fillProse(prose);
     
     const encounterResult = this.getOutcomeDiceResults(Object.values(rollResults));
     const outcome = palestoneEncounter.outcomes[encounterResult];
+    outcome.description = this.fillProse(outcome.description);
     this.character.palestoneEncounter = {
-      prose,
+      prose: filledProse,
       outcome: {
         ...this.character.palestoneEncounter.outcome,
         ...outcome

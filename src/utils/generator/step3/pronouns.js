@@ -2,8 +2,8 @@ export const pronouns = {
   'masculine': {
     subject: 'he',
     object: 'him',
-    possesive: 'his',
-    possesiveObject: 'his',
+    possessive: 'his',
+    possessiveObject: 'his',
     self: 'himself',
     verbs: {
       present: 'is',
@@ -14,8 +14,8 @@ export const pronouns = {
   'feminine': {
     subject: 'she',
     object: 'her',
-    possesive: 'her',
-    possesiveObject: 'hers',
+    possessive: 'her',
+    possessiveObject: 'hers',
     self: 'herself',
     verbs: {
       present: 'is',
@@ -26,8 +26,8 @@ export const pronouns = {
   'neutral': {
     subject: 'they',
     object: 'them',
-    possesive: 'their',
-    possesiveObject: 'theirs',
+    possessive: 'their',
+    possessiveObject: 'theirs',
     self: 'themselves',
     verbs: {
       present: 'are',

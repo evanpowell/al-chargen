@@ -1,6 +1,6 @@
 export const palestoneEncounter = {
   description: {
-    1: `a fist-sized shard, translucent and radiant`,
+    1: `a fist-sized shard, translucent and radiant,`,
     2: `several small, pebble-sized, mysterious stones`,
     3: `a cluster of glowing, radiant crystals thin as twigs`,
     4: `a carved, radiant trinket joined to metal or bone`,
@@ -8,7 +8,7 @@ export const palestoneEncounter = {
     6: `an eight-pointed 'singing stone' with a strange audible glow`
   },
   locale: {
-    1: `$['near', 'within'] $PRONOUN_POSSESIVE hometown.`,
+    1: `$['near', 'within'] $PRONOUN_POSSESSIVE hometown.`,
     2: `along the road far outside a settlement.`,
     3: `$['near', 'within'] a nearby settlement.`,
     4: `$['near', 'at'] the outskirts of a strange ruin.`,
@@ -21,7 +21,7 @@ export const palestoneEncounter = {
     3: `Fear spread among the locals as $NAME`,
     4: `Attention was brought to the authorities when $NAME`,
     5: `$NAME became $['famous', 'infamous'] throughout the region when $PRONOUN_SUBJECT`,
-    6: `$NAME was utterly alone when $PRONOUN SUBJECT`
+    6: `$NAME was utterly alone when $PRONOUN_SUBJECT`
   },
   impact: {
     1: (sharedExposureRoll) => {

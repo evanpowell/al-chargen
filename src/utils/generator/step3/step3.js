@@ -169,7 +169,6 @@ export class Step3 extends Step2 {
   rollName = () => {
     let namesPool = [];
     let language = this.character.languages[0];
-    console.log('language', language);
     if (language.includes(`Es'ahn`)) {
       language =  `Es'ahn`;
     }
@@ -204,9 +203,6 @@ export class Step3 extends Step2 {
     }
     
     this.character.name = this.getRandomArrayValue(namesPool);
-    if (this.character.name) {
-      console.log(this.character.name);
-    }
   };
 
   rollNameType = (probabilities) => {
@@ -245,8 +241,6 @@ export class Step3 extends Step2 {
       }
     }
     this.pronouns = pronouns[pronounType];
-
-    console.log('pronounType', pronounType);
   };
 
   rollCommunity = () => {

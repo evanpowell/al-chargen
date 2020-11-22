@@ -16,7 +16,7 @@ export default {
       // for (let i = 0; i < 1000; i++) {
       charGen.rollAll();
       // }
-      // charGen.printCharacter();
+      charGen.printCharacter();
     },
   },
 };

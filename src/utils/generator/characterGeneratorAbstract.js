@@ -5,6 +5,7 @@ import { proficiencies } from "./step4/proficiencies";
 
 export default class CharacterGeneratorAbstract extends DiceRoller {
   character = new Character();
+  pronouns = {};
 
   addSkillPoint(skillName) {
     let hasSkill = false;
@@ -83,4 +84,19 @@ export default class CharacterGeneratorAbstract extends DiceRoller {
       return 'All Numbers Distinct'
     }
   }
+
+  fillProse = (prose) => {
+    prose = prose.replaceAll('$PRONOUN_SUBJECT', this.pronouns.subject);
+    prose = prose.replaceAll('$PRONOUN_OBJECT', this.pronouns.object);
+    prose = prose.replaceAll('$PRONOUN_POSSESSIVE', this.pronouns.possessive);
+    prose = prose.replaceAll('$PRONOUN_SELF', this.pronouns.self);
+    prose = prose.replaceAll('$NAME', this.character.name);
+    prose = prose.replaceAll(/\$\[.*?\]/g, (arrayAsString) => {
+      arrayAsString = arrayAsString.replace('$', '');
+      arrayAsString = arrayAsString.replaceAll(`'`, `"`);
+      const parsedArray = JSON.parse(arrayAsString);
+      return this.getRandomArrayValue(parsedArray);
+    });
+    return prose;
+  };
 }
