@@ -222,6 +222,30 @@ export class Step4 extends Step3 {
     this.character.vocation = this.getRandomArrayValue(vocations);
   }
 
+  addEquipment = () => {
+    this.character.inventory = [
+      ...this.character.inventory,
+      ...this.expertise.equipment
+    ]
+  }
+
+  rollSupplies = () => {
+    const suppliesPoints = this.rollDie(6);
+    let remainingSupplies = this.expertise.supplies;
+    const characterSupplies = [];
+    
+    for (let i = 0; i < suppliesPoints; i++) {
+      const chosenSupply = this.getRandomArrayValue(remainingSupplies);
+      characterSupplies.push(chosenSupply);
+      remainingSupplies = remainingSupplies.filter((supply) => supply !== chosenSupply);
+    }
+
+    this.character.inventory = [
+      ...this.character.inventory,
+      ...characterSupplies
+    ];
+  }
+
   rollStep4 = () => {
     this.rollAptitude();
     this.rollAptitudeSkills();
@@ -233,5 +257,7 @@ export class Step4 extends Step3 {
     this.rollProficiencies();
     this.rollTitle();
     this.rollVocation();
+    this.addEquipment();
+    this.rollSupplies();
   };
 }
