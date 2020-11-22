@@ -28,16 +28,18 @@ export const names = {
     'Ardonic': {
         nameList: ardonicNames,
         isGendered: true,
+        genderedProbability: 90,
+        nonGenderedType: 'neutral',
         probabilities: [
             { type: 'standard', probability: 75 },
             { type: 'genderFlip', probability: 15 },
-            { type: 'neutral', probability: 10 }
         ]
     },
     'Brolean': {
         nameList: broleanNames,
         probabilities: [
-            { type: 'shamanic', probability: 15 }
+            { type: 'traditional', probability: 85 },
+            { type: 'neutral', probability: 15 }
         ]
     },
     'Bwantaal': {
@@ -46,11 +48,15 @@ export const names = {
     },
     'Chenachua': {
         nameList: chenachuaNames,
+        probabilities: [
+            { type: 'traditional', probability: 100 }
+        ]
     },
     'Creonic': {
         nameList: creonicNames,
         isGendered: true,
         probabilities: [
+            { type: 'standard', probability: 80 },
             { type: 'genderFlip', probability: 20 }
         ]
     },
@@ -58,17 +64,21 @@ export const names = {
         nameList: delonianNames,
         isGendered: true,
         isReversed: true,
+        genderedProbability: 90,
+        nonGenderedType: 'spiritual',
         probabilities: [
-            { type: 'genderFlip', probability: 15 },
-            { type: 'spiritual', probability: 10 }
+            { type: 'standard', probability: 85 },
+            { type: 'genderFlip', probability: 15 }
         ]
     },
     'Elmecian': {
         nameList: elmecianNames,
         isGendered: true,
+        genderedProbability: 90,
+        nonGenderedType: 'neutral',
         probabilities: [
+            { type: 'standard', probability: 85 },
             { type: 'genderFlip', probability: 15 },
-            { type: 'neutral', probability: 10 },
         ]
     },
     [`Es'ahn`]: {
@@ -78,42 +88,52 @@ export const names = {
     'Kimenian': {
         nameList: kimenianNames,
         isGendered: true,
+        genderedProbability: 80,
+        nonGenderedType: 'neutral',
         probabilities: [
-            { type: 'genderFlip', probability: 20 },
-            { type: 'neutral', probability: 20 }
+            { type: 'standard', probability: 80 },
+            { type: 'genderFlip', probability: 20 }
         ]
     },
     'Lorosian': {
         nameList: lorosianNames,
         isGendered: true,
+        genderedProbability: 90,
+        nonGenderedType: 'neutral',
         probabilities: [
-            { type: 'genderFlip', probability: 15 },
-            { type: 'neutral', probability: 10 }
+            { type: 'standard', probability: 85 },
+            { type: 'genderFlip', probability: 15 }
         ]
     },
     'Ommultic': {
         nameList: ommulticNames,
         isGendered: true,
+        genderedProbability: 85,
+        nonGenderedType: 'neutral',
         probabilities: [
+            { type: 'standard', probability: 90 },
             { type: 'genderFlip', probability: 10 },
-            { type: 'neutral', probability: 15 }
         ]
     },
     'Taluan': {
         nameList: taluanNames,
         isGendered: true,
         isReversed: true,
+        genderedProbability: 90,
+        nonGenderedType: 'neutral',
         probabilities: [
+            { type: 'standard', probability: 80 },
             { type: 'genderFlip', probability: 20 },
-            { type: 'neutral', probability: 10 }
         ]
     },
     'Thelean': {
         nameList: theleanNames,
         isGendered: true,
+        genderedProbability: 85,
+        nonGenderedType: 'neutral',
         probabilities: [
-            { type: 'genderFlip', probability: 5 },
-            { type: 'neutral', probability: 15 }
+            { type: 'standard', probability: 95 },
+            { type: 'genderFlip', probability: 15 },
         ]
     },
     'Torlish': {
@@ -129,6 +149,9 @@ export const names = {
     },
     'Volaani': {
         nameList: volaaniNames,
+        probabilities: [
+            { type: 'traditional', probability: 100 }
+        ]
     }
 }
 

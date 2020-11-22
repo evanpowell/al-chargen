@@ -1,5 +1,5 @@
 export const uskelianNames = {
-    highclass: [
+    highClass: [
         `Beskiviska`,
         `Beviry`,
         `Beviskelka`,
@@ -51,7 +51,7 @@ export const uskelianNames = {
         `Zlatkha`,
         `Zleska`
     ],
-    lowclass: [
+    lowClass: [
         `Ankhmar`,
         `Banslan`,
         `Banthas`,

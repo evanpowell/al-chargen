@@ -5,9 +5,6 @@
 </template>
 
 <script>
-import { Step1 } from "@/utils/generator/step1/step1";
-import { Step2 } from "@/utils/generator/step2/step2";
-import { Step3 } from "@/utils/generator/step3/step3";
 import CharacterGenerator from "@/utils/generator/characterGenerator";
 
 export default {
@@ -19,7 +16,7 @@ export default {
       // for (let i = 0; i < 1000; i++) {
       charGen.rollAll();
       // }
-      charGen.printCharacter();
+      // charGen.printCharacter();
     },
   },
 };

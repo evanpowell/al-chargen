@@ -1,8 +1,8 @@
-import { DiceRoller } from '../diceRoller';
 import Attributes from './attributes';
 
 export default class Character {
   attributes = new Attributes();
+  name = '';
   ancestry = '';
   sex = '';
   appearance = {

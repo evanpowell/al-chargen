@@ -129,7 +129,7 @@ export class Step4 extends Step3 {
 
   rollProficiencies = (proficiencyPoints = this.rollDie(4)) => {
     this.character.proficiencies = Object.entries(this.expertise.proficiencies)
-      .filter(([name, points]) => points !== 0)
+      .filter(([, points]) => points !== 0)
       .map(([name, points]) => {
         return {
           ...proficiencies[name],
