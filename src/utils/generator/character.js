@@ -78,13 +78,11 @@ export default class Character {
     }
   };
   palestoneEncounter = {
-    description: '',
-    encounterLocale: '',
-    sharedExposure: '',
-    impact: '',
+    prose: '',
     outcome: {
       description: '',
-      modifications: []
+      modifications: [],
+      notes: ''
     }
   }
   wealth = 0;

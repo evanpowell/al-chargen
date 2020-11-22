@@ -242,7 +242,7 @@ export class Step4 extends Step3 {
       termYears += years;
     }
 
-    const termResult = this.getTermResult(rollResults);
+    const termResult = this.getOutcomeDiceResults(rollResults);
     const termOutcome = termOutcomes[termResult];
 
     this.character.term.years = termYears;
@@ -252,50 +252,6 @@ export class Step4 extends Step3 {
     };
 
     this.character.appearance.final.age = this.character.appearance.initial.age + termYears;
-  }
-
-  isSequentialNumbers = (numbers) => {
-    const sortedNumbers = [...numbers].sort();
-    let prev = sortedNumbers[0];
-    for (const [i, num] of sortedNumbers.entries()) {
-      if (i === 0) {
-        continue;
-      }
-      if (num !== prev + 1) {
-        return false;
-      }
-      prev = num;
-    }
-
-    return true;
-  }
-
-  getTermResult = (numbers) => {
-    if (this.isSequentialNumbers(numbers)) {
-      return 'Sequential Numbers';
-    }
-
-    const occurenceObj = numbers.reduce((occurences, num) => {
-      if (!occurences[num]) {
-        occurences[num] = 1;
-      } else {
-        occurences[num] += 1;
-      }
-      return occurences;
-    }, {});
-
-    const occurences = Object.values(occurenceObj);
-    if (occurences.includes(4)) {
-      return 'All Equal Numbers';
-    } else if (occurences.includes(2) && !occurences.includes(1)) {
-      return 'Two Equaled Pairs';
-    } else if (occurences.includes(3)) {
-      return 'Three Equal Numbers';
-    } else if (occurences.includes(2)) {
-      return 'One Equaled Pair';
-    } else {
-      return 'All Numbers Distinct'
-    }
   }
 
   rollStep4 = () => {

@@ -1,11 +1,13 @@
-import { Step4 } from "./step4/step4";
+import Step6 from "./step6/step6";
 
-export default class CharacterGenerator extends Step4 {
+export default class CharacterGenerator extends Step6 {
   rollAll = () => {
     this.rollStep1();
     this.rollStep2();
     this.rollStep3();
     this.rollStep4();
+    this.rollStep5();
+    this.rollStep6();
     this.applyModifications();
   };
 
@@ -49,11 +51,29 @@ export default class CharacterGenerator extends Step4 {
         break;
       }
       case 'resistance': {
-        this.rollResistances(modification.points);
+        if (!name) {
+          this.rollResistances(modification.points);
+        } else {
+          this.character.resistances[name] += modification.points;
+        }
         break;
       }
       case 'proficiency': {
         this.rollProficiencies(modification.points);
+        break;
+      }
+      case 'attribute': {
+        this.character.attributes.adjustments[name] += modification.points
+        break;
+      }
+      case 'death': {
+        //TODO: roll death chart
+        console.log('------------DEATH----------------');
+        break;
+      }
+      case 'wealth': {
+        const [numberOfDice, sides] = modification.amount.split('d');
+        this.character.wealth += this.rollDice(numberOfDice, sides);
         break;
       }
       default: {
