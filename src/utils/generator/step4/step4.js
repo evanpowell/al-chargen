@@ -65,7 +65,7 @@ export class Step4 extends Step3 {
     });
 
     for (const proficiency of expertiseProficiencies) {
-      if (this.character.attributes.final[proficiency.baseAttribute] >= proficiency.minAttributeValue) {
+      if (this.character.attributes.final[proficiency.baseAttribute] >= proficiency.minRequired) {
         return true;
       }
     }
@@ -113,24 +113,113 @@ export class Step4 extends Step3 {
     const points = this.rollDie(4);
 
     for (let i = 0; i < points; i++) {
-      const skillName = this.rollAuxiliarySkill(skillsPool, sides);
+      const skillName = this.rollAuxiliarySkillProficiency(skillsPool, sides);
       this.addSkillPoint(skillName);
     }
   }
 
-  rollAuxiliarySkill = (skills, sides) => {
+  rollAuxiliarySkillProficiency = (skillsProficiencies, sides) => {
     const rollResult = this.rollDie(sides);
     let min = 0;
     let max = 0;
 
-    for (const skill of skills) {
+    for (const item of skillsProficiencies) {
       min = max;
-      max += skill.probability;
+      max += item.probability;
 
       if (rollResult > min && rollResult <= max) {
-        return skill.name;
+        return item.name;
       }
     }
+  }
+
+  rollProficiencies = () => {
+    /*
+      - If no proficiency requirements are met, put all the points in closest acheivable proficiencies.
+
+      - Filter out proficiencies with unmet requirements
+      - Of the remaining proficiencies, skew probability in favor of those with higher attribute values
+    */
+    this.character.proficiencies = Object.entries(this.expertise.proficiencies)
+      .filter(([name, points]) => points !== 0)
+      .map(([name, points]) => {
+        return {
+          ...proficiencies[name],
+          points
+        }
+      });
+
+    const expertiseProficiencies = Object.keys(this.expertise.proficiencies)
+      .map((name) => proficiencies[name]);
+
+    let proficienciesPool = expertiseProficiencies
+      .filter((proficiency) => {
+        return this.character.attributes.final[proficiency.baseAttribute] >= proficiency.minRequired;
+      })
+      .map((proficiency) => {
+        const attributeVal = this.character.attributes.final[proficiency.baseAttribute];
+        let probability = Math.floor(attributeVal * (attributeVal / 10));
+        if (attributeVal < 10) {
+          probability -= 1;
+        } else if (attributeVal >=12 ) {
+          probability += 1;
+        }
+
+        return {
+          name: proficiency.name,
+          probability
+        }
+      });
+
+    if (!proficienciesPool.length) {
+      proficienciesPool = this.getClosestAttainableProficiencies(expertiseProficiencies);
+    }
+
+    const sides = proficienciesPool.reduce((sides, proficiency) => (sides + proficiency.probability), 0);
+    const points = this.rollDie(4);
+
+    for (let i = 0; i < points; i++) {
+      const proficiencyName = this.rollAuxiliarySkillProficiency(proficienciesPool, sides);
+      this.addProficiencyPoint(proficiencyName);
+    }
+  }
+
+  getClosestAttainableProficiencies = (expertiseProficiencies) => {
+    const proficienciesWithDifferences = expertiseProficiencies.map((proficiency) => {
+      return {
+        ...proficiency,
+        difference: proficiency.minRequired - this.character.attributes.final[proficiency.baseAttribute]
+      }
+    })
+    const lowestDifference = proficienciesWithDifferences
+      .reduce((lowest, proficiency) => {
+        return proficiency.difference < lowest ? proficiency.difference : lowest
+      }, 99);
+    
+    return expertiseProficiencies
+      .filter((proficiency) => proficiency.difference === lowestDifference)
+      .map((proficiency) => {
+        return {
+          ...proficiency,
+          probability: 10
+        }
+    });
+  }
+
+  rollTitle = () => {
+    const rollResult = this.rollDie(6) - 4;
+    if (rollResult < 0) {
+      this.character.titles.push({
+        name: 'No Title'
+      });
+    } else {
+      this.character.titles.push(this.expertise.titles[rollResult]);
+    }
+  }
+
+  rollVocation = () => {
+    const vocations = this.aptitude.vocations[this.expertise.name];
+    this.character.vocation = this.getRandomArrayValue(vocations);
   }
 
   rollStep4 = () => {
@@ -141,5 +230,8 @@ export class Step4 extends Step3 {
     this.rollAbilities();
     this.rollConditioning();
     this.rollExpertiseSkills();
+    this.rollProficiencies();
+    this.rollTitle();
+    this.rollVocation();
   };
 }

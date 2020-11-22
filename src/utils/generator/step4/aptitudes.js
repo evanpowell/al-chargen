@@ -20,8 +20,19 @@ export const aptitudes = {
     advantage: {
       name: 'Summon Strength',
       description: 'Retry STR-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Salvager', 'Brewer'],
+      'Combat': ['Warrior', 'Vanguard'],
+      'Crafts': ['Smith', 'Forgemaster'],
+      'Influence': ['Stalwart', 'Wrangler'],
+      'Lore': ['Pilgrim', 'Mountaineer'],
+      'Manipulation': ['Rockclimber', 'Shipman'],
+      'Spellwork': ['Awakener', 'Blackguard'],
+      'Stewardship': ['Stablehand', 'Chamberlain']
     }
   },
+
   end: {
     name: 'Survivalist',
     skillsPool: [
@@ -43,8 +54,19 @@ export const aptitudes = {
     advantage: {
       name: 'Fortitude',
       description: 'Retry END-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Gatherer', 'Witch'],
+      'Combat': ['Bulwark', 'Grappler'],
+      'Crafts': ['Trapper', 'Prepper'],
+      'Influence': ['Beastmaster', 'Tracker'],
+      'Lore': ['Cartographer', 'Storyteller'],
+      'Manipulation': ['Prowler', 'Ranger'],
+      'Spellwork': ['Druid', 'Whisperer'],
+      'Stewardship': ['Steward', 'Gatekeeper']
     }
   },
+
   agi: {
     name: 'Acrobat',
     skillsPool: [
@@ -66,8 +88,19 @@ export const aptitudes = {
     advantage: {
       name: 'Deftness',
       description: 'Retry AGI-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Sleeper', 'Ritualist'],
+      'Combat': ['Duelist', 'Archer'],
+      'Crafts': ['Scaffolder', 'Weaver'],
+      'Influence': ['Entertainer', 'Juggler'],
+      'Lore': ['Chronicler', 'Dancer'],
+      'Manipulation': ['Scout', 'Ghost'],
+      'Spellwork': ['Shadowdancer', 'Sorcerer'],
+      'Stewardship': ['Shepherd', 'Farmhand']
     }
   },
+
   pre: {
     name: 'Seeker',
     skillsPool: [
@@ -89,8 +122,19 @@ export const aptitudes = {
     advantage: {
       name: 'Finesse',
       description: 'Retry PRE-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Distiller', 'Medicine Maker'],
+      'Combat': ['Assassin', 'Scorpion'],
+      'Crafts': ['Mechanic', 'Jeweler'],
+      'Influence': ['Diplomat', 'Tactician'],
+      'Lore': ['Sleeper', 'Sage'],
+      'Manipulation': ['Fox', 'Pickpocket'],
+      'Spellwork': ['Coldrunner', 'Sandman'],
+      'Stewardship': ['Hunter', 'Forager']
     }
   },
+
   int: {
     name: 'Deviser',
     skillsPool: [
@@ -112,8 +156,19 @@ export const aptitudes = {
     advantage: {
       name: 'Mastermind',
       description: 'Retry INT-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Brewmaster', 'Apothecary'],
+      'Combat': ['Strategist', 'Viper'],
+      'Crafts': ['Spider', 'Engineer'],
+      'Influence': ['Savant', 'Mystic'],
+      'Lore': ['Ambassador', 'Oracle'],
+      'Manipulation': ['Mentalist', 'Cryptographer'],
+      'Spellwork': ['Battlemage', 'Wizard'],
+      'Stewardship': ['Scavenger', 'Delegator']
     }
   },
+
   wis: {
     name: 'Scholar',
     skillsPool: [
@@ -135,8 +190,19 @@ export const aptitudes = {
     advantage: {
       name: 'Well Versed',
       description: 'Retry WIS-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Herbalist', 'Healer'],
+      'Combat': ['Monk', 'Cleric', 'Paladin'],
+      'Crafts': ['Maker', 'Tailor'],
+      'Influence': ['Adviser', 'Augur'],
+      'Lore': ['Historian', 'Elder'],
+      'Manipulation': ['Diviner', 'Antagonist'],
+      'Spellwork': ['Evoker', 'Thaumaturge'],
+      'Stewardship': ['Caretaker', 'Mender']
     }
   },
+
   per: {
     name: 'Watcher',
     skillsPool: [
@@ -158,8 +224,19 @@ export const aptitudes = {
     advantage: {
       name: 'Ascertaining',
       description: 'Retry PER-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Alchemist', 'Botanist'],
+      'Combat': ['Militia Leader', 'Rival'],
+      'Crafts': ['Architect', 'Builder'],
+      'Influence': ['Spymaster', 'Politician'],
+      'Lore': ['Priest', 'Shaman'],
+      'Manipulation': ['Puppeteer', 'Overseer'],
+      'Spellwork': ['Enchanter', 'Artificer'],
+      'Stewardship': ['Chef', 'Provisioner']
     }
   },
+
   cha: {
     name: 'Opportunist',
     skillsPool: [
@@ -181,6 +258,16 @@ export const aptitudes = {
     advantage: {
       name: 'Convincing',
       description: 'Retry CHA-based skill test once per day'
+    },
+    vocations: {
+      'Alchemy': ['Nostrumist', 'Perfumer'],
+      'Combat': ['Sellsword', 'Freerider'],
+      'Crafts': ['Trader', 'Peddler'],
+      'Influence': ['Ringleader', 'Fence'],
+      'Lore': ['Traveler', 'Bard'],
+      'Manipulation': ['Rogue', 'Thief'],
+      'Spellwork': ['Conjurer', 'Warlock'],
+      'Stewardship': ['Acolyte', 'Squire']
     }
   }
 }

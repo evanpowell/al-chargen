@@ -54,6 +54,14 @@ export default class CharacterGenerator extends Step4 {
   };
 
   printCharacter = () => {
-    console.log(JSON.stringify(this.character, null, 2).replace(/["]/g, ""));
+    const character = {
+      ...this.character,
+      attributes: {
+        ...this.character.attributes,
+        final: this.character.attributes.final,
+        bonusPenalties: this.character.attributes.bonusPenalties
+      }
+    };
+    console.log(JSON.stringify(character, null, 2).replace(/["]/g, ""));
   };
 }
