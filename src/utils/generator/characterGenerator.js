@@ -1,4 +1,3 @@
-import { Step3 } from "./step3/step3";
 import { Step4 } from "./step4/step4";
 
 export default class CharacterGenerator extends Step4 {
