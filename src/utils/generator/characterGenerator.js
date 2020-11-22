@@ -19,8 +19,18 @@ export default class CharacterGenerator extends Step4 {
     const { type, name } = modification;
     switch (type) {
       case 'skill': {
-        for (let i = 0; i < modification.points; i++) {
-          this.addSkillPoint(name);
+        if (!name) {
+          for (let i = 0; i < modification.points; i++) {
+            if (this.rollDie(100) <= 50) {
+              this.rollAptitudeSkills(1);
+            } else {
+              this.rollExpertiseSkills(1);
+            }
+          }
+        } else {
+          for (let i = 0; i < modification.points; i++) {
+            this.addSkillPoint(name);
+          }
         }
         break;
       }
@@ -28,6 +38,27 @@ export default class CharacterGenerator extends Step4 {
         const newAppearance = Math.round(this.character.appearance.initial[name] * modification.multiplier);
         this.character.appearance.final[name] = newAppearance;
         break;
+      }
+      case 'distinguishingFeature': {
+        this.character.appearance.distinguishingFeatures.push({
+          description: modification.description
+        });
+        break;
+      }
+      case 'ability': {
+        this.rollAbilities(modification.points);
+        break;
+      }
+      case 'resistance': {
+        this.rollResistances(modification.points);
+        break;
+      }
+      case 'proficiency': {
+        this.rollProficiencies(modification.points);
+        break;
+      }
+      default: {
+        console.log('modification type does not match:', modification.type);
       }
     }
   };

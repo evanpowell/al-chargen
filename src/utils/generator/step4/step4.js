@@ -3,6 +3,7 @@ import { Step3 } from "../step3/step3";
 import { aptitudes } from "./aptitudes";
 import { expertises } from "./expertises";
 import { proficiencies } from "./proficiencies";
+import { termOutcomes } from "./term";
 
 export class Step4 extends Step3 {
   rollAptitude = () => {
@@ -20,20 +21,18 @@ export class Step4 extends Step3 {
     this.character.advantage = this.aptitude.advantage;
   };
 
-  rollAptitudeSkills = () => {
-    let skillPoints = this.rollDie(4);
+  rollAptitudeSkills = (skillPoints = this.rollDie(4)) => {
     for (let i = 0; i < skillPoints; i++) {
       const skillName = this.getRandomArrayValue(this.aptitude.skillsPool);
       this.addSkillPoint(skillName);
     }
   };
   
-  rollResistances = () => {
+  rollResistances = (resistancePoints = this.rollDie(4)) => {
     this.character.resistances = { ...this.aptitude.resistances };
-    let resistancePoints = this.rollDie(4);
     for (let i = 0; i < resistancePoints; i++) {
-      const [resistance, points] = this.getRandomObjectEntry(this.character.resistances);
-      this.character.resistances[resistance] = points + 1;
+      const [key, val] = this.getRandomObjectEntry(this.character.resistances);
+      this.character.resistances[key] = val + 1;
     }
   };
 
@@ -44,8 +43,6 @@ export class Step4 extends Step3 {
     } else {
       potentialExpertises = Object.keys(expertises);
     }
-
-
     
     let expertiseName = this.getRandomArrayValue(potentialExpertises);
     if (!this.doesMeetProficiencyRequirements(expertiseName)) {
@@ -73,25 +70,23 @@ export class Step4 extends Step3 {
     return false;
   };
 
-  rollAbilities = () => {
+  rollAbilities = (abilityPoints = this.rollDie(6)) => {
     this.character.abilities = { ...this.expertise.abilities };
-    const points = this.rollDie(6);
-    for (let i = 0; i < points; i++) {
+    for (let i = 0; i < abilityPoints; i++) {
       const [ability] = this.getRandomObjectEntry(this.expertise.abilities);
       this.character.abilities[ability] += 1;
     }
   }
 
-  rollConditioning = () => {
+  rollConditioning = (conditioningPoints = 3) => {
     this.character.conditioning = { ...this.expertise.conditioning };
-    const points = 3;
-    for (let i = 0; i < points; i++) {
+    for (let i = 0; i < conditioningPoints; i++) {
       const [conditioningType] = this.getRandomObjectEntry(this.expertise.conditioning);
       this.character.conditioning[conditioningType] += 1;
     }
   }
 
-  rollExpertiseSkills = () => {
+  rollExpertiseSkills = (skillPoints = this.rollDie(4)) => {
     const skillsPool = this.expertise.auxiliarySkillsPool
       .map((skillName) => skills[skillName])
       .map((skill) => {
@@ -110,9 +105,8 @@ export class Step4 extends Step3 {
       });
 
     const sides = skillsPool.reduce((sides, skill) => (sides + skill.probability), 0);
-    const points = this.rollDie(4);
 
-    for (let i = 0; i < points; i++) {
+    for (let i = 0; i < skillPoints; i++) {
       const skillName = this.rollAuxiliarySkillProficiency(skillsPool, sides);
       this.addSkillPoint(skillName);
     }
@@ -133,13 +127,7 @@ export class Step4 extends Step3 {
     }
   }
 
-  rollProficiencies = () => {
-    /*
-      - If no proficiency requirements are met, put all the points in closest acheivable proficiencies.
-
-      - Filter out proficiencies with unmet requirements
-      - Of the remaining proficiencies, skew probability in favor of those with higher attribute values
-    */
+  rollProficiencies = (proficiencyPoints = this.rollDie(4)) => {
     this.character.proficiencies = Object.entries(this.expertise.proficiencies)
       .filter(([name, points]) => points !== 0)
       .map(([name, points]) => {
@@ -176,9 +164,8 @@ export class Step4 extends Step3 {
     }
 
     const sides = proficienciesPool.reduce((sides, proficiency) => (sides + proficiency.probability), 0);
-    const points = this.rollDie(4);
 
-    for (let i = 0; i < points; i++) {
+    for (let i = 0; i < proficiencyPoints; i++) {
       const proficiencyName = this.rollAuxiliarySkillProficiency(proficienciesPool, sides);
       this.addProficiencyPoint(proficiencyName);
     }
@@ -246,6 +233,71 @@ export class Step4 extends Step3 {
     ];
   }
 
+  rollTerm = () => {
+    let rollResults = [];
+    let termYears = 0;
+    for (let i = 0; i < 4; i++) {
+      const years = this.rollDie(6);
+      rollResults.push(years);
+      termYears += years;
+    }
+
+    const termResult = this.getTermResult(rollResults);
+    const termOutcome = termOutcomes[termResult];
+
+    this.character.term.years = termYears;
+    this.character.term.outcome = {
+      description: termOutcome.description,
+      modifications: termOutcome.modifications || []
+    };
+
+    this.character.appearance.final.age = this.character.appearance.initial.age + termYears;
+  }
+
+  isSequentialNumbers = (numbers) => {
+    const sortedNumbers = [...numbers].sort();
+    let prev = sortedNumbers[0];
+    for (const [i, num] of sortedNumbers.entries()) {
+      if (i === 0) {
+        continue;
+      }
+      if (num !== prev + 1) {
+        return false;
+      }
+      prev = num;
+    }
+
+    return true;
+  }
+
+  getTermResult = (numbers) => {
+    if (this.isSequentialNumbers(numbers)) {
+      return 'Sequential Numbers';
+    }
+
+    const occurenceObj = numbers.reduce((occurences, num) => {
+      if (!occurences[num]) {
+        occurences[num] = 1;
+      } else {
+        occurences[num] += 1;
+      }
+      return occurences;
+    }, {});
+
+    const occurences = Object.values(occurenceObj);
+    if (occurences.includes(4)) {
+      return 'All Equal Numbers';
+    } else if (occurences.includes(2) && !occurences.includes(1)) {
+      return 'Two Equaled Pairs';
+    } else if (occurences.includes(3)) {
+      return 'Three Equal Numbers';
+    } else if (occurences.includes(2)) {
+      return 'One Equaled Pair';
+    } else {
+      return 'All Numbers Distinct'
+    }
+  }
+
   rollStep4 = () => {
     this.rollAptitude();
     this.rollAptitudeSkills();
@@ -259,5 +311,6 @@ export class Step4 extends Step3 {
     this.rollVocation();
     this.addEquipment();
     this.rollSupplies();
+    this.rollTerm();
   };
 }

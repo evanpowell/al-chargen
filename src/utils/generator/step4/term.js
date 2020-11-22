@@ -1,10 +1,10 @@
-export const term = {
+export const termOutcomes = {
   'All Numbers Distinct': {
-    outcome: 'Showed a lack of motivation or disdain for their initial area of expertise',
+    description: 'Showed a lack of motivation or disdain for their initial area of expertise',
   },
 
   'Sequential Numbers': {
-    outcome: 'Showed adept prowess in their area of expertise',
+    description: 'Showed adept prowess in their area of expertise',
     modifications: [
       {
         type: 'skill',
@@ -26,7 +26,7 @@ export const term = {
   },
 
   'One Equaled Pair': {
-    outcome: 'Showed an above-average dedication in their field of expertise',
+    description: 'Showed an above-average dedication in their field of expertise',
     modifications: [
       {
         type: 'skill',
@@ -40,7 +40,7 @@ export const term = {
   },
 
   'Three Equal Numbers': {
-    outcome: 'Experiences an injury or trauma during training',
+    description: 'Experiences an injury or trauma during training',
     modifications: [
       {
         type: 'distinguishingFeature',
@@ -50,7 +50,7 @@ export const term = {
   },
 
   'Two Equaled Pairs': {
-    outcome: 'Showed a master of their practice',
+    description: 'Showed a mastery of their practice',
     modifications: [
       {
         type: 'skill',
@@ -72,7 +72,7 @@ export const term = {
   },
 
   'All Equal Numbers': {
-    outcome: 'Showed unrivaled command of their practice',
+    description: 'Showed unrivaled command of their practice',
     modifications: [
       {
         type: 'skill',

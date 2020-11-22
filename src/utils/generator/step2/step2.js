@@ -31,7 +31,7 @@ export class Step2 extends Step1 {
         this.character.appearance.initial = {
             height: this.rollDice(height.number, height.sides, height.modifier),
             weight: this.rollDice(weight.number, weight.sides, weight.modifier),
-            baseAge: this.rollDice(baseAge.number, baseAge.sides, baseAge.modifier)
+            age: this.rollDice(baseAge.number, baseAge.sides, baseAge.modifier)
         }
 
         this.character.appearance.final = { ...this.character.appearance.initial };
