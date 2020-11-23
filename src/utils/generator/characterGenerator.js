@@ -125,13 +125,64 @@ export default class CharacterGenerator extends Step6 {
   }
 
   listDistinguishingFeatures = () => {
-    return this.character.appearance.distinguishingFeatures
-      .map((feature) => `- ${feature.description}`)
-      .join("\n");
+    const { distinguishingFeatures } = this.character.appearance;
+    if (distinguishingFeatures.length) {
+      return this.character.appearance.distinguishingFeatures
+        .map((feature) => `- ${feature.description}`)
+        .join("\n");
+    } else {
+      return 'No distinguishing features'
+    }
   }
 
   listLanguages = () => {
     return this.character.languages.join(", ");
+  }
+
+  getTitlesAndRecognition = () => {
+    const [title] = this.character.titles;
+    if (title.notes) {
+      return `${title.name}: ${title.notes}`
+    } else {
+      return title.name;
+    }
+  }
+
+  getAdvantageAndDescription = () => {
+    const { name, description } = this.character.advantage;
+    return `${name.toUpperCase()}:\n${description}`;
+  }
+
+  mapSkillsToFieldsObject = () => {
+    return this.character.skills.reduce((fieldsObj, { name, baseAttribute, points }, i) => {
+      const nameString = `${name} (${baseAttribute.toUpperCase()})`;
+      const num = i + 1;
+      fieldsObj[`Skill name ${num}`] = [nameString];
+      fieldsObj[`Skill number ${num}`] = [points];
+
+      return fieldsObj;
+    }, {});
+  }
+
+  mapProficienciesToFieldsObject = () => {
+    return this.character.proficiencies.reduce((fieldsObj, { name, baseAttribute, minRequired, points }, i) => {
+      const nameString = `${name} (${baseAttribute.toUpperCase()} >= ${minRequired})`;
+      const num = i + 1;
+      fieldsObj[`Proficiency name ${num}`] = [nameString];
+      fieldsObj[`Proficiency number ${num}`] = [points];
+
+      return fieldsObj;
+    }, {});
+  }
+
+  listInventory = () => {
+    return this.character.inventory.map(({name, quantity}) => {
+      if (!quantity) {
+        return name;
+      } else {
+        return `${name} (${quantity})`
+      }
+    }).join('\n');
   }
 
   mapToPdfFields = () => {
@@ -148,7 +199,6 @@ export default class CharacterGenerator extends Step6 {
       "Adventurer Level": "1",
 
       // CHARACTERISTICS
-
       Ancestry: [this.character.ancestry],
       Sex: [this.character.sex],
       Height: [this.convertInchesToFeet(appearance.height)],
@@ -157,11 +207,9 @@ export default class CharacterGenerator extends Step6 {
       "Distinguishing Features": [this.listDistinguishingFeatures()],
 
       //ORIGINS
-
       "Languages Spoken": [this.listLanguages()],
 
       // ATTRIBUTES
-
       STR: [this.character.attributes.initial.str],
       END: [this.character.attributes.initial.end],
       AGI: [this.character.attributes.initial.agi],
@@ -199,14 +247,50 @@ export default class CharacterGenerator extends Step6 {
       "Bonus PenaltyCHA": [bonusPenalties.cha],
 
       // PROFILE
-
       Aptitude: [this.character.aptitude],
       Expertise: [this.character.expertise],
+      "Vocation and Description": [this.character.vocation],
+      "Titles and Recognition": [this.getTitlesAndRecognition()],
+      Term: [`${this.character.term.years} yrs`],
 
       // PALE STONE ENCOUNTER
-
       "Encounter Story": [this.character.palestoneEncounter.prose],
-      Outcome: [this.character.palestoneEncounter.outcome.description]
+      Outcome: [this.character.palestoneEncounter.outcome.description],
+
+      // RESISTANCES
+      Addiction: [this.character.resistances.addiction],
+      Aversion: [this.character.resistances.aversion],
+      Debility: [this.character.resistances.debility],
+      Explosion: [this.character.resistances.explosion],
+      Infection: [this.character.resistances.infection],
+      Toxin: [this.character.resistances.toxin],
+
+      //ABILITIES
+      "Assess Threat": [this.character.abilities.assessThreat],
+      "Collect Information": [this.character.abilities.collectInformation],
+      "Find": [this.character.abilities.find],
+      "Haggle": [this.character.abilities.haggle],
+      "Navigate": [this.character.abilities.navigate],
+      "Take Notice": [this.character.abilities.takeNotice],
+
+      //ADVANTAGE
+      "Advantage": [this.getAdvantageAndDescription()],
+
+      // CONDITIONING
+
+      "Poise": [this.character.conditioning.poise],
+      "Avoidance": [this.character.conditioning.avoidance],
+      "Capacity Conditioning": [this.character.conditioning.capacity],
+
+      // SKILLS
+      ...this.mapSkillsToFieldsObject(),
+
+      // PROFICIENCIES
+      ...this.mapProficienciesToFieldsObject(),
+
+      // INVENTORY
+      "Carried equipment sundries and supplies": [this.listInventory()],
+      "Coins treasures and wealth": [`${this.character.wealth} Threnn`]
     }
   }
 

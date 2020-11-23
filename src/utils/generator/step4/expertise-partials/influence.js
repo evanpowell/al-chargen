@@ -15,12 +15,12 @@ export const influence = {
     'Track'
   ],
   abilities: {
-    [`Assess Threat`]: 2,
-    [`Collect Information`]: 1,
-    [`Find`]: 1,
-    [`Haggle`]: 2,
-    [`Navigate`]: 1,
-    [`Take Notice`]: 1,
+    assessThreat: 2,
+    collectInformation: 1,
+    find: 1,
+    haggle: 2,
+    navigate: 1,
+    takeNotice: 1,
   },
   conditioning: {
     poise: 1,

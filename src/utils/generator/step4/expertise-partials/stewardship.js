@@ -15,12 +15,12 @@ export const stewardship = {
     'Tumble'
   ],
   abilities: {
-    [`Assess Threat`]: 1,
-    [`Collect Information`]: 1,
-    [`Find`]: 2,
-    [`Haggle`]: 1,
-    [`Navigate`]: 2,
-    [`Take Notice`]: 1,
+    assessThreat: 1,
+    collectInformation: 1,
+    find: 2,
+    haggle: 1,
+    navigate: 2,
+    takeNotice: 1,
   },
   conditioning: {
     poise: 0,

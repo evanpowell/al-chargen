@@ -15,12 +15,12 @@ export const spellwork = {
     'Tell Fortune'
   ],
   abilities: {
-    [`Assess Threat`]: 1,
-    [`Collect Information`]: 1,
-    [`Find`]: 2,
-    [`Haggle`]: 1,
-    [`Navigate`]: 1,
-    [`Take Notice`]: 2,
+    assessThreat: 1,
+    collectInformation: 1,
+    find: 2,
+    haggle: 1,
+    navigate: 1,
+    takeNotice: 2,
   },
   conditioning: {
     poise: 0,

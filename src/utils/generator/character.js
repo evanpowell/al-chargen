@@ -42,7 +42,10 @@ export default class Character {
   languages = [];
   isLiterate = false;
   aptitude = '';
-  advantage = '';
+  advantage = {
+    name: '',
+    description: ''
+  };
   expertise = '';
   vocation = '';
   abilities = {

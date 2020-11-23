@@ -46,19 +46,12 @@ export default {
         .then(({ data }) => {
           const fields = pdfform().list_fields(data);
           const fieldKeys = Object.keys(fields);
-          console.log(
-            "mapped fields",
-            JSON.stringify(fieldKeys, null, 2).replaceAll(`"`, "")
-          );
           const filledForm = pdfform().transform(
             data,
             this.charGen.mapToPdfFields()
           );
-          console.log("filledForm", filledForm);
           const blob = new Blob([filledForm]);
-          console.log("blob", blob);
           const url = window.webkitURL.createObjectURL(blob);
-          console.log("url", url);
           this.url = url;
           this.fileName = `${this.character.name}.pdf`;
           this.isFilled = true;

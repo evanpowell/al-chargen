@@ -15,12 +15,12 @@ export const crafts = {
     'Trek'
   ],
   abilities: {
-    [`Assess Threat`]: 1,
-    [`Collect Information`]: 1,
-    [`Find`]: 2,
-    [`Haggle`]: 2,
-    [`Navigate`]: 1,
-    [`Take Notice`]: 1,
+    assessThreat: 1,
+    collectInformation: 1,
+    find: 2,
+    haggle: 2,
+    navigate: 1,
+    takeNotice: 1,
   },
   conditioning: {
     poise: 1,
