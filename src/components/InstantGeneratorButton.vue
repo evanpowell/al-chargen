@@ -1,9 +1,22 @@
 <template>
-  <div>
-    <button @click="calculate">Generate Instant Character</button>
-    <a v-if="isFilled" :href="url" :download="fileName"
-      >Download filled sheet</a
-    >
+  <div class="container">
+    <button class="generate-button" @click="calculate">
+      Generate Instant Character
+    </button>
+    <div v-if="isFilled">
+      <div class="details">
+        <p>Your character is:</p>
+        <h2>{{ character.name }},</h2>
+        <h3>
+          the {{ character.ancestry }}
+          {{ character.vocation.toLowerCase() }} from
+          {{ character.origins.provincialOrigins.region }}
+        </h3>
+      </div>
+      <a class="download-link" :href="url" :download="fileName"
+        >Download {{ character.name }}'s Character Sheet</a
+      >
+    </div>
   </div>
 </template>
 
@@ -44,8 +57,6 @@ export default {
       axios
         .get(characterSheetURL, { responseType: "arraybuffer" })
         .then(({ data }) => {
-          const fields = pdfform().list_fields(data);
-          const fieldKeys = Object.keys(fields);
           const filledForm = pdfform().transform(
             data,
             this.charGen.mapToPdfFields()
@@ -63,4 +74,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.download-link {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  background-color: #585858;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #2c2c2c;
+  }
+}
+
+.generate-button {
+  margin-bottom: 30px;
+}
+
+.details {
+  margin-bottom: 30px;
+}
 </style>
