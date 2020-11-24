@@ -34,20 +34,12 @@ export const spellwork = {
     'Spellcasting': 0,
     'Transference': 0
   },
-  titles: [
-    {
-      name: 'Meddler',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Elemenalist',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Magus',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Meddler',
+    'Three Equal Numbers': 'Elementalist',
+    'Two Equaled Pairs': 'Magus',
+    'All Equal Numbers': 'Archmagus'
+  },
   equipment: [
     {
       name: `Flame-resistant cloak`

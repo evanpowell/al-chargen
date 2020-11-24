@@ -34,20 +34,12 @@ export const combat = {
     'Power Strikes': 1,
     'Precision Strikes': 0
   },
-  titles: [
-    {
-      name: 'Rabblerouser',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Veteran',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Champion',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Rabblerouser',
+    'Three Equal Numbers': 'Veteran',
+    'Two Equaled Pairs': 'Champion',
+    'All Equal Numbers': 'Legend'
+  },
   equipment: [
     {
       name: `Arm Bracers`

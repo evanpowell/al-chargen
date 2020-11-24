@@ -22,11 +22,7 @@ export default class CharacterGenerator extends Step6 {
       case 'skill': {
         if (!name) {
           for (let i = 0; i < modification.points; i++) {
-            if (this.rollDie(100) <= 50) {
-              this.rollAptitudeSkills(1);
-            } else {
-              this.rollExpertiseSkills(1);
-            }
+            this.rollExpertiseSkills(1);
           }
         } else {
           for (let i = 0; i < modification.points; i++) {
@@ -46,7 +42,7 @@ export default class CharacterGenerator extends Step6 {
         });
         break;
       }
-      case 'ability': {
+      case 'ability': {        
         this.rollAbilities(modification.points);
         break;
       }
@@ -58,8 +54,31 @@ export default class CharacterGenerator extends Step6 {
         }
         break;
       }
+      case 'accolades': {
+        for (let i = 0; i < modification.points; i++) {
+          const category = this.getRandomArrayValue([
+            'abilities',
+            'skills',
+            'conditioning',
+            'proficiencies'
+          ]);
+          
+          if (category === 'skills') {
+            this.rollExpertiseSkills(1);
+          } else if (category === 'proficiencies') {
+            this.rollProficiencies(1);
+          } else {
+            const [key] = this.getRandomObjectEntry(this.character[category]);
+            this.character[category][key] += 1;
+          }
+        }
+
+        break;
+      }
       case 'proficiency': {
-        this.rollProficiencies(modification.points);
+        for (let i = 0; i < modification.points; i++) {
+          this.addPointToExisting('proficiencies');
+        }
         break;
       }
       case 'attribute': {

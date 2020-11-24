@@ -43,13 +43,10 @@ export default {
   methods: {
     calculate: function () {
       const charGen = new CharacterGenerator();
-      // for (let i = 0; i < 1000; i++) {
       charGen.rollAll();
-
+      charGen.printCharacter();
       this.character = charGen.character;
       this.charGen = charGen;
-      // }
-      charGen.printCharacter();
       this.printCharacter();
     },
 

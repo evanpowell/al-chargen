@@ -34,20 +34,12 @@ export const alchemy = {
     'Salves': 0,
     'Tonics': 0
   },
-  titles: [
-    {
-      name: 'Occultist',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Toiler',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Shaper',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Occultist',
+    'Three Equal Numbers': 'Toiler',
+    'Two Equaled Pairs': 'Shaper',
+    'All Equal Numbers': 'Paragon'
+  },
   equipment: [
     {
       name: `Alchemist's satchel`

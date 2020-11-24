@@ -34,20 +34,12 @@ export const influence = {
     'Oration': 1,
     'Wit': 0
   },
-  titles: [
-    {
-      name: 'Pariah',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Dignitary',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Noble',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Pariah',
+    'Three Equal Numbers': 'Dignitary',
+    'Two Equaled Pairs': 'Guildcrest',
+    'All Equal Numbers': 'Noble'
+  },
   equipment: [
     {
       name: `Colorful banner`

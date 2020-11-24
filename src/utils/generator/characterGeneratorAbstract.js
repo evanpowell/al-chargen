@@ -24,6 +24,11 @@ export default class CharacterGeneratorAbstract extends DiceRoller {
     }
   }
 
+  addPointToExisting= (type) => {
+    const item = this.getRandomArrayValue(this.character[type]);
+    item.points += 1;
+  }
+
   addProficiencyPoint(proficiencyName) {
     let hasProficiency = false;
     this.character.proficiencies.forEach((proficiency) => {

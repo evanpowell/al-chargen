@@ -34,20 +34,12 @@ export const stewardship = {
     'Provisioning': 0,
     'Survivalism': 1
   },
-  titles: [
-    {
-      name: 'Hermit',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Operator',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Keeper',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Hermit',
+    'Three Equal Numbers': 'Operator',
+    'Two Equaled Pairs': 'Keeper',
+    'All Equal Numbers': 'Whisperer'
+  },
   equipment: [
     {
       name: `Falconer's Bracer`

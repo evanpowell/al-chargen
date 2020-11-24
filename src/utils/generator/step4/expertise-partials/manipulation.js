@@ -34,20 +34,12 @@ export const manipulation = {
     'Skullduggery': 0,
     'Stealth': 0
   },
-  titles: [
-    {
-      name: 'Rat',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Dasher',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Mystborn',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Rat',
+    'Three Equal Numbers': 'Dasher',
+    'Two Equaled Pairs': 'Mystborn',
+    'All Equal Numbers': 'Delegate'
+  },
   equipment: [
     {
       name: `Abacus`

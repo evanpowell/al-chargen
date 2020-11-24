@@ -34,20 +34,12 @@ export const crafts = {
     'Smithing': 0,
     'Transports': 1
   },
-  titles: [
-    {
-      name: 'Bumbler',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Artisan',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Master',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Bumbler',
+    'Three Equal Numbers': 'Artisan',
+    'Two Equaled Pairs': 'Doyen',
+    'All Equal Numbers': 'Maestre'
+  },
   equipment: [
     {
       name: `Crude Smith's Hammer`

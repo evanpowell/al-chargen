@@ -193,17 +193,6 @@ export class Step4 extends Step3 {
     });
   }
 
-  rollTitle = () => {
-    const rollResult = this.rollDie(6) - 4;
-    if (rollResult < 0) {
-      this.character.titles.push({
-        name: 'No Title'
-      });
-    } else {
-      this.character.titles.push(this.expertise.titles[rollResult]);
-    }
-  }
-
   rollVocation = () => {
     const vocations = this.aptitude.vocations[this.expertise.name];
     this.character.vocation = this.getRandomArrayValue(vocations);
@@ -250,6 +239,11 @@ export class Step4 extends Step3 {
       description: termOutcome.description,
       modifications: termOutcome.modifications || []
     };
+
+    const titleName = this.expertise.titles[termResult];
+    if (titleName) {
+      this.character.titles = [{ name: titleName }];
+    }
 
     this.character.appearance.final.age = this.character.appearance.initial.age + termYears;
   }

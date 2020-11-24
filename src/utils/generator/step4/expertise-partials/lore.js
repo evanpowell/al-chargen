@@ -34,20 +34,12 @@ export const lore = {
     'Rhetoric': 0,
     'Ritual': 1
   },
-  titles: [
-    {
-      name: 'Heretic',
-      notes: '+2 difficulty recruiting'
-    },
-    {
-      name: 'Elder',
-      notes: '-2 difficulty recruiting'
-    },
-    {
-      name: 'Harbinger',
-      notes: '-4 difficulty recruiting'
-    },
-  ],
+  titles: {
+    'Sequential Numbers': 'Heretic',
+    'Three Equal Numbers': 'Lettered',
+    'Two Equaled Pairs': 'Elder',
+    'All Equal Numbers': 'Harbinger'
+  },
   equipment: [
     {
       name: `Healer's tools`
