@@ -25,13 +25,14 @@ export default class Step5 extends Step4 {
     const filledProse = this.fillProse(prose);
     
     const encounterResult = this.getOutcomeDiceResults(Object.values(rollResults));
-    const outcome = palestoneEncounter.outcomes[encounterResult];
+    const outcome = { ...palestoneEncounter.outcomes[encounterResult] };
     outcome.description = this.fillProse(outcome.description);
+    console.log(outcome.description);
     this.character.palestoneEncounter = {
       prose: filledProse,
       outcome: {
-        ...this.character.palestoneEncounter.outcome,
-        ...outcome
+        ...outcome,
+        modifications: outcome.modifications || []
       }
     }
   }
