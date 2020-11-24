@@ -163,10 +163,10 @@ export default class CharacterGenerator extends Step6 {
     if (!title) {
       return '';
     }
-    
+
     const { notes } = this.character.term.outcome;
     if (notes) {
-      return `${title.name}: ${notes}`
+      return `${title.name}\n(${notes})`
     } else {
       return title.name;
     }
