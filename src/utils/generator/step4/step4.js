@@ -237,6 +237,7 @@ export class Step4 extends Step3 {
     this.character.term.years = termYears;
     this.character.term.outcome = {
       description: termOutcome.description,
+      notes: termOutcome.notes || '',
       modifications: termOutcome.modifications || []
     };
 
@@ -257,7 +258,6 @@ export class Step4 extends Step3 {
     this.rollConditioning();
     this.rollExpertiseSkills();
     this.rollProficiencies();
-    this.rollTitle();
     this.rollVocation();
     this.addEquipment();
     this.rollSupplies();

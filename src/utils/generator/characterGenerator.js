@@ -160,8 +160,13 @@ export default class CharacterGenerator extends Step6 {
 
   getTitlesAndRecognition = () => {
     const [title] = this.character.titles;
-    if (title.notes) {
-      return `${title.name}: ${title.notes}`
+    if (!title) {
+      return '';
+    }
+    
+    const { notes } = this.character.term.outcome;
+    if (notes) {
+      return `${title.name}: ${notes}`
     } else {
       return title.name;
     }
