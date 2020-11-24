@@ -10,7 +10,7 @@
         <h3>
           the {{ character.ancestry }}
           {{ character.vocation.toLowerCase() }} from
-          {{ character.origins.provincialOrigins.region }}
+          {{ character.origins.provincialOrigins.region }}.
         </h3>
       </div>
       <a class="download-link" :href="url" :download="fileName"
