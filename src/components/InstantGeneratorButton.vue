@@ -9,7 +9,7 @@
         <h2>{{ character.name }},</h2>
         <h3>
           the {{ character.ancestry }}
-          {{ character.vocation.toLowerCase() }} from
+          {{ character.vocation.name.toLowerCase() }} from
           {{ character.origins.provincialOrigins.region }}.
         </h3>
       </div>

@@ -4,6 +4,7 @@ import { aptitudes } from "./aptitudes";
 import { expertises } from "./expertises";
 import { proficiencies } from "./proficiencies";
 import { termOutcomes } from "./term";
+import { vocations } from "./vocations";
 
 export class Step4 extends Step3 {
   rollAptitude = () => {
@@ -194,8 +195,13 @@ export class Step4 extends Step3 {
   }
 
   rollVocation = () => {
-    const vocations = this.aptitude.vocations[this.expertise.name];
-    this.character.vocation = this.getRandomArrayValue(vocations);
+    const possibleVocations = this.aptitude.vocations[this.expertise.name];
+    const name = this.getRandomArrayValue(possibleVocations);
+    const description = vocations[name];
+    this.character.vocation = {
+      name,
+      description
+    };
   }
 
   addEquipment = () => {

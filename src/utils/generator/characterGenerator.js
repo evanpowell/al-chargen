@@ -158,6 +158,11 @@ export default class CharacterGenerator extends Step6 {
     return this.character.languages.join(", ");
   }
 
+  getVocationAndDescription = () => {
+    const { name, description } = this.character.vocation;
+    return `${name.toUpperCase()}: ${description}`
+  }
+
   getTitlesAndRecognition = () => {
     const [title] = this.character.titles;
     if (!title) {
@@ -273,7 +278,7 @@ export default class CharacterGenerator extends Step6 {
       // PROFILE
       Aptitude: [this.character.aptitude],
       Expertise: [this.character.expertise],
-      "Vocation and Description": [this.character.vocation],
+      "Vocation and Description": [this.getVocationAndDescription()],
       "Titles and Recognition": [this.getTitlesAndRecognition()],
       Term: [`${this.character.term.years} yrs`],
 
