@@ -40,19 +40,26 @@ export const notableSettlements = [
     name: `Akal`,
     type: `large township`,
     region: `the Djenndan Protectorate`, // match exactly with wording in step3/provincialOrigins.js
-    location: `in the eastern rolling hills and forests of the Djenndan Protectorate`
+    location: `in the eastern rolling hills and forests of the Djenndan Protectorate`,
+    prepositions: [
+      `the large township of`
+    ]
   },
   {
     name: `Asnarat`,
     type: `large city`,
     region: `the Weyell Groves`,
-    location: `along the coast southeast of the Weyell Groves`
+    location: `along the coast southeast of the Weyell Groves`,
+    prepositions: [
+      `the impressive port city of`,
+      `the port city of`
+    ]
   },
   {
     name: `Bright Reach`,
     type: `small city`,
     region: `Southwest Hinn`,
-    location: `along the Balendian channel inside the peninsula of Hinn`
+    location: `along the Balendian channel inside the peninsula of Hinn`,
   },
   {
     name: `Burunu`,
@@ -70,7 +77,10 @@ export const notableSettlements = [
     name: `Cho Kassal`,
     type: `small city`,
     region: `the Djenndan Protectorate`,
-    location: `in the vast township of Deridian Standing, west of the bogs near the Central Corridor in the Djenndan Protectorate`
+    location: `in the vast township of Deridian Standing, west of the bogs near the Central Corridor in the Djenndan Protectorate`,
+    prepositions: [
+      `the city of peat,`
+    ]
   },
   {
     name: `Cyopolda`,
