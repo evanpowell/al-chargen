@@ -266,6 +266,11 @@ export class Step3 extends Step2 {
       || (this.character.attributes.final.int >= 13 && this.rollDie(100) <= 40);
   };
 
+  rollLocationProse = () => {
+    const milesFromNotableSettlement = this.rollDice(4, 6);
+    
+  }
+
   rollStep3 = () => {
       this.rollBirthDate();
       this.rollProvince();

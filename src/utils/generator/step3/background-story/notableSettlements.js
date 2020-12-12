@@ -175,7 +175,8 @@ export const notableSettlements = [
   {
     name: `Mahrkonat`,
     type: `large city`,
-    region: `central Bosen`, // I feel like we need to revisit this particular entry because it is owned by Bosen but it is on the border of Reviak
+    region: `central Bosen`,
+    closestRegion: `Reviak Proper`,
     location: `atop the rocky plateus north of the Pale Spires at the mouth of the Balendian Channel`
   },
     {
@@ -277,7 +278,7 @@ export const notableSettlements = [
   {
     name: `Xiapitis`,
     type: `large township`,
-    region: `Southwest Hinn`, // also, Southwest Hinn is the opposite side of the province so that region doesn't quite work, but neither does Delonian Hinn, so, maybe omit this?
+    region: `Southwest Hinn`,
     location: `in the rainy and immense greatwood forests among the viantu clanships of southern Hinn`
   },
   {
@@ -286,7 +287,6 @@ export const notableSettlements = [
     region: `the islands of Schelk`,
     location: `at the heart of the Schelk islander tradeway in the Sea of Thrennum`
   },
-  // I'm adding one here because the Northern Wilds are not represented with notable settlements in the rulebook
   {
     name: `Ad'tai`,
     type: `village`,
