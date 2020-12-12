@@ -284,32 +284,9 @@ export class Step3 extends Step2 {
 
   rollSettlementsProse = () => {
     const { settlement } = this.character.origins;
-    let settlementType;
-    if (settlement === 'nomadic group') {
-      settlementType = 'nomadic';
-    } else if (settlement === 'diasporic group') {
-      settlementType = 'diasporic';
-    } else {
-      settlementType = 'location';
-    }
-
-    let settlementPrepositions;
-
-    if (settlmentType === 'location') {
-      if (settlement === 'large city') {
-        const { location } = settlementsProse.prepositions;
-        settlementPrepositions = [...location.large, ...location.neutral];
-      } else {
-        settlementPrepositions = location.neutral;
-      }
-    } else {
-      settlementPrepositions = settlementsProse.prepositions[settlementType];
-    }
-
-    settlementPrepositions = [...settlementPrepositions, ...settlementsProse.prepositions.neutral];
-
-    const settlementPreposition = this.getRandomArrayValue(settlementPrepositions);
-    const settlementsProseString = `${this.character.name} ${settlementPreposition} ${settlement}`;
+    const settlementPhrases = settlementsProse[settlement];
+    const settlementPhrase = this.getRandomArrayValue(settlementPhrases);
+    const settlementsProseString = `${this.character.name} ${settlementPhrase}`;
     return settlementsProseString;
   };
   
@@ -327,7 +304,7 @@ export class Step3 extends Step2 {
     const provincePhrases = biomesProse[biome].provincePhrases;
     const provincePhrase = this.getRandomArrayValue(provincePhrases);
 
-    const biomesProseString = `${settlement} ${biomePhrase} ${provincePhrase} ${region}`;
+    const biomesProseString = `${biomePhrase} ${provincePhrase} ${region}`;
     return biomesProseString;
   };
 
