@@ -112,7 +112,7 @@ export const biomesProse = {
         provincePhrases: [
             'north of',
             'east of',
-            'bordering Lost Lake in the north of',
+            'near Lost Lake in the north of',
             'west of'
         ],
     },

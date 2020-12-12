@@ -272,13 +272,12 @@ export class Step3 extends Step2 {
     this.rollLocationsProse();
   };
 
-  rollLocationProse = () => {
+  rollLocationsProse = () => {
     const settlementPhrase = this.rollSettlementsProse();
     const biomesPhrase = this.rollBiomesProse();
 
     const locationsProse = `${settlementPhrase} ${biomesPhrase}`;
     const filledLocationsProse = this.fillProse(locationsProse);
-    console.log('LOCATIONAL PROSE:');
     console.log(filledLocationsProse);
   };
 
@@ -322,6 +321,6 @@ export class Step3 extends Step2 {
       this.rollReputation();
       this.rollConnection();
       this.rollLiteracy();
-      this.
+      this.rollBackgroundStory();
   };
 }
