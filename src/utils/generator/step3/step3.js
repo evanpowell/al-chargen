@@ -11,6 +11,8 @@ import { reputation } from "./reputation";
 import { connections } from "./connections";
 import { Step2 } from "../step2/step2";
 import { pronouns } from "./pronouns";
+import { biomesProse } from "./background-story/biomesProse";
+import { settlementsProse } from "./background-story/settlementsProse";
 
 export class Step3 extends Step2 {
 
@@ -266,10 +268,68 @@ export class Step3 extends Step2 {
       || (this.character.attributes.final.int >= 13 && this.rollDie(100) <= 40);
   };
 
+  rollBackgroundStory = () => {
+    this.rollLocationsProse();
+  };
+
   rollLocationProse = () => {
-    const milesFromNotableSettlement = this.rollDice(4, 6);
-    
-  }
+    const settlementPhrase = this.rollSettlementsProse();
+    const biomesPhrase = this.rollBiomesProse();
+
+    const locationsProse = `${settlementPhrase} ${biomesPhrase}`;
+    const filledLocationsProse = this.fillProse(locationsProse);
+    console.log('LOCATIONAL PROSE:');
+    console.log(filledLocationsProse);
+  };
+
+  rollSettlementsProse = () => {
+    const { settlement } = this.character.origins;
+    let settlementType;
+    if (settlement === 'nomadic group') {
+      settlementType = 'nomadic';
+    } else if (settlement === 'diasporic group') {
+      settlementType = 'diasporic';
+    } else {
+      settlementType = 'location';
+    }
+
+    let settlementPrepositions;
+
+    if (settlmentType === 'location') {
+      if (settlement === 'large city') {
+        const { location } = settlementsProse.prepositions;
+        settlementPrepositions = [...location.large, ...location.neutral];
+      } else {
+        settlementPrepositions = location.neutral;
+      }
+    } else {
+      settlementPrepositions = settlementsProse.prepositions[settlementType];
+    }
+
+    settlementPrepositions = [...settlementPrepositions, ...settlementsProse.prepositions.neutral];
+
+    const settlementPreposition = this.getRandomArrayValue(settlementPrepositions);
+    const settlementsProseString = `${this.character.name} ${settlementPreposition} ${settlement}`;
+    return settlementsProseString;
+  };
+  
+  rollBiomesProse = () => {
+    const { provincialOrigins, settlement } = this.character.origins;
+    // const { region, biomes } = provincialOrigins;
+    const region = 'the Ommultic Front';
+    const biome = 'spruce forests';
+
+    // const biome = this.getRandomArrayValue(biomes);
+
+    const biomePhrases = biomesProse[biome].phrases[settlement];
+    const biomePhrase = this.getRandomArrayValue(biomePhrases);
+
+    const provincePhrases = biomesProse[biome].provincePhrases;
+    const provincePhrase = this.getRandomArrayValue(provincePhrases);
+
+    const biomesProseString = `${settlement} ${biomePhrase} ${provincePhrase} ${region}`;
+    return biomesProseString;
+  };
 
   rollStep3 = () => {
       this.rollBirthDate();
@@ -285,5 +345,6 @@ export class Step3 extends Step2 {
       this.rollReputation();
       this.rollConnection();
       this.rollLiteracy();
+      this.
   };
 }
