@@ -36,30 +36,52 @@ export const biomesProse = {
     'spruce forests': {
         phrases: {
             'hamlet': [
-
+                `tucked within $['the shaded spruces', 'the whispering pines', 'the grand evergreens']`,
+                `on the edge of $['the bright clearing', 'the towering willows', 'the spruce forests']`,
+                `near the $['spring fed spruces', 'looming spruce forests', 'quiet flowing waters']`,
+                `deep within the $['spruce tree valleys', 'dark spruce forests', 'bright spruce forests']`
             ],
             'village': [
-
+                `tucked away in $['the shaded spruces', 'the tall pines', 'the grand evergreens']`,
+                `at the heart of $['the tall spruces', 'the whispering willows', 'the spruce forests']`,
+                `situated along the borders of $['the empty spruces', 'the tall green groves', 'sleepy pines']`,
+                `settled within the $['spruce tree valleys', 'dark spruce forests', 'bright spruce forests']`
             ],
             'small town': [
-                `in the heart of $['a spruce forest', 'a dense network of pines']`,
-                `next phrase here`,
-                `one more phrase`
+                `in the heart of $['a spruce forest', 'a dense network of pines', 'a spruce forest clearing']`,
+                `located within the $['dense networks of spruce trees', 'dense networks of evergreens', 'spruce forests']`,
+                `situated just south of $['the bright spruces', 'the spruce forests', 'the shadowy spruce trees']`,
+                `found at the border of $['the central evergreens', 'the twisting groves', 'the great pines', 'the watchful spruce trees']`
             ],
             'large township': [
-
+                `stretched throughout $['the ancient spruce trees', 'the grand spruces', 'the shady pines']`,
+                `found nestled in $['the flowing juniper fields', 'the arable forests', 'the dense evergreens']`,
+                `at the center of $['the great spruce forests', 'the meandering forests', 'the secluded spruce clearings']`,
+                `marking $['the far reaches of the hunting pines', 'the entrance to the spruce forests', 'the outer borders of the looming spruce forests']`
             ],
             'small city': [
-
+                `settled among $['the ancient spruce trees', 'the whispering willows', 'the shady pines']`,
+                `at the heart of $['the bright spruce forests', 'the tall evergreens', 'the spruce trees']`,
+                `beyond the valleys of $['the ancient evergreens', 'the spring fed spruce trees', 'the rolling spruce forests']`,
+                `found deep within $['the spruce forests', 'the juniper fields', 'the shaded spruces']`
             ],
             'large city': [
-
+                `thriving amid $['the ancient spruce trees', 'the grand spruces', 'the shady pines']`,
+                `located just beyond $['an ancient spruce grove', 'the grand spruce trees', 'the whispering pines']`,
+                `bordering $['the great spruce groves', 'the windy pines', 'the expansive evergreen forests']`,
+                `densely settled within $['the twisting pines', 'the waving evergreens', 'the great spruce forests']`
             ],
             'diasporic group': [
-
+                `settled in the opened clearings of $['the tall spruce trees', 'the grand spruces', 'the shaded pines']`,
+                `located among $['the whispering spruces', 'the shaded willows', 'the tall pines']`,
+                `found deep within $['the spruce forests', 'the spruce valleys', 'the lakeside groves']`,
+                `at the heart of $['the dark spruce groves', 'the tall spruce hills', 'the expansive spruce forests']`
             ],
             'nomadic group': [
-
+                `that travels among $['the sacred spruce trees', 'the grand spruce hunting grounds', 'the shaded evergreens']`,
+                `which traverses the ridge beyond $['the coniferous forests', 'the spruce groves', 'the fields of willow']`,
+                `that journeys through $['the quiet spruce forests', 'the sacred spruce shadows', 'the shadowed forests']`,
+                `that hunts $['within the hallowed evergreens', 'beyond the reaching willows', 'among the spruce clearings']`
             ]
         },
             // location: {
