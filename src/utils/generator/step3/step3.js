@@ -273,15 +273,30 @@ export class Step3 extends Step2 {
   };
 
   rollLocationsProse = () => {
-    const settlementPhrase = this.rollSettlementsProse();
-    const biomesPhrase = this.rollBiomesProse();
+    const settlementPhrase = this.rollSettlementPhrase();
+    const {
+      biomePhrase,
+      regionPhrase
+    } = this.rollBiomeAndRegionPhrases();
+    const notableSettlementPhrase = this.rollNotableSettlementPhrase();
 
-    const locationsProse = `${settlementPhrase} ${biomesPhrase}`;
+    const roll = this.rollDie(100);
+
+    let locationsProse;
+
+    if (roll <= 65) {
+      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notableSettlementPhrase}.`
+    } else if (roll <= 85) {
+      locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notableSettlementPhrase}.`
+    } else {
+      locationsProse = `${notableSettlementPhrase} ${biomePhrase}, ${settlementPhrase} ${regionPhrase}`
+    }
+
     const filledLocationsProse = this.fillProse(locationsProse);
     console.log(filledLocationsProse);
   };
 
-  rollSettlementsProse = () => {
+  rollSettlementPhrase = () => {
     const { settlement } = this.character.origins;
     const settlementPhrases = settlementsProse[settlement];
     const settlementPhrase = this.getRandomArrayValue(settlementPhrases);
@@ -289,7 +304,7 @@ export class Step3 extends Step2 {
     return settlementsProseString;
   };
   
-  rollBiomesProse = () => {
+  rollBiomeAndRegionPhrases = () => {
     const { provincialOrigins, settlement } = this.character.origins;
     // const { region, biomes } = provincialOrigins;
     const region = 'the Ommultic Front';
@@ -303,9 +318,15 @@ export class Step3 extends Step2 {
     const provincePhrases = biomesProse[biome].provincePhrases;
     const provincePhrase = this.getRandomArrayValue(provincePhrases);
 
-    const biomesProseString = `${biomePhrase} ${provincePhrase} ${region}`;
-    return biomesProseString;
+    return {
+      biomePhrase,
+      regionPhrase: `${provincePhrase} ${region}`,
+    };
   };
+
+  rollNotableSettlementPhrase = () => {
+    return `two days' ride from the great city of Raelian`;
+  }
 
   rollStep3 = () => {
       this.rollBirthDate();
