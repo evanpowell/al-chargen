@@ -84,139 +84,121 @@ export const biomesProse = {
                 `that hunts $['within the hallowed evergreens', 'beyond the reaching willows', 'among the spruce clearings']`
             ]
         },
-            // location: {
-            //     hamlet: [
-
-            //     ],
-            //     village: 
-            //     'felled from the spruce forests',
-            //     'neighboring a $ADJECTIVE spruce forest',
-            //     `in the heart of $['a spruce forest', 'a dense network of pines']`,
-            //     'in the clearings of a $ADJECTIVE spruce forest',
-            //     'nestled within a $ADJECTIVE spruce forest',
-            //     'cloistered within a $ADJECTIVE spruce forest',
-            //     'deep within a $ADJECTIVE spruce forests'
-            // },
-            // group: [
-            //     'among the spruce forests',
-            //     'central to the $ADJECTIVE spruce forests',
-            //     'bordering a $ADJECTIVE spruce forest'
-            // ],
-            // nomadic: [
-            //     'that travels among the $ADJECTIVE spruce forests',
-            //     'which traverses the $ADJECTIVE spruce forests',
-            //     'that journeys through the spruce forests',
-            //     'that circles through the $ADJECTIVE spruce forests',
-            //     'among the $ADJECTIVE spruce forests'
-            // ]
         provincePhrases: [
             'north of',
             'east of',
-            'near Lost Lake in the north of',
+            'in the north of',
             'west of'
         ],
     },
     'expansive tundra': {
         phrases: {
             'hamlet': [
-
+                `centered within $['the expansive tundra', 'the glacial tundra', 'the grand tundra']`,
+                `overlooking $['the great tundra', 'the cold steppes', 'the expansive tundra']`,
+                `fortified upon $['the expansive tundra', 'looming ice fields', 'the great cold steppes']`,
+                `deep within $['the snow covered tundra', 'the expansive tundra', 'the brisk tundra']`
             ],
             'village': [
-
+                `settled in $['the stretching tundra', 'the desolate tundra', 'the wide tundra']`,
+                `among the standing rocks of $['the cold tundra', 'the windy tundra', 'the glacial expanse']`,
+                `situated within $['the dark tundra', 'the endless tundra', 'the expansive tundra']`,
+                `near the shrublands of $['the vast tundra', 'the wide arctic tundra', 'the snowy steppes']`
             ],
             'small town': [
-
+                `in the center of $['the forbidden tundra', 'the expansive tundra', 'the glacial clearings']`,
+                `located amid the $['wide expansive tundra', 'cold ice fields', 'vast steppes']`,
+                `resting within $['the clouded tundra', 'the snowy steppes', 'the glacial fields']`,
+                `found centered in the $['vast tundra', 'icy and desolate steppes', 'glacial wilderness', 'expansive glaciers']`
             ],
             'large township': [
-
+                `stretched across $['the wide tundra', 'the vast steppes', 'the vast tundra']`,
+                `found nestled in $['the expansive tundra', 'the stony steppes', 'the dangerous glacial fields']`,
+                `adjacent to $['the great cold expanse', 'the icy fields', 'the expansive steppes']`,
+                `among the temperate grasses at $['the mouth of the jagged glaciers', 'the entrance to vast tundra', 'the edge of the windy steppes']`
             ],
             'small city': [
-
+                `on the lower plateaus of $['the vast tundra', 'the endless rocky steppes', 'the chilling expanse']`,
+                `beyond the treeline in $['the boundless tundra', 'the frozen wastelands', 'the vast steppes']`,
+                `beyond the cold valley in $['the endless tundra', 'the wandering hotsprings', 'the bitter arctic steppes']`,
+                `at the arctic edge of $['the vast frozen wastelands', 'the endless steppes', 'the expansive tundra']`
             ],
             'large city': [
-
+                `warming the ridge of the arctic edge of $['the shifting glaciers', 'the grand steppes', 'the vast tundra']`,
+                `located central to $['the windswept tundra', 'the boundless steppes', 'the expansive permafrost']`,
+                `at the glacier's edge of $['the salted hotsprings', 'the vast permafrost', 'the arctic steppes']`,
+                `still braving the cold winds of $['the clouded tundra', 'the frozen wastelands', 'the ice stone fields']`
             ],
             'diasporic group': [
-
+                `that long ago resettled in $['the forgiving tundra', 'the open steppes', 'the brisk tundra']`,
+                `just south of $['the scattered hotsprings', 'the expansive tundra', 'the boundless wastes']`,
+                `found hidden deep within $['the ice stone steppes', 'the vast tundra', 'the frozen fields']`,
+                `cresting the icy ridges of $['the endless permafrost', 'the vast tundra', 'the expansive steppes']`
             ],
             'nomadic group': [
-
+                `that wanders across $['the vast tundra', 'the arctic permafrost', 'the chilling steppes']`,
+                `that traverses $['the windswept steppes', 'the harsh tundra', 'the bitter cold glaciers']`,
+                `that hunts beyond the cold stones of $['the lifegiving permafrost', 'the stone scattered steppes', 'the sacred shrublands']`,
+                `that often camps within $['the cold green permafrosts', 'the caribou steppes', 'the icy tundra']`
             ]
         },
-        // phrases: {
-        //     location: [
-        //         'centered within the $ADJECTIVE tundra',
-        //         'overlooking the $ADJECTIVE tundra',
-        //         'fortified upon the $ADJECTIVE tundra'
-        //     ],
-        //     group: [
-        //         'which fled to the $ADJECTIVE tundra',
-        //         'in the heart of the $ADJECTIVE tundra',
-        //         'bermed in the central hills of the $ADJECTIVE tundra'
-        //     ],
-        //     nomadic: [
-        //         'that travels over the $ADJECTIVE tundra',
-        //         'that traverses the $ADJECTIVE tundra',
-        //         'that hunts across the $ADJECTIVE tundra',
-        //         'that fishes the hotsprings on the $ADJECTIVE tundra'
-        //     ],
-        //     neutral: [
-        //         'isolated on the $ADJECTIVE tundra',
-        //         'among the ice fields of the $ADJECTIVE tundra',
-        //         'among the hotsprings of the $ADJECTIVE tundra'
-        //     ]
-        // },
         provincePhrases: [
             'north of',
-            'beyond Lost Lake and north of',
+            'far beyond Lost Lake in',
             'beyond'
         ]
     },
     'cold lakefronts': {
         phrases: {
             'hamlet': [
-
+                `in the thick forests of $['the cold lakefronts', 'the chilling lakes', 'the arctic lakelands']`,
+                `situated close to $['the cold trout lakes', 'the icy lakefronts', 'the cold lakefronts']`,
+                `near the waters' edge of $['the frigid lakefronts', 'the frigid lakelands', 'the frozen fjords']`,
+                `found within $['the snow frosted lakes', 'the cold lakefronts', 'the windy cold lakes']`
             ],
             'village': [
-
+                `settled in $['the long lakefronts', 'the frigid lakes', 'the icy lakelands']`,
+                `established within the tall grasses of $['the cold lakefronts', 'the windy ice lakes', 'the ice covered lakes']`,
+                `beneath the vibrant trees in $['the frost covered lakefronts', 'the bone chilling lakelands', 'the frigid lakefronts']`,
+                `in the forests above $['the snowy lakefronts', 'the arctic lakelands', 'the crisp lakelands']`
             ],
             'small town': [
-
+                `central to $['the formidable cold lakes', 'the cold lakefronts', 'the glacier fed lakelands']`,
+                `located nearby the $['wide cold lakefronts', 'cold lakes', 'wild frostful lakelands']`,
+                `resting beside $['the flowing cold lakes', 'the snow covered lakefronts', 'the frigid lake waters']`,
+                `found amid the $['briarpatch lakesides', 'desolate lakefronts', 'quiet lakelands', 'icy lakelands']`
             ],
             'large township': [
-
+                `bordering the edge of $['the cold lakefronts', 'the snow covered lakefronts', 'the frost-filled lakelands']`,
+                `stretching across $['the cold lakefronts', 'the icy lakelands', 'the pale ice lakes']`,
+                `encompassed within $['the great cold lakelands', 'the inhospitable lakefronts', 'the harsh lakelands']`,
+                `surrounded by the temperate grasses at $['the heart of the cold lakelands', 'the entrance to icy cold lakes', 'the mouth of the trout lake waters']`
             ],
             'small city': [
-
+                `on the Tanethi greatbarges of $['the chilly lake waters', 'the blue ice lakes', 'the frigid lake waters']`,
+                `among $['the dark cold lakelands', 'the frozen lakefronts', 'the snow covered waterfronts']`,
+                `nestled within $['the cold blue lakes', 'the placid lakelands', 'the arctic lakefronts']`,
+                `near the icy waters of $['the crisp mountain lakes', 'the frost lakes', 'the cold lakefronts']`
             ],
             'large city': [
-
+                `central to $['the cold lakelands', 'the great lakefronts', 'the distant trout lakes']`,
+                `located along $['the icy gravel beaches', 'the frozen lake shores', 'the arctic lakelands']`,
+                `in the hills above $['the frozen fjords', 'the frigid lakelands', 'the unforgiving ice lakes']`,
+                `overlooking $['the vast ice lakes', 'the inhospitable lakelands', 'the snowswept lakefronts']`
             ],
             'diasporic group': [
-
+                `that has made its home along $['the pale blue lakefronts', 'the ice covered lake fields', 'the frigid gravel beaches']`,
+                `that has settled on the ice beds of $['the frostful lakelands', 'the cold lakefronts', 'the snowy lakefronts']`,
+                `settled among $['the frost lakes', 'the frozen trout lake waters', 'the icy lakesides']`,
+                `that made a lasting home among $['the great frost lakes', 'the fierce lakefronts', 'the snow waters']`
             ],
             'nomadic group': [
-
+                `that traverses $['the outstretched cold lakes', 'the arctic lakefronts', 'the chilling gravel beaches']`,
+                `that hunts the elk rich, $['snowy lakelands', 'harsh lakefronts', 'bitter cold lakesides']`,
+                `that hunts beyond the cold stones of $['the ice lakes of Hathia', 'the frigid lakewaters', 'the frozen lakefronts']`,
+                `that often camps within $['the cold lakeside forests', 'the frigid lakefronts', 'the icy lakelands']`
             ]
         },
-            // location: [
-            //     'overlooking a $ADJECTIVE lakefront',
-            //     'looking out upon a $ADJECTIVE lakefront',
-            //     'in the hills along a $ADJECTIVE lakefront'
-            // ],
-            // group: [
-            //     'that has made its home along a $ADJECTIVE lakefront',
-            //     'that has settled on the ice beds of the $ADJECTIVE lakefronts'
-            // ],
-            // nomadic: [
-            //     'that traverses the $ADJECTIVE lakefronts',
-            //     'that hunts the elk rich $ADJECTIVE lakefronts'
-            // ],
-            // neutral: [
-            //     'on the Tanethi greatbarges of the $ADJECTIVE lakefronts',
-            //     'among the $ADJECTIVE lake fronts',
-            //     'in the bordered forests of the $ADJECTIVE lake fronts'
-            // ]
         provincePhrases: [
             'nearby',
             'north of',
@@ -225,6 +207,56 @@ export const biomesProse = {
     },
 /*--- central Wendajii ---*/
     'savannah grasslands': {
+        phrases: {
+            'hamlet': [
+                `in the thick forests of $['the cold lakefronts', 'the chilling lakes', 'the arctic lakelands']`,
+                `situated close to $['the cold trout lakes', 'the icy lakefronts', 'the cold lakefronts']`,
+                `near the waters' edge of $['the frigid lakefronts', 'the frigid lakelands', 'the frozen fjords']`,
+                `found within $['the snow frosted lakes', 'the cold lakefronts', 'the windy cold lakes']`
+            ],
+            'village': [
+                `marking the tall reeds of $['the long lakefronts', 'the frigid lakes', 'the icy lakelands']`,
+                `established within the tall grasses of $['the cold lakefronts', 'the windy ice lakes', 'the ice covered lakes']`,
+                `beneath the vibrant trees in $['the frost covered lakefronts', 'the bone chilling lakelands', 'the frigid lakefronts']`,
+                `in the forests above $['the snowy lakefronts', 'the arctic lakelands', 'the crisp lakelands']`
+            ],
+            'small town': [
+                `among the watercatches of $['the formidable cold lakes', 'the cold lakefronts', 'the glacier fed lakelands']`,
+                `located nearby the $['wide cold lakefronts', 'cold lakes', 'wild frostful lakelands']`,
+                `resting beside $['the flowing cold lakes', 'the snow covered lakefronts', 'the frigid lake waters']`,
+                `found amid the $['briarpatch lakesides', 'desolate lakefronts', 'quiet lakelands', 'icy lakelands']`
+            ],
+            'large township': [
+                `bordering the edge of $['the cold lakefronts', 'the snow covered lakefronts', 'the frost-filled lakelands']`,
+                `stretching across $['the cold lakefronts', 'the icy lakelands', 'the pale ice lakes']`,
+                `encompassed within $['the great cold lakelands', 'the inhospitable lakefronts', 'the harsh lakelands']`,
+                `surrounded by the temperate grasses at $['the heart of the cold lakelands', 'the entrance to icy cold lakes', 'the mouth of the trout lake waters']`
+            ],
+            'small city': [
+                `beyond the rifts of $['the chilly lake waters', 'the blue ice lakes', 'the frigid lake waters']`,
+                `within the vast $['the dark cold lakelands', 'the frozen lakefronts', 'the snow covered waterfronts']`,
+                `nestled overlooking $['the cold blue lakes', 'the placid lakelands', 'the arctic lakefronts']`,
+                `near the scattered tall trees of $['the crisp mountain lakes', 'the frost lakes', 'the cold lakefronts']`
+            ],
+            'large city': [
+                `centrally located in $['the cold lakelands', 'the great lakefronts', 'the distant trout lakes']`,
+                `located along $['the icy gravel beaches', 'the frozen lake shores', 'the arctic lakelands']`,
+                `found far among $['the frozen fjords', 'the frigid lakelands', 'the unforgiving ice lakes']`,
+                `built in the rocky reach above $['the vast ice lakes', 'the inhospitable lakelands', 'the snowswept lakefronts']`
+            ],
+            'diasporic group': [
+                `within the lower oasis of $['the pale blue lakefronts', 'the ice covered lake fields', 'the frigid gravel beaches']`,
+                `marking the tall reeds of $['the frostful lakelands', 'the cold lakefronts', 'the snowy lakefronts']`,
+                `that migrated to the expansive $['the frost lakes', 'the frozen trout lake waters', 'the icy lakesides']`,
+                `that found a sustainable home among $['the great frost lakes', 'the fierce lakefronts', 'the snow waters']`
+            ],
+            'nomadic group': [
+                `which wanders $['the outstretched cold lakes', 'the arctic lakefronts', 'the chilling gravel beaches']`,
+                `overwatching the elephant herds of $['snowy lakelands', 'harsh lakefronts', 'bitter cold lakesides']`,
+                `that overlooks the greatnecks of $['the ice lakes of Hathia', 'the frigid lakewaters', 'the frozen lakefronts']`,
+                `that follows the lion's trail through $['the cold lakeside forests', 'the frigid lakefronts', 'the icy lakelands']`
+            ]
+        },
         phrases: {
             location: [
                 'overlooking the',
