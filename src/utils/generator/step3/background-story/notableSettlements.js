@@ -31,19 +31,59 @@
   - replace 'Central Wendajii' with the more accurate location of notable settlement 'X' to stay true to the description of that settlement.
 
   Even if the region rolled matches well with the location of the notable settlement, the 'location' property can be
-  used to replace the region with a more detailed description (see Heksaag below).
+  used to replace the region with a more detailed description.
 */
-e
 
 export const notableSettlements = [
   {
     name: `Akal`,
     type: `large township`,
-    region: `the Djenndan Protectorate`, // match exactly with wording in step3/provincialOrigins.js
+    region: `the Djenndan Protectorate`,
+
+    // location is only when character is determined to be from the notable settlement, and will
+    // replace biome and province descriptions that are otherwise rolled.
     location: `in the eastern rolling hills and forests of the Djenndan Protectorate`,
+
     prepositions: [
-      `the large township of`
-    ]
+      `the $['ancestral', 'hospitable', 'looming'] township of`
+    ],
+
+    rangeDescriptions: {
+      // unique expressions for the distance from character's settlement to the notable settlement
+      // Example: "three days along the main roads to", "a fortnight by camel from"
+      close: [
+        `$["a long day's", "two days'"] ride from`
+      ],
+      mid: [
+        `a fortnight by horse from`,
+        `$['six', 'seven', 'eight', 'nine'] days' journey from`
+      ]
+    },
+
+    rangeProbabilities: {
+      // chances that a settlement type of smaller population is either within close or mid range
+      // of the notable settlement. (If the character's settlement is of equal or greater size, the
+      // notable settlement automatically excluded).
+      'diasporic group': {
+        close: 30,
+        mid: 30
+      },
+      'hamlet': {
+        // if character is from a hamlet, there is a 40% chance that hamlet is close to Akal, and
+        // a 50% chance that it is mid range (leaving a 10% chance that the distance is too far
+        // for Akal to be mentioned in the backstory prose).
+        close: 40,
+        mid: 50
+      },
+      'village': {
+        close: 25,
+        mid: 45
+      },
+      'small town': {
+        close: 20,
+        mid: 40
+      }
+    }
   },
   {
     name: `Asnarat`,
