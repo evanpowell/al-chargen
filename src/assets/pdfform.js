@@ -481,7 +481,7 @@ function pdfform() {
     return out.get_uint8array();
   }
 
-  function list_fields(data) {
+  function listFields(data) {
     var doc = minipdf_lib.parse(new Uint8Array(data));
     var res = {};
 
@@ -526,8 +526,8 @@ function pdfform() {
   }
 
   return {
-    transform: transform,
-    list_fields: list_fields,
+    transform,
+    listFields,
     // test only
     _serialize_str: serialize_str,
     _decode_str: pdf_decode_str,

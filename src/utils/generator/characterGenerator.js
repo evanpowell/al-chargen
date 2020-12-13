@@ -87,7 +87,7 @@ export default class CharacterGenerator extends Step6 {
       }
       case 'death': {
         //TODO: roll death chart
-        console.log('------------DEATH----------------');
+        // console.log('------------DEATH----------------');
         break;
       }
       case 'wealth': {
@@ -228,27 +228,27 @@ export default class CharacterGenerator extends Step6 {
       "Adventurer Level": "1",
 
       // CHARACTERISTICS
-      Ancestry: [this.character.ancestry],
-      Sex: [this.character.sex],
-      Height: [this.convertInchesToFeet(appearance.height)],
-      Weight: [`${appearance.weight} lbs.`],
-      Age: [appearance.age],
+      "Ancestry": [this.character.ancestry],
+      "Sex": [this.character.sex],
+      "Height": [this.convertInchesToFeet(appearance.height)],
+      "Weight": [`${appearance.weight} lbs.`],
+      "Age": [appearance.age],
       "Distinguishing Features": [this.listDistinguishingFeatures()],
 
       //ORIGINS
       "Languages Spoken": [this.listLanguages()],
 
       // ATTRIBUTES
-      STR: [this.character.attributes.initial.str],
-      END: [this.character.attributes.initial.end],
-      AGI: [this.character.attributes.initial.agi],
-      PRE: [this.character.attributes.initial.pre],
-      INT: [this.character.attributes.initial.int],
-      WIS: [this.character.attributes.initial.wis],
-      PER: [this.character.attributes.initial.per],
-      CHA: [this.character.attributes.initial.cha],
+      "STR": [this.character.attributes.initial.str],
+      "END": [this.character.attributes.initial.end],
+      "AGI": [this.character.attributes.initial.agi],
+      "PRE": [this.character.attributes.initial.pre],
+      "INT": [this.character.attributes.initial.int],
+      "WIS": [this.character.attributes.initial.wis],
+      "PER": [this.character.attributes.initial.per],
+      "CHA": [this.character.attributes.initial.cha],
 
-      "Attribute AdjustmentsRow1": [adjustments.str],
+      "Attribute AdjustmentsSTR": [adjustments.str],
       "Attribute AdjustmentsEND": [adjustments.end],
       "Attribute AdjustmentsAGI": [adjustments.agi],
       "Attribute AdjustmentsPRE": [adjustments.pre],
@@ -257,7 +257,7 @@ export default class CharacterGenerator extends Step6 {
       "Attribute AdjustmentsPER": [adjustments.per],
       "Attribute AdjustmentsCHA": [adjustments.cha],
 
-      "Adjusted ScoreRow1": [this.character.attributes.final.str],
+      "Adjusted ScoreSTR": [this.character.attributes.final.str],
       "Adjusted ScoreEND": [this.character.attributes.final.end],
       "Adjusted ScoreAGI": [this.character.attributes.final.agi],
       "Adjusted ScorePRE": [this.character.attributes.final.pre],
@@ -266,7 +266,7 @@ export default class CharacterGenerator extends Step6 {
       "Adjusted ScorePER": [this.character.attributes.final.per],
       "Adjusted ScoreCHA": [this.character.attributes.final.cha],
 
-      "Bonus PenaltyRow1": [bonusPenalties.str],
+      "Bonus PenaltySTR": [bonusPenalties.str],
       "Bonus PenaltyEND": [bonusPenalties.end],
       "Bonus PenaltyAGI": [bonusPenalties.agi],
       "Bonus PenaltyPRE": [bonusPenalties.pre],
@@ -276,23 +276,23 @@ export default class CharacterGenerator extends Step6 {
       "Bonus PenaltyCHA": [bonusPenalties.cha],
 
       // PROFILE
-      Aptitude: [this.character.aptitude],
-      Expertise: [this.character.expertise],
+      "Aptitude": [this.character.aptitude],
+      "Expertise": [this.character.expertise],
       "Vocation and Description": [this.getVocationAndDescription()],
       "Titles and Recognition": [this.getTitlesAndRecognition()],
-      Term: [`${this.character.term.years} yrs`],
+      "Term": [`${this.character.term.years} yrs`],
 
       // PALE STONE ENCOUNTER
       "Encounter Story": [this.character.palestoneEncounter.prose],
-      Outcome: [this.character.palestoneEncounter.outcome.description],
+      "Outcome": [this.character.palestoneEncounter.outcome.description],
 
       // RESISTANCES
-      Addiction: [this.character.resistances.addiction],
-      Aversion: [this.character.resistances.aversion],
-      Debility: [this.character.resistances.debility],
-      Explosion: [this.character.resistances.explosion],
-      Infection: [this.character.resistances.infection],
-      Toxin: [this.character.resistances.toxin],
+      "Addiction": [this.character.resistances.addiction],
+      "Aversion": [this.character.resistances.aversion],
+      "Debility": [this.character.resistances.debility],
+      "Explosion": [this.character.resistances.explosion],
+      "Infection": [this.character.resistances.infection],
+      "Toxin": [this.character.resistances.toxin],
 
       //ABILITIES
       "Assess Threat": [this.character.abilities.assessThreat],
@@ -307,9 +307,9 @@ export default class CharacterGenerator extends Step6 {
 
       // CONDITIONING
 
-      "Poise": [this.character.conditioning.poise],
-      "Avoidance": [this.character.conditioning.avoidance],
-      "Capacity Conditioning": [this.character.conditioning.capacity],
+      "PoiseConditioning": [this.character.conditioning.poise],
+      "AvoidanceConditioning": [this.character.conditioning.avoidance],
+      "CapacityConditioning": [this.character.conditioning.capacity],
 
       // SKILLS
       ...this.mapSkillsToFieldsObject(),
@@ -318,8 +318,8 @@ export default class CharacterGenerator extends Step6 {
       ...this.mapProficienciesToFieldsObject(),
 
       // INVENTORY
-      "Carried equipment sundries and supplies": [this.listInventory()],
-      "Coins treasures and wealth": [`${this.character.wealth} Threnn`]
+      "Inventory": [this.listInventory()],
+      "Coins": [`${this.character.wealth} Threnn`]
     }
   }
 
