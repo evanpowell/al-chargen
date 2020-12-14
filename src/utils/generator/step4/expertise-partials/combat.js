@@ -42,13 +42,17 @@ export const combat = {
   },
   equipment: [
     {
-      name: `Arm Bracers`
+      name: `Arm Bracers`,
     },
     {
-      name: `Crude Cudgel`
+      name: `Crude Cudgel`,
+      type: `weapon`,
+      damage: `1d6-1`
     },
     {
-      name: `Crude Dirk`
+      name: `Crude Dirk`,
+      type: `weapon`,
+      damage: `1d6-1`
     },
     {
       name: `Hemp Sling`
