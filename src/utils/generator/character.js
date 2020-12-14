@@ -80,6 +80,7 @@ export default class Character {
       modifications: []
     }
   };
+  masteries = [];
   palestoneEncounter = {
     prose: '',
     outcome: {

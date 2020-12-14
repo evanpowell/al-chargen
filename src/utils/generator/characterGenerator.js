@@ -210,6 +210,10 @@ export default class CharacterGenerator extends Step6 {
     }).join('\n');
   }
 
+  listMasteries = () => {
+    return this.character.masteries.join(`\n`);
+  }
+
   mapToPdfFields = () => {
     const adjustments = Object.entries(this.character.attributes.adjustments)
       .reduce(this.showPlusHideZerosReducer, {});
@@ -315,7 +319,10 @@ export default class CharacterGenerator extends Step6 {
 
       // INVENTORY
       "Inventory": [this.listInventory()],
-      "Coins": [`${this.character.wealth} Threnn`]
+      "Coins": [`${this.character.wealth} Threnn`],
+
+      // MASTERY
+      "MasteryBox": [this.listMasteries()]
     }
   }
 
