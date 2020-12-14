@@ -242,17 +242,20 @@ export class Step4 extends Step3 {
 
     this.character.term.years = termYears;
     this.character.term.outcome = {
-      description: termOutcome.description,
       notes: termOutcome.notes || '',
       modifications: termOutcome.modifications || []
     };
 
     const titleName = this.expertise.titles[termResult];
     if (titleName) {
-      this.character.titles = [{ name: titleName }];
+      this.character.title = titleName;
     }
 
     this.character.appearance.final.age = this.character.appearance.initial.age + termYears;
+  }
+
+  rollAccoladesProse = () => {
+    // TODO: Roll Accolades prose once phrases are fleshed out.
   }
 
   rollStep4 = () => {
@@ -268,5 +271,6 @@ export class Step4 extends Step3 {
     this.addEquipment();
     this.rollSupplies();
     this.rollTerm();
+    this.rollAccoladesProse();
   };
 }

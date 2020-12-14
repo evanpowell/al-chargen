@@ -1,10 +1,7 @@
 export const termOutcomes = {
-  'All Numbers Distinct': {
-    description: 'Showed a lack of motivation or disdain for their initial area of expertise'
-  },
+  'All Numbers Distinct': {},
 
   'Sequential Numbers': {
-    description: 'Regarged with disdain',
     notes: '+2 difficulty recruiting',
     modifications: [
       {
@@ -15,7 +12,6 @@ export const termOutcomes = {
   },
 
   'One Equaled Pair': {
-    description: 'Showed drive and dedication, earned respect',
     modifications: [
       {
         type: 'skill',
@@ -29,7 +25,6 @@ export const termOutcomes = {
   },
 
   'Three Equal Numbers': {
-    description: 'Highly regarded',
     notes: '-4 difficulty recruiting',
     modifications: [
       {
@@ -40,7 +35,6 @@ export const termOutcomes = {
   },
 
   'Two Equaled Pairs': {
-    description: 'Demonstrated exceptional prowess',
     modifications: [
       {
         type: 'accolades',
@@ -50,7 +44,6 @@ export const termOutcomes = {
   },
 
   'All Equal Numbers': {
-    description: 'Displayed unrivaled expertise',
     modifications: [
       {
         type: 'skill',
