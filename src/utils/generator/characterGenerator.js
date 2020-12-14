@@ -165,7 +165,7 @@ export default class CharacterGenerator extends Step6 {
 
   getAccolades = () => {
     // TODO: Update this once accolades prose is completed
-    const [title] = this.character;
+    const { title } = this.character;
     if (title) {
       return title
     } else {
