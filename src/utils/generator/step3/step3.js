@@ -115,58 +115,61 @@ export class Step3 extends Step2 {
     this.character.origins.settlement = this.getRandomArrayValue(settlements);
   }
 
-  rollParentage = () => {
-    const parentObj = this.getRandomArrayValue(parentage);
-    const { type } = parentObj;
-    let numberOfParents = 0;
-    if (parentObj.max) {
-      numberOfParents = this.rollDie(parentObj.max);
-    } else if (parentObj.fixed) {
-      numberOfParents = parentObj.fixed;
-    }
+  // Deprecated
+  // rollParentage = () => {
+  //   const parentObj = this.getRandomArrayValue(parentage);
+  //   const { type } = parentObj;
+  //   let numberOfParents = 0;
+  //   if (parentObj.max) {
+  //     numberOfParents = this.rollDie(parentObj.max);
+  //   } else if (parentObj.fixed) {
+  //     numberOfParents = parentObj.fixed;
+  //   }
 
-    const statuses = this.rollStatuses(numberOfParents, relationStatuses);
+  //   const statuses = this.rollStatuses(numberOfParents, relationStatuses);
     
-    this.character.origins.parentage = {
-      type,
-      statuses
-    };
-  }
+  //   this.character.origins.parentage = {
+  //     type,
+  //     statuses
+  //   };
+  // }
 
-  rollRelations = () => {
-    this.character.origins.relations = relations
-      .filter(() => this.rollDie(100) <= 75)
-      .reduce((relationsObj,rel) => {
-        const numOfRelations = this.rollDie(rel.max) - 1;
-        let statuses;
-        if (rel.type === 'pets') {
-            statuses = this.rollStatuses(numOfRelations, petTypes);
-        } else {
-            statuses = this.rollStatuses(numOfRelations, relationStatuses);
-        }
+  // Deprecated
+  // rollRelations = () => {
+  //   this.character.origins.relations = relations
+  //     .filter(() => this.rollDie(100) <= 75)
+  //     .reduce((relationsObj,rel) => {
+  //       const numOfRelations = this.rollDie(rel.max) - 1;
+  //       let statuses;
+  //       if (rel.type === 'pets') {
+  //           statuses = this.rollStatuses(numOfRelations, petTypes);
+  //       } else {
+  //           statuses = this.rollStatuses(numOfRelations, relationStatuses);
+  //       }
 
-        if (numOfRelations) {
-            relationsObj[rel.type] = statuses;
-        }
+  //       if (numOfRelations) {
+  //           relationsObj[rel.type] = statuses;
+  //       }
         
-        return relationsObj;
-      }, {});
-  }
+  //       return relationsObj;
+  //     }, {});
+  // }
 
-  rollStatuses(quantity, statuses) {
-    return [...Array(quantity)]
-      .map(() => {
-        return this.getRandomArrayValue(statuses);
-      })
-      .reduce((statusObj, status) => {
-        if (statusObj[status]) {
-          statusObj[status] += 1;
-        } else {
-          statusObj[status] = 1;
-        }
-        return statusObj;
-      }, {});
-  }
+  // Deprecated
+  // rollStatuses(quantity, statuses) {
+  //   return [...Array(quantity)]
+  //     .map(() => {
+  //       return this.getRandomArrayValue(statuses);
+  //     })
+  //     .reduce((statusObj, status) => {
+  //       if (statusObj[status]) {
+  //         statusObj[status] += 1;
+  //       } else {
+  //         statusObj[status] = 1;
+  //       }
+  //       return statusObj;
+  //     }, {});
+  // }
 
   rollName = () => {
     let namesPool = [];
@@ -333,8 +336,8 @@ export class Step3 extends Step2 {
       this.rollProvince();
       this.rollLanguages();
       this.rollSettlement();
-      this.rollParentage();
-      this.rollRelations();
+      // this.rollParentage();
+      // this.rollRelations();
       this.rollCommunity();
       this.rollName();
       this.rollPronouns();
