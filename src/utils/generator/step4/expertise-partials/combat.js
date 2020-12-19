@@ -55,13 +55,13 @@ export const combat = {
       damage: `1d6-1`
     },
     {
-      name: `Hemp Sling`
+      name: `Weapon Belt`
     },
     {
-      name: `Quilted Fur Armor`
+      name: `Crude Fur Armor`
     },
     {
-      name: `Weapon Belt`,
+      name: `Whetstone`,
     }
   ],
   supplies: [
