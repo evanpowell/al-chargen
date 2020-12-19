@@ -63,28 +63,28 @@ export const alchemy = {
   ],
   supplies: [
     {
-      name: `Clear water`,
+      name: `Compound Ingredients`,
       quantity: 5
     },
     {
-      name: `Joza root`,
+      name: `Elixir Ingredients`,
       quantity: 5
     },
     {
-      name: `Myrtle`,
+      name: `Herbalism Ingredients`,
       quantity: 5
     },
     {
-      name: `Nettle milk`,
+      name: `Salve Ingredients`,
       quantity: 5
     },
     {
-      name: `Witch's Webbing`,
+      name: `Tonic Ingredients`,
       quantity: 5
     },
     {
-      name: `Pine tar`,
-      quantity: 5
+      name: `Waterskin`,
+      quantity: 3
     },
   ]
 };
