@@ -55,35 +55,35 @@ export const combat = {
       damage: `1d6-1`
     },
     {
-      name: `Hemp Sling`
+      name: `Weapon Belt`
     },
     {
-      name: `Quilted Fur Armor`
+      name: `Crude Fur Armor`
     },
     {
-      name: `Weapon Belt`,
+      name: `Whetstone`,
     }
   ],
   supplies: [
     {
-      name: `Arrows`,
-      quantity: 20
-    },
-    {
-      name: `Bullets`,
-      quantity: 20
+      name: `Armorer's Toolkit`,
+      quantity: 3
     },
     {
       name: `Bandage Provisions`,
       quantity: 10
     },
     {
+      name: `Field Provisions`,
+      quantity: 3
+    },
+    {
       name: `Face Paint`,
       quantity: 5
     },
     {
-      name: `Leather Strips`,
-      quantity: 10
+      name: `Leather Lashings`,
+      quantity: 5
     },
     {
       name: `Pemmican`,
