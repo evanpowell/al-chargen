@@ -233,6 +233,7 @@ export default class CharacterGenerator extends Step6 {
       "Height": [this.convertInchesToFeet(appearance.height)],
       "Weight": [`${appearance.weight} lbs.`],
       "Age": [appearance.age],
+      "Day of Birth": [this.character.origins.birthdate.dateString],
       "Distinguishing Features": [this.listDistinguishingFeatures()],
 
       //ORIGINS
