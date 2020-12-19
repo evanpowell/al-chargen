@@ -62,28 +62,28 @@ export const spellwork = {
   ],
   supplies: [
     {
-      name: `Amethyst`,
-      quantity: 5
+      name: `Spellcasting Components`,
+      quantity: 3
     },
     {
-      name: `Illusionist's Powder`,
-      quantity: 10
+      name: `Charm Components`,
+      quantity: 3
     },
     {
-      name: `Lead`,
-      quantity: 5
+      name: `Emergence Components`,
+      quantity: 3
     },
     {
-      name: `Malachite`,
-      quantity: 5
+      name: `Artifice Components`,
+      quantity: 3
     },
     {
-      name: `Nightshade Dust`,
-      quantity: 5
+      name: `Transference Components`,
+      quantity: 3
     },
     {
-      name: `Turquoise`,
-      quantity: 5
+      name: `Moonstone`,
+      quantity: 1
     },
   ]
 };
