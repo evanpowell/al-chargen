@@ -1,11 +1,3 @@
-/*
-  Example: Combat - Champion
-
-  Kishietta was the hero of several battles as a vanguard, and [is feared and admired as a "Champion"].
-
-*/
-
-
 export const titleAccoladesPhrases = {
 
   // Alchemy
