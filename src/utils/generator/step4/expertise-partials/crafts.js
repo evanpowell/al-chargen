@@ -62,23 +62,23 @@ export const crafts = {
   ],
   supplies: [
     {
-      name: `Armorer's Bundle`,
+      name: `Armorer's Toolkit`,
       quantity: 10
     },
     {
-      name: `Board lumber`,
+      name: `Glass Mineral Ore`,
       quantity: 5
     },
     {
-      name: `Brown salts`,
+      name: `Needles`,
       quantity: 5
-    },
-    {
-      name: `Glass flecks`,
-      quantity: 10
     },
     {
       name: `Leather Strips`,
+      quantity: 10
+    },
+    {
+      name: `Thread`,
       quantity: 10
     },
     {
