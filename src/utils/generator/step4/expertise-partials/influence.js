@@ -62,20 +62,20 @@ export const influence = {
   ],
   supplies: [
     {
-      name: `Candles`,
+      name: `Connections Instruments`,
       quantity: 6
     },
     {
-      name: `Ink`,
-      quantity: 5
+      name: `Diplomacy Instruments`,
+      quantity: 2
     },
     {
       name: `Parchments`,
       quantity: 10
     },
     {
-      name: `Perfume`,
-      quantity: 2
+      name: `Oration Instruments`,
+      quantity: 5
     },
     {
       name: `Quill scribers`,
