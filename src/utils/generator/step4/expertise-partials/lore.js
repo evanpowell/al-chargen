@@ -62,22 +62,22 @@ export const lore = {
   ],
   supplies: [
     {
-      name: `Forsaking and Accepting`,
+      name: `"Forsaking and Accepting"`,
     },
     {
-      name: `Regent's Crest`,
+      name: `"Regent's Crest"`,
     },
     {
-      name: `Scholar's Rhetoric`,
+      name: `"Scholar's Rhetoric"`,
     },
     {
-      name: `Song of the Soldiers' Spires`,
+      name: `"Song of the Soldiers' Spires"`,
     },
     {
-      name: `Tome of the Mongrel`,
+      name: `"Tome of the Mongrel"`,
     },
     {
-      name: `Yelvelak's Bestiary`,
+      name: `"Yelvelak's Bestiary"`,
     },
   ]
 };
