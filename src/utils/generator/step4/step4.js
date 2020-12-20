@@ -6,6 +6,7 @@ import { proficiencies } from "./proficiencies";
 import { termOutcomes } from "./term";
 import { vocations } from "./vocations";
 import { expertiseAccoladesPhrases } from "./accolades-prose/expertiseAccoladesPhrases";
+import { titleAccoladesPhrases } from "./accolades-prose/titleAccoladesPhrases";
 
 export class Step4 extends Step3 {
   rollAptitude = () => {
@@ -266,12 +267,13 @@ export class Step4 extends Step3 {
   rollAccoladesProse = () => {
     const part1Phrases = expertiseAccoladesPhrases[this.character.expertise][this.termDiceResult];
     const part1Phrase = this.getRandomArrayValue(part1Phrases);
-    const sentence1 = this.fillProse(`${this.character.name} ${part1Phrase}.`);
-    this.character.accolades = sentence1;
-    // TODO: Update below when title-related phrases are complete
-    if (this.character.title) {
-      this.character.accolades += `\n"${this.character.title}"`
-    }
+    const sentence1 = this.fillProse(`$NAME ${part1Phrase}.`);
+    const part2Sentences = titleAccoladesPhrases[this.termDiceResult];
+    let sentence2 = this.getRandomArrayValue(part2Sentences);
+    sentence2 = this.fillProse(sentence2);
+    sentence2 = this.capitalizeString(sentence2);
+    
+    this.character.accolades = `${sentence1} ${sentence2}`;
   }
 
   rollStep4 = () => {

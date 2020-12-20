@@ -31,10 +31,10 @@ export const titleAccoladesPhrases = {
     `$PRONOUN_POSSESSIVE $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific'] $TITLE speaks to $PRONOUN_POSSESSIVE many accomplishments in the field.`
   ],
   'Two Equaled Pairs': [ // exceptional prowess
-    `Over time $PRONOUN_SUBJECT deeds inspired the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific'] $TITLE.`,
+    `Over time $PRONOUN_POSSESSIVE deeds inspired the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific'] $TITLE.`,
     `$PRONOUN_POSSESSIVE actions earned $PRONOUN_OBJECT esteemed recognition as a $TITLE.`,
     `The merit of this work led $PRONOUN_OBJECT to become hailed as a $TITLE, $['a title', 'a nickname', 'an epithet', 'a moniker', 'a sobriquet', 'an honorific'] of esteem.`,
-    `$PRONOUN_SUBJECT were blessed with the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific'] $TITLE, so all could recognize $PRONOUN_POSSESSIVE deeds.`
+    `$PRONOUN_SUBJECT $VERB_PAST blessed with the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific'] $TITLE, so all could recognize $PRONOUN_POSSESSIVE deeds.`
   ],
   'All Equal Numbers': [ // unrivaled expertise
     `$PRONOUN_POSSESSIVE distinction earned $PRONOUN_OBJECT regard as a $TITLE.`,

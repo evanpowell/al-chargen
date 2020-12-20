@@ -95,7 +95,10 @@ export default class CharacterGeneratorAbstract extends DiceRoller {
     prose = prose.replaceAll('$PRONOUN_OBJECT', this.pronouns.object);
     prose = prose.replaceAll('$PRONOUN_POSSESSIVE', this.pronouns.possessive);
     prose = prose.replaceAll('$PRONOUN_SELF', this.pronouns.self);
+    prose = prose.replaceAll('$VERB_PRESENT', this.pronouns.verbs.present);
+    prose = prose.replaceAll('$VERB_PAST', this.pronouns.verbs.past);
     prose = prose.replaceAll('$NAME', this.character.name);
+    prose = prose.replaceAll('$TITLE', `"${this.character.title}"`);
     prose = prose.replaceAll(/\$\[.*?\]/g, (arrayAsString) => {
       arrayAsString = arrayAsString.replace('$', '');
       arrayAsString = arrayAsString.replaceAll(`'`, `"`);
@@ -104,4 +107,8 @@ export default class CharacterGeneratorAbstract extends DiceRoller {
     });
     return prose;
   };
+
+  capitalizeString = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 }
