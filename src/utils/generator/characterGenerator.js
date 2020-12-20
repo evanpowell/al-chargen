@@ -163,16 +163,6 @@ export default class CharacterGenerator extends Step6 {
     return `${name.toUpperCase()}: ${description}`
   }
 
-  getAccolades = () => {
-    // TODO: Update this once accolades prose is completed
-    const { title } = this.character;
-    if (title) {
-      return title
-    } else {
-      return '';
-    }
-  }
-
   getAdvantageAndDescription = () => {
     const { name, description } = this.character.advantage;
     return `${name.toUpperCase()}:\n${description}`;
@@ -280,7 +270,7 @@ export default class CharacterGenerator extends Step6 {
       "Aptitude": [this.character.aptitude],
       "Expertise": [this.character.expertise],
       "Vocation and Description": [this.getVocationAndDescription()],
-      "Accolades": [this.getAccolades()],
+      "Accolades": [this.character.accolades],
       "Term": [`${this.character.term.years} yrs`],
 
       // PALE STONE ENCOUNTER

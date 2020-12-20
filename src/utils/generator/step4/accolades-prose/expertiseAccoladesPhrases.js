@@ -32,7 +32,7 @@
     Note: A semi-colon splice might be easier than a new sentence if capitalizing pronouns would be difficult.
 */
 
-const expertiseAccoladesPhrases = {
+export const expertiseAccoladesPhrases = {
   'Alchemy': {
     'All Numbers Distinct': [ // lack of motivation
       `found little facility with ingredients and alembics while apprenticing`,
