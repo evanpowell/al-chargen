@@ -62,28 +62,28 @@ export const manipulation = {
   ],
   supplies: [
     {
-      name: `False features`,
+      name: `Disguise Kits`,
+      quantity: 3
+    },
+    {
+      name: `Intelligence Kits`,
+      quantity: 3
+    },
+    {
+      name: `Misdirection Kits`,
       quantity: 5
     },
     {
-      name: `Invisible ink`,
+      name: `Skullduggery Kits`,
+      quantity: 3
+    },
+    {
+      name: `Stealth Kits`,
       quantity: 5
-    },
-    {
-      name: `Knuckle grease`,
-      quantity: 5
-    },
-    {
-      name: `Ledger cyphers`,
-      quantity: 10
-    },
-    {
-      name: `Lock picks`,
-      quantity: 10
     },
     {
       name: `Trick coins`,
-      quantity: 20
+      quantity: 8
     },
   ]
 };
