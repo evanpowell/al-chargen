@@ -253,10 +253,10 @@ export class Step4 extends Step3 {
 
     this.character.appearance.final.age = this.character.appearance.initial.age + termYears;
 
-    if (termOutcome.notes) {
-      this.character.masteries = [
-        ...this.character.masteries,
-        termOutcome.notes
+    if (termOutcome.recognition) {
+      this.character.recognition = [
+        ...this.character.recognition,
+        ...termOutcome.recognition
       ];
     }
 

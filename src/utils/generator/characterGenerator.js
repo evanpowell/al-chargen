@@ -204,6 +204,10 @@ export default class CharacterGenerator extends Step6 {
     return this.character.masteries.join(`\n`);
   }
 
+  listRecognition = () => {
+    return this.character.recognition.join(`\n`);
+  }
+
   mapToPdfFields = () => {
     const adjustments = Object.entries(this.character.attributes.adjustments)
       .reduce(this.showPlusHideZerosReducer, {});
@@ -313,7 +317,10 @@ export default class CharacterGenerator extends Step6 {
       "Coins": [`${this.character.wealth} Threnn`],
 
       // MASTERY
-      "MasteryBox": [this.listMasteries()]
+      "MasteryBox": [this.listMasteries()],
+
+      // STATUS, RECOGNITION, AND INFLUENCE
+      "StatusBox": [this.listRecognition()]
     }
   }
 

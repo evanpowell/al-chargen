@@ -2,7 +2,20 @@ export const termOutcomes = {
   'All Numbers Distinct': {},
 
   'Sequential Numbers': {
-    notes: '+2 difficulty recruiting',
+    recognition: [
+      'Professional Title',
+      '-2 recognition',
+    ],
+    modifications: [
+      {
+        type: 'accolades',
+        points: 4
+      }
+    ]
+  },
+
+  'One Equaled Pair': {
+    recognition: ['+2 recognition'],
     modifications: [
       {
         type: 'accolades',
@@ -11,21 +24,11 @@ export const termOutcomes = {
     ]
   },
 
-  'One Equaled Pair': {
-    modifications: [
-      {
-        type: 'skill',
-        points: 4
-      },
-      {
-        type: 'ability',
-        points: 2
-      },
-    ]
-  },
-
   'Three Equal Numbers': {
-    notes: '-4 difficulty recruiting',
+    recognition: [
+      'Professional Title',
+      '+4 recognition',
+    ],
     modifications: [
       {
         type: 'accolades',
@@ -35,6 +38,10 @@ export const termOutcomes = {
   },
 
   'Two Equaled Pairs': {
+    recognition: [
+      'Professional Title',
+      '+5 recognition',
+    ],
     modifications: [
       {
         type: 'accolades',
@@ -44,23 +51,15 @@ export const termOutcomes = {
   },
 
   'All Equal Numbers': {
+    recognition: [
+      'Professional Title',
+      '+6 recognition',
+    ],
     modifications: [
       {
-        type: 'skill',
-        points: 5
-      },
-      {
-        type: 'ability',
-        points: 5
-      },
-      {
-        type: 'resistance',
-        points: 5
-      },
-      {
-        type: 'proficiency',
-        points: 5
-      },
+        type: 'accolades',
+        points: 6
+      }
     ]
   }
 };

@@ -81,6 +81,7 @@ export default class Character {
     }
   };
   masteries = [];
+  recognition = [];
   palestoneEncounter = {
     prose: '',
     outcome: {
