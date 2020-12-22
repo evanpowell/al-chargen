@@ -13,6 +13,9 @@ import { Step2 } from "../step2/step2";
 import { pronouns } from "./pronouns";
 import { biomesProse } from "./background-story/biomesProse";
 import { settlementsProse } from "./background-story/settlementsProse";
+import { notableSettlements } from "./background-story/notableSettlements";
+import { notableSettlementMatchProbabilities } from "./background-story/notableSettlementMatch";
+import { notableSettlementVerbs } from "./background-story/notableSettlementVerbs";
 
 export class Step3 extends Step2 {
 
@@ -276,27 +279,32 @@ export class Step3 extends Step2 {
   };
 
   rollLocationsProse = () => {
+    const { isMatch, phrase: notablePhrase } = this.rollNotableSettlementPhrase();
+    if (isMatch) {
+      console.log(notablePhrase);
+      return;
+    }
+
     const settlementPhrase = this.rollSettlementPhrase();
     const {
       biomePhrase,
       regionPhrase
     } = this.rollBiomeAndRegionPhrases();
-    const notableSettlementPhrase = this.rollNotableSettlementPhrase();
 
     const roll = this.rollDie(100);
 
     let locationsProse;
 
     if (roll <= 65) {
-      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notableSettlementPhrase}.`
+      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
     } else if (roll <= 85) {
-      locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notableSettlementPhrase}.`
+      locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
     } else {
-      locationsProse = `${notableSettlementPhrase} ${biomePhrase}, ${settlementPhrase} ${regionPhrase}`
+      locationsProse = `${notablePhrase} ${biomePhrase}, ${settlementPhrase} ${regionPhrase}`
     }
 
-    const filledLocationsProse = this.fillProse(locationsProse);
-    console.log(filledLocationsProse);
+    const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
+    // console.log(filledLocationsProse);
   };
 
   rollSettlementPhrase = () => {
@@ -328,7 +336,33 @@ export class Step3 extends Step2 {
   };
 
   rollNotableSettlementPhrase = () => {
-    return `two days' ride from the great city of Raelian`;
+    const { provincialOrigins, settlement } = this.character.origins;
+    const { region } = provincialOrigins;
+
+    const notableSettlementsInRegion = notableSettlements
+      .filter((settlement) => settlement.region === region);
+    const notableSettlement = this.getRandomArrayValue(notableSettlementsInRegion);
+    
+    if (notableSettlement && settlement === notableSettlement.type) {
+      const chanceOfMatch = notableSettlementMatchProbabilities[settlement];
+      if (this.rollDie(100) <= chanceOfMatch) {
+        const { location, prepositions, name } = notableSettlement;
+        const settlementPreposition = this.getRandomArrayValue(prepositions);
+        const verbType = settlement === 'large city' ? 'large city' : 'other';
+        const verbs  = notableSettlementVerbs[verbType];
+        const verb = this.getRandomArrayValue(verbs);
+        let phrase = `${this.character.name} ${verb} ${settlementPreposition} ${name}, ${location}.`
+        phrase = this.fillProse(phrase);
+        return  {
+          isMatch: true,
+          phrase
+        };
+      }
+    }
+
+    return {
+      phrase: 'filler'
+    };
   }
 
   rollStep3 = () => {
