@@ -1,9 +1,9 @@
 export const settlementsProse = {
   'hamlet': [
-    `was raised in $["a sleepy", "an industrious", "a south-facing", "a bustling", "a small"] $["hamlet", "settlement", "cloister", "collection of huts"]`,
-    `came up among $["a central", "a forgotten", "a mystic", "a bright", "a farming"] $["hamlet", "settlement", "cloister", "collection of huts"]`,
-    `is from $["a small", "a sizeable", "a backward", "a longstanding", "an upstart"] $["hamlet", "settlement", "cloister", "collection of huts"]`,
-    `was born in $["a sparse", "a dense", "a traditional", "an ancient", "a new"] $["hamlet", "settlement", "cloister", "collection of huts"]`
+    `was raised in $["a sleepy", "an industrious", "a south-facing", "a bustling", "a small"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
+    `came up among $["a central", "a forgotten", "a mystic", "a bright", "a farming"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
+    `is from $["a small", "a sizeable", "a backward", "a longstanding", "an upstart"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
+    `was born in $["a sparse", "a dense", "a traditional", "an ancient", "a new"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`
   ],
   'village': [
     `grew up in $["a traditional", "a noble", "an abandoned", "a distant", "a small"] $["village", "redoubt", "crossroads", "community"]`,
@@ -36,15 +36,15 @@ export const settlementsProse = {
     `is from the $["central", "north", "south", "west", "east"] district within $["a large city", "a great city", "a metropolis", "an urban center"]`
   ],
   'diasporic group': [
-      `was born into $["an ancestral", "a wandering", "a newly founded", "a remote", "a war-torn"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
-      `was born among the refugees of $["a cloistered", "a populous", "a displaced", "west", "east"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
-      `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "an little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
-      `was raised within $["a longstanding", "a newly settled", "a culturally traditional", "a diverse", "a recent"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`
+    `was born into $["an ancestral", "a wandering", "a newly founded", "a remote", "a war-torn"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
+    `was born among $["a poor", "a populous", "a displaced", "a western", "an eastern"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
+    `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "an little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
+    `was raised within $["a longstanding", "a war torn", "a culturally traditional", "a diverse", "a recent"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`
   ],
   'nomadic group': [
-    `was born into $["a silent", "a hidden", "a sustainable", "a hardy", "a communal"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
+    `was born into $["an intentional", "a hidden", "a sustainable", "a hardy", "a communal"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `is a member of $["a traditional", "a unique", "an little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-    `was raised hunting with $["the ancestral", "the agrarian", "an unsettled", "an overpopulated", "a dissolving"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
+    `was raised hunting with $["the ancestral", "the agrarian", "a disheveled", "an overpopulated", "a dissolving"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `hails from $["the inspirational", "a wandering", "a generational", "a successful", "a resilient"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`
   ]
 }
