@@ -285,25 +285,36 @@ export class Step3 extends Step2 {
       return;
     }
 
-    const settlementPhrase = this.rollSettlementPhrase();
-    const {
-      biomePhrase,
-      regionPhrase
-    } = this.rollBiomeAndRegionPhrases();
-
-    const roll = this.rollDie(100);
-
-    let locationsProse;
-
-    if (roll <= 65) {
-      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
-    } else if (roll <= 85) {
-      locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
-    } else {
-      locationsProse = `${notablePhrase} ${biomePhrase}, ${settlementPhrase} ${regionPhrase}`
+    if (notablePhrase) {
+      console.log(this.fillProse(notablePhrase));
     }
 
-    const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
+    // TODO: Uncomment and refactor once biomesProse.js is fully updated
+    // const settlementPhrase = this.rollSettlementPhrase();
+    // const {
+    //   biomePhrase,
+    //   regionPhrase
+    // } = this.rollBiomeAndRegionPhrases();
+
+    // const roll = this.rollDie(100);
+
+    // const { settlement } = this.character.origins;
+    // const nonStructuralSettlements = ['diasporic group', 'nomadic group'];
+    // const isNonStructuralSettlement = nonStructuralSettlements.includes(settlement);
+    // let locationsProse;
+
+    // if (notablePhrase) {
+    //   if (roll <= 15 && !isNonStructuralSettlement) {
+    //     locationsProse = `${notablePhrase}, ${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
+    //   } else if (roll <= 80) {
+    //     locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
+    //   } else {
+    //     locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
+    //   }
+    // }
+
+
+    // const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
     // console.log(filledLocationsProse);
   };
 
@@ -351,7 +362,7 @@ export class Step3 extends Step2 {
         const verbType = settlement === 'large city' ? 'large city' : 'other';
         const verbs  = notableSettlementVerbs[verbType];
         const verb = this.getRandomArrayValue(verbs);
-        let phrase = `${this.character.name} ${verb} ${settlementPreposition} ${name}, ${location}.`
+        let phrase = `$NAME ${verb} ${settlementPreposition} ${name}, ${location}.`
         phrase = this.fillProse(phrase);
         return  {
           isMatch: true,
@@ -360,9 +371,40 @@ export class Step3 extends Step2 {
       }
     }
 
-    return {
-      phrase: 'filler'
-    };
+    if (!notableSettlement) {
+      return {};
+    }
+
+    const { rangeProbabilities } = notableSettlement;
+    const rangeProbabilitiesForSettlementType = rangeProbabilities[settlement];
+
+    if (!rangeProbabilitiesForSettlementType) {
+      return {};
+    }
+
+    const { close, mid } = rangeProbabilitiesForSettlementType;
+    const roll = this.rollDie(100);
+    if (roll <= close) {
+      const descriptions = notableSettlement.rangeDescriptions.close;
+      const description = this.getRandomArrayValue(descriptions);
+      const preposition = this.getRandomArrayValue(notableSettlement.prepositions);
+      const phrase = `${description} ${preposition} ${notableSettlement.name}`;
+      return {
+        phrase
+      };
+    }
+
+    if (roll <= close + mid) {
+      const descriptions = notableSettlement.rangeDescriptions.mid;
+      const description = this.getRandomArrayValue(descriptions);
+      const preposition = this.getRandomArrayValue(notableSettlement.prepositions);
+      const phrase = `${description} ${preposition} ${notableSettlement.name}`;
+      return {
+        phrase
+      };
+    }
+
+    return {};
   }
 
   rollStep3 = () => {

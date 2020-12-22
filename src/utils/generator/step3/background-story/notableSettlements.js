@@ -260,7 +260,7 @@ export const notableSettlements = [
     region: `the Djenndan Protectorate`,
     location: `in the vast township of Deridian Standing, west of the bogs near the Central Corridor in the Djenndan Protectorate`,
     prepositions: [
-      `the city $["of peat,", "of the emerald earth,", "at the standing ridge,", "of the Djati Gaour,", "above Pale Moss Bridge, "]`
+      `the city $["of peat,", "of the emerald earth,", "at the standing ridge,", "of the Djati Gaour,", "above Pale Moss Bridge,"]`
     ],
     rangeDescriptions: {
       close: [
@@ -652,7 +652,7 @@ export const notableSettlements = [
 
     rangeDescriptions: {
       close: [
-        `$["a long day", "covered forest journey", "two days"] by horse from`
+        `$["a long day", "a covered forest journey", "two days"] by horse from`
       ],
       mid: [
         `a fortnight by horse from`,
@@ -744,7 +744,7 @@ export const notableSettlements = [
     region: `Plenith South`,
     location: `in the dense rainforests between Greenlook River and the Jodhra Ocean in Plenith`,
     prepositions: [
-      `the $["warm city,", "humid city of", "the city of the Gazta, "]`
+      `the $["warm city,", "humid city of", "the city of the Gazta,"]`
     ],
 
     rangeDescriptions: {
@@ -832,7 +832,7 @@ export const notableSettlements = [
     region: `the Brolean Expanse`,
     location: `in the foliage and flowers at the edge of the Pinerush Gates at the farthest point of the Brolean Expanse`,
     prepositions: [
-      `the $["far city", "Gem of the Gates,", "city under Borgas Hill, "]`
+      `the $["far city", "Gem of the Gates,", "city under Borgas Hill,"]`
     ],
 
     rangeDescriptions: {
@@ -924,7 +924,7 @@ export const notableSettlements = [
     region: `New Voland`,
     location: `atop the karst topography amid the green wetlands of New Voland`,
     prepositions: [
-      `the $["village of power,", "village of magic,", "village of the pools, "]`
+      `the $["village of power,", "village of magic,", "village of the pools,"]`
     ],
 
     rangeDescriptions: {
@@ -1427,7 +1427,7 @@ export const notableSettlements = [
       ],
       mid: [
         `a fortnight by camel from`,
-        `a $["two", "three", "four", "five"]-week $["ride", "journey", "trek", "crossing", "excursion"] $["by camel", "by horse", "by goat"]`,
+        `a $["two", "three", "four", "five"]-week $["ride", "journey", "trek", "crossing", "excursion"] $["by camel", "by horse", "by goat"] from`,
         `a $["dangerous", "lonely", "perilous"] $["ride", "journey", "excursion", "trek", "crossing"] away from`
       ]
     },
@@ -1455,12 +1455,12 @@ export const notableSettlements = [
     }
   },
   {
-    name: `Vordigar City`,
+    name: `Vordigar`,
     type: `small city`,
     region: `New Scorth`,
     location: `far south of the forklands in the shadowed coniferous forests of New Scorth`,
     prepositions: [
-      `the $["ais"lun", "old world", "ancient"] city of`
+      `the $["ais'lun", "old world", "ancient"] city of`
     ],
 
     rangeDescriptions: {
