@@ -9,8 +9,8 @@ export const notableSettlementVerbs = {
   'large city': [
     `hails from a community locality within`,
     `is from an archaic community in`,
-    `was born into the $['central', 'labor', 'western', 'eastern', 'historical'] borough of`,
-    `is from the $['central', 'north', 'south', 'west', 'east'] district within`
+    `was born into the $["central", "labor", "western", "eastern", "historical"] borough of`,
+    `is from the $["central", "north", "south", "west", "east"] district within`
   ] ,
   'other': [
     `hails from`,
