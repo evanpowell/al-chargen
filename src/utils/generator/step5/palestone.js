@@ -8,10 +8,10 @@ export const palestoneEncounter = {
     6: `an eight-pointed 'singing stone' with a strange audible glow`
   },
   locale: {
-    1: `$['near', 'within'] $PRONOUN_POSSESSIVE hometown.`,
+    1: `$["near", "within"] $PRONOUN_POSSESSIVE hometown.`,
     2: `along the road far outside a settlement.`,
-    3: `$['near', 'within'] a nearby settlement.`,
-    4: `$['near', 'at'] the outskirts of a strange ruin.`,
+    3: `$["near", "within"] a nearby settlement.`,
+    4: `$["near", "at"] the outskirts of a strange ruin.`,
     5: `in a body of water, deep below the surface.`,
     6: `within the wilderness in the trunk of a tree.`
   },
@@ -20,7 +20,7 @@ export const palestoneEncounter = {
     2: `$NAME was witnessed by an unknown party as $PRONOUN_SUBJECT`,
     3: `Fear spread among the locals as $NAME`,
     4: `Attention was brought to the authorities when $NAME`,
-    5: `$NAME became $['famous', 'infamous'] throughout the region when $PRONOUN_SUBJECT`,
+    5: `$NAME became $["famous", "infamous"] throughout the region when $PRONOUN_SUBJECT`,
     6: `$NAME was utterly alone when $PRONOUN_SUBJECT`
   },
   impact: {
@@ -31,7 +31,7 @@ export const palestoneEncounter = {
         return `Those who were present during the encounter shared the same outcome.`
       }
     },
-    2: `Visions of $['subterranean locales', 'eerie cavernous spaces far below ground'] momentarily haunted $NAME's psyche.`,
+    2: `Visions of $["subterranean locales", "eerie cavernous spaces far below ground"] momentarily haunted $NAME's psyche.`,
     3: `For just a moment, $PRONOUN_SUBJECT became aware of other Pale Stone nearby.`,
     4: `As $PRONOUN_SUBJECT inspected the stone, it suddenly burst into fragments.`,
     5: `$NAME closed $PRONOUN_POSSESSIVE eyes for only a moment, but when $PRONOUN_SUBJECT opened them, $PRONOUN_SUBJECT strangely found $PRONOUN_SELF miles from home.`,

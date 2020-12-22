@@ -1,37 +1,3 @@
-/*
-  Example: Alchemy - Two Equaled Pairs
-
-  (the phrase is brackets is what is provided from this file)
-
- Kishietta [found little facility with ingredients and alembics while apprenticing] as a Ritualist.
- 
- 
- Kishietta [was widely known for her deep knowledge] as a Ritualist {and is renowned as a "Shaper"}.
-
- !!!! I wonder if we can change the wording of the "title" portion, such as {and is renowned as a Shaper}. !!!
-
-  With the full sentence describing the character's distinctive experience with a vocation, I'm feeling like 
-  tacking on an additional "and" or comma splice for the addition of a Title feels like too much. 
-  
-  My recommendation is that we just create a new sentence for the Titles (or a semicolon splice). 
-  e.g.: "and is renowned as a" should instead be organized as "Their accolades earned them the title of"-- 
-  and other variants such as--
-    `$PRONOUN_POSSESSIVE distinction earned $PRONOUN_OBJECT regard as a`,
-    `Through $PRONOUN_POSSESSIVE laurels $PRONOUN_SUBJECT became known as a`,
-    `$PRONOUN_POSSESSIVE achievements bound $PRONOUN_OBJECT to the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific']`,
-    `$PRONOUN_POSSESSIVE accomplishments bestowed $PRONOUN_OBJECT with the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific']`,
-    `These activities led $PRONOUN_OBJECT to adopt the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific']`,
-    `Over time $PRONOUN_SUBJECT deeds inspired the $['title', 'nickname', 'epithet', 'moniker', 'sobriquet', 'honorific']`,
-    `$PRONOUN_POSSESSIVE actions earned $PRONOUN_OBJECT recognition as a`,
-    `The merit of this work led $PRONOUN_OBJECT to become known as a`
-
-    The 'All Numbers Distinct' option for every expertise could just be a sentence that reads:
-    "$PRONOUN_POSSESSIVE deeds have earned $PRONOUN_OBJECT no titles or recognition."
-    Or perhaps no sentence at all, similar to the 'One Equaled Pair' option.
-
-    Note: A semi-colon splice might be easier than a new sentence if capitalizing pronouns would be difficult.
-*/
-
 export const expertiseAccoladesPhrases = {
   'Alchemy': {
     'All Numbers Distinct': [ // lack of motivation
