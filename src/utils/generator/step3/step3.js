@@ -25,7 +25,8 @@ export class Step3 extends Step2 {
   }
 
   rollProvince = () => {
-    this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
+    this.character.origins.provincialOrigins = provincialOrigins[this.rollDie(10) - 1];
+    // this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
   }
 
   rollLanguages = () => {
@@ -285,37 +286,27 @@ export class Step3 extends Step2 {
       return;
     }
 
-    if (notablePhrase) {
-      console.log(this.fillProse(notablePhrase));
-    }
-
-    // TODO: Uncomment and refactor once biomesProse.js is fully updated
-    // const settlementPhrase = this.rollSettlementPhrase();
-    // const {
-    //   biomePhrase,
-    //   regionPhrase
-    // } = this.rollBiomeAndRegionPhrases();
+    const settlementPhrase = this.rollSettlementPhrase();
+    const {
+      biomePhrase,
+      regionPhrase
+    } = this.rollBiomeAndRegionPhrases();
 
     // const roll = this.rollDie(100);
-
     // const { settlement } = this.character.origins;
     // const nonStructuralSettlements = ['diasporic group', 'nomadic group'];
     // const isNonStructuralSettlement = nonStructuralSettlements.includes(settlement);
-    // let locationsProse;
+    let locationsProse;
 
-    // if (notablePhrase) {
-    //   if (roll <= 15 && !isNonStructuralSettlement) {
-    //     locationsProse = `${notablePhrase}, ${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
-    //   } else if (roll <= 80) {
-    //     locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
-    //   } else {
-    //     locationsProse = `${regionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
-    //   }
-    // }
+    if (notablePhrase) {
+      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
+    } else {
+      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
+    }
 
 
-    // const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
-    // console.log(filledLocationsProse);
+    const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
+    console.log(filledLocationsProse);
   };
 
   rollSettlementPhrase = () => {
@@ -328,11 +319,8 @@ export class Step3 extends Step2 {
   
   rollBiomeAndRegionPhrases = () => {
     const { provincialOrigins, settlement } = this.character.origins;
-    // const { region, biomes } = provincialOrigins;
-    const region = 'the Ommultic Front';
-    const biome = 'spruce forests';
-
-    // const biome = this.getRandomArrayValue(biomes);
+    const { region, biomes } = provincialOrigins;
+    const biome = this.getRandomArrayValue(biomes);
 
     const biomePhrases = biomesProse[biome].phrases[settlement];
     const biomePhrase = this.getRandomArrayValue(biomePhrases);
