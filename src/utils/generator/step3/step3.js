@@ -282,7 +282,7 @@ export class Step3 extends Step2 {
   rollLocationsProse = () => {
     const { isMatch, phrase: notablePhrase } = this.rollNotableSettlementPhrase();
     if (isMatch) {
-      console.log(notablePhrase);
+      this.character.backgroundStory += notablePhrase;
       return;
     }
 
@@ -306,7 +306,7 @@ export class Step3 extends Step2 {
 
 
     const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
-    console.log(filledLocationsProse);
+    this.character.backgroundStory += filledLocationsProse;
   };
 
   rollSettlementPhrase = () => {

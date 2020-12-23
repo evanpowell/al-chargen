@@ -231,6 +231,7 @@ export default class CharacterGenerator extends Step6 {
       "Distinguishing Features": [this.listDistinguishingFeatures()],
 
       //ORIGINS
+      "Background Story": [this.character.backgroundStory],
       "Languages Spoken": [this.listLanguages()],
 
       // ATTRIBUTES
