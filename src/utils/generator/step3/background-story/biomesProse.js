@@ -1653,7 +1653,7 @@ export const biomesProse = {
             'hamlet': [
                 `grounded in the labors of the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
                 `planted within the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
-                `settled out among $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
+                `settled out among the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
                 `dependent on the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`
             ],
             'village': [
@@ -1706,28 +1706,53 @@ export const biomesProse = {
 /*--- coastal Bosen ---*/
     'olive forests': {
         phrases: {
-            location: [
-                'vital to the',
-                'overlooking the',
-                'caretaking the',
-                'amid the'
+            'hamlet': [
+                `growing within the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `in the shade of the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `resting in the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `aligned with the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
             ],
-            group: [
-                'rebuilding a community within the',
-                'relocated to the',
-                'tending to the',
-                'planted among the'
+            'village': [
+                `working within the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `settled near the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `out in the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `in the hills surrounding $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
             ],
-            nomadic: [
-                'foraging across the',
-                'that camps north of the',
-                'that migrates each season south of the'
+            'small town': [
+                `nestled within the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `located in the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `standing with the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `found beyond the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
             ],
-            neutral: [
-                'among the',
-                'next to the',
-                'pruned from the',
-                'tending to the'
+            'large township': [
+                `demarcating the boundaries of the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `that harvests the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `spanning the hills beneath the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `at the boundary of the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
+            ],
+            'small city': [
+                `planted among the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `next to the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `overlooking the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `just beyond the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
+            ],
+            'large city': [
+                `vital to the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `dependent on the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `caretaking the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `amid the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
+            ],
+            'diasporic group': [
+                `rebuilding a community within the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `relocated to the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `tending to the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `scattered out among the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
+            ],
+            'nomadic group': [
+                `that camps amid the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `foraging across the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `that camps beyond the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`,
+                `that migrates each season beyond the $["aromatic", "pungent", "plump", "savory", "green", "red", "black", "fragrant", "sweet"] $["olive forests", "olive orchards", "caper forests", "caper fields", "olive farms", "olive hills", "caper farms", "olive forests"]`
             ]
         },
         provincePhrases: [
@@ -1736,26 +1761,53 @@ export const biomesProse = {
     },
     'nut groves': {
         phrases: {
-            location: [
-                'centered within the',
-                'shaped by the',
-                'located within the',
-                'overlooking the'
+            'hamlet': [
+                `scattered among the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `in the shade of the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `nestled in the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `hidden within the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
             ],
-            group: [
-                'centered within the',
-                'tasked with caretaking the',
-                'that remains hidden among the',
-                'that has become vital to the'
+            'village': [
+                `laboring along the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `gathered near the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `far beyond the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `deep in the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
             ],
-            nomadic: [
-                'that travels between the coastlands and the',
-                'that forages along the southern',
-                'that hunts along the falcon trails in the'
+            'small town': [
+                `packed within the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `found among the architectural marvels within the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `settled amid the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `found within the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
             ],
-            neutral: [
-                'ritually dependent on the',
-                'that is located within'
+            'large township': [
+                `that marks the breadth of the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that borders the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `encompassing the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `along the edge of the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
+            ],
+            'small city': [
+                `ritually dependent on the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `next to the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `overlooking the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `just beyond the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
+            ],
+            'large city': [
+                `central to the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `shaped by the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `watching over the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that serves the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
+            ],
+            'diasporic group': [
+                `centered within the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `tasked with caretaking the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that remains hidden among the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that has become vital to the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
+            ],
+            'nomadic group': [
+                `that travels between the beaches and the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that forages south along the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that hunts the falcon's trail in the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`,
+                `that patrols the perimeter of the $["earthy", "peppery", "life-giving", "plentiful", "mellow", "delicate", "large", "oily", "waxy"] $["nut groves", "nut trees", "nut forests", "almond groves", "beech groves", "hazelnut groves", "walnut groves", "nut groves"]`
             ]
         },
         provincePhrases: [
@@ -1764,27 +1816,53 @@ export const biomesProse = {
     },
     'mild coastlands': {
         phrases: {
-            location: [
-                'thriving as a heritage community in the',
-                'centrally positioned along the',
-                'resting along the',
-                'cast on the shores and'
+            'hamlet': [
+                `central to the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `well within the boundaries of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `constructed along the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `deep within the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
             ],
-            group: [
-                'that emigrated to the',
-                'forging a new society at the edge of the',
-                'forcibly relocated to the',
-                'that long ago settled the'
+            'village': [
+                `at the horizons of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `out beyond the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `within view of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `of fishers along the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
             ],
-            nomadic: [
-                'that traverses the tides across the',
-                'that depends on the water fowl of the',
-                'that sails the outer rocks of the'
+            'small town': [
+                `historically settled in the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `positioned centrally in the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `found along the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `sustaining itself in the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
             ],
-            neutral: [
-                'along the',
-                'isolated upon',
-                'of fishing communities'
+            'large township': [
+                `that divides the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that borders the sands of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `stretching across the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `inland from the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
+            ],
+            'small city': [
+                `located along the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `near the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `at the waters' edge in the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `thriving as a heritage community among the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
+            ],
+            'large city': [
+                `full of ancient architecture and located in the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `isolated upon the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `resting along the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `overlooking the shores of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
+            ],
+            'diasporic group': [
+                `that emigrated to the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `forging a new society at the edge of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that was forcibly relocated to the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that long ago settled the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
+            ],
+            'nomadic group': [
+                `that floats the water's edge of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that sails the outer rocks of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that depends on the water fowl of the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`,
+                `that traverses the tides across the $["mild", "balmy", "peaceful", "calm", "mellow", "breezy", "tropical", "salt wind", "mild"] $["coastlands", "coasts", "coastal regions", "shorelines", "shores", "coastlines", "coasts", "coastlands"]`
             ]
         },
         provincePhrases: [
@@ -1793,27 +1871,53 @@ export const biomesProse = {
     },
     'balmy seas': {
         phrases: {
-            location: [
-                'afloat on the',
-                'among the coastal docks of the',
-                'looking out across the',
-                'at the edge of the'
+            'hamlet': [
+                `floating off the coast in the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `beyond reach of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `settled nearby the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `next to the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
             ],
-            group: [
-                'among the coastal docks of the',
-                'that fled to the',
-                'that relocated on the',
-                'that now represents the largest fishing community along the'
+            'village': [
+                `afloat on the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `looking out across the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `at the edge of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `at the fishing docks of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
             ],
-            nomadic: [
-                'that sails the',
-                'that navigates the',
-                'that traverses the'
+            'small town': [
+                `settled ages ago in the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `greeting the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `within the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `floating near the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
             ],
-            neutral: [
-                'afloat on the',
-                'located near the',
-                'overlooking the'
+            'large township': [
+                `adjacent to the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that enters the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `divided by the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `navigable by the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
+            ],
+            'small city': [
+                `along the beachhead of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `within view of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `located adjacent to the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `struggling in the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
+            ],
+            'large city': [
+                `found near the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `overlooking the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `bordering the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `at the mouth of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
+            ],
+            'diasporic group': [
+                `among the coastal docks of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that fled to the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that relocated on the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that now represents one of the largest fishing communities of the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
+            ],
+            'nomadic group': [
+                `that sails the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that navigates the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that traverses the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`,
+                `that patrols the $["balmy", "tropical", "blissful", "humid", "equatorial", "warm", "tropical", "tropical", "balmy"] $["seas", "lagoons", "ocean pools", "tidal ponds", "swells", "crests", "seas", "lagoons"]`
             ]
         },
         provincePhrases: [
