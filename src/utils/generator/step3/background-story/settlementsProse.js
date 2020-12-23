@@ -24,7 +24,7 @@ export const settlementsProse = {
     `is a child of $["an expansive", "a walled", "a guarded", "an empty", "a sparse"] $["large township", "large town", "township", "district"]`
   ],
   'small city': [
-    `hails from $["a tranquil", "a guarded", "a gleaming", "an ancestral", "a unique"] $["small city", "city", "municipality", "locality"]`,
+    `hails from $["a tranquil", "a guarded", "a gleaming", "an ancestral", "a singular"] $["small city", "city", "municipality", "locality"]`,
     `is from $["a disparate", "a densely packed", "a populous", "an isolated", "a withering"] $["small city", "city", "municipality", "locality"]`,
     `comes from $["a traditional", "an energetic", "an ancient", "an upstart", "a difficult to find"] $["small city", "city", "municipality", "locality"]`,
     `grew up in $["a tourist", "a transient", "a resource-starved", "resource-rich", "wild"] $["small city", "city", "municipality", "locality"]`
@@ -43,7 +43,7 @@ export const settlementsProse = {
   ],
   'nomadic group': [
     `was born into $["an intentional", "a hidden", "a sustainable", "a hardy", "a communal"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-    `is a member of $["a traditional", "a unique", "an little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
+    `is a member of $["a traditional", "a singular", "an little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `was raised hunting with $["the ancestral", "the agrarian", "a disheveled", "an overpopulated", "a dissolving"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `hails from $["the inspirational", "a wandering", "a generational", "a successful", "a resilient"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`
   ]
