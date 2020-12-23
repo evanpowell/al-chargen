@@ -1927,28 +1927,53 @@ export const biomesProse = {
 /*--- Siadagal ---*/
     'lush farmlands': {
         phrases: {
-            location: [
-                'central to the',
-                'located within the',
-                'amid the',
-                'in the heart of the'
+            'hamlet': [
+                `in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `found in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `settled ages ago in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `growing in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
             ],
-            group: [
-                'indentured within the',
-                'rebuilding among the',
-                'relocated to the',
-                'crucial to the sustainability of the'
+            'village': [
+                `in the open center of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `among the free centers of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `within the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `at the commerce edge of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
             ],
-            nomadic: [
-                'that camps north of the',
-                'that guards the delicate and',
-                'that traverses the winters outside of the'
+            'small town': [
+                `newly settled in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `contributing to the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `recently constructed in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `situated in proximity to the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
             ],
-            neutral: [
-                'in the',
-                'in the hills above the',
-                'among the lesser known',
-                'among the greater'
+            'large township': [
+                `consisting of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `bordering the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `separated by the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `devoted to the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
+            ],
+            'small city': [
+                `found at the heart of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `overlooking the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `in the reaches of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `flourishing in the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
+            ],
+            'large city': [
+                `standing above the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `located within the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `amid the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `along the leg of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
+            ],
+            'diasporic group': [
+                `that is indentured to the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `relocated to the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `that rebuilt among the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `crucial to the sustainability of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
+            ],
+            'nomadic group': [
+                `that camps north of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `that guards the delicate and $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `that migrates through the winters of the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`,
+                `that keeps its distance from the $["lush", "fertile", "plentiful", "abundant", "bounteous", "bountiful", "productive", "fruitful", "lush"] $["farmlands", "farming fields", "orchards", "vineyards", "crop lands", "estates", "plantations", "farmlands"]`
             ]
         },
         provincePhrases: [
@@ -1957,27 +1982,53 @@ export const biomesProse = {
     },
     'fields': {
         phrases: {
-            location: [
-                'on the',
-                'above the',
-                'planted in the',
-                'on the lonely'
+            'hamlet': [
+                `found in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `hidden in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `closed off in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `cloistered on the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
             ],
-            group: [
-                'planted in the',
-                'scattered aross the',
-                'that emigrated to the',
-                'that has fortified a hold in the central'
+            'village': [
+                `in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `among the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `on the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `nearby the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
             ],
-            nomadic: [
-                'ranging across the eastern',
-                'traversing across the open',
-                'herding along the southern'
+            'small town': [
+                `located in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `found among the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `stagnated in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `close to the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
             ],
-            neutral: [
-                'on the',
-                'within the',
-                'amid the'
+            'large township': [
+                `sequestered within the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `still honoring the old kingdom boundaries of the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `marking the edge of the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `stretching across the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
+            ],
+            'small city': [
+                `at the gathering of the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `that peers out on the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `that hearkens to the old kingdoms in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `long ago settled in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
+            ],
+            'large city': [
+                `in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `above the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `amid the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `central within the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
+            ],
+            'diasporic group': [
+                `that is planted in the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `scattered across the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `that emigrated to the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `that has a fortified hold in the center of the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
+            ],
+            'nomadic group': [
+                `that ranges across the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `traversing across the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `herding along the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`,
+                `that hunts beyond the $["open", "lonely", "wide", "grassy", "vast", "lonesome", "flowing", "rolling", "grassy"] $["fields", "landscapes", "lands", "meadows", "prairies", "grasslands", "plains", "fields"]`
             ]
         },
         provincePhrases: [
@@ -1986,27 +2037,53 @@ export const biomesProse = {
     },
     'rainy coasts': {
         phrases: {
-            location: [
-                'on the',
-                'under the',
-                'in the caves along the',
-                'situated at the edge of the'
+            'hamlet': [
+                `in the caves along the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `sheltered in the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `huddled on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `settled on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
             ],
-            group: [
-                'in the craggy and',
-                'relocated to the storm-ridden',
-                'that fled to the',
-                'scattered along the'
+            'village': [
+                `on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `within the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `at the heart of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `within view of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
             ],
-            nomadic: [
-                'that hunts across the',
-                'who serve as the roaming caretakers of the',
-                'that traverses the storm-ridden'
+            'small town': [
+                `settled on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `central to the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `providing shelter on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `near the water flows of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
             ],
-            neutral: [
-                'whisping across the',
-                'within the winds of the',
-                'on the'
+            'large township': [
+                `bridging the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `at the intersection of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `near the borders of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `in the inland flows of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
+            ],
+            'small city': [
+                `on the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `under the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `overlooking the caves of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `situated at the edge of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
+            ],
+            'large city': [
+                `within the winds of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `standing within the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `providing shelter in the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `standing over the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
+            ],
+            'diasporic group': [
+                `in the craggy and $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `relocated to the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `that fled to the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `scattered along the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
+            ],
+            'nomadic group': [
+                `that hunts across the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `that serves as the roaming caretakers of the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `that traverses the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`,
+                `that moves across the $["rainy", "storm-ridden", "storm-soaked", "rain-soaked", "gloomy", "precipitous", "rain-drenched", "stormy", "rainy"] $["coasts", "shorelines", "gravel beaches", "coastlines", "shores", "coastal region", "coast", "coasts"]`
             ]
         },
         provincePhrases: [
@@ -2015,26 +2092,53 @@ export const biomesProse = {
     },
     'summer storms': {
         phrases: {
-            location: [
-                'emerging from the',
-                'central to the',
-                'at the evocation of the',
-                'resting beneath the'
+            'hamlet': [
+                `at the edges of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `standing among the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `gathered for the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `basking in the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
             ],
-            group: [
-                'central to the',
-                'that fled south of the',
-                'rebuilding among the'
+            'village': [
+                `thriving among the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `settled in the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `at the borders of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `amid the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
             ],
-            nomadic: [
-                'traversing the',
-                'that hunts amid the',
-                'that guides travelers across the'
+            'small town': [
+                `settled past the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `apart of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `located among the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `found at the brink of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
             ],
-            neutral: [
-                'beyond the clearings of the',
-                'central to the',
-                'thriving beyond the'
+            'large township': [
+                `marking the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `within the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `beyond the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `at the heart of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
+            ],
+            'small city': [
+                `resting beneath the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `beyond the clearings of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `out under the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `settled long ago within the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
+            ],
+            'large city': [
+                `at the evocation of the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `central to the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `watching over the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `that grew from the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
+            ],
+            'diasporic group': [
+                `central to the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `rebuilding among the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `that fled south beyond the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `reclaiming their ancestral homeland on the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
+            ],
+            'nomadic group': [
+                `traversing the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `that hunts amid the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `that guides travelers across the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`,
+                `that moves through the $["calm", "pleasant", "lulling", "peaceful", "relaxing", "reliable", "drizzling", "serene", "calm"] $["summer storms", "summer rains", "seasonal storms", "seasonal rains", "summer showers", "Bailiean rains", "summer mists", "summer storms"]`
             ]
         },
         provincePhrases: [
