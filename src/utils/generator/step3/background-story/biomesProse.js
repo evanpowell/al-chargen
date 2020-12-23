@@ -2148,27 +2148,53 @@ export const biomesProse = {
 /*--- the forests of Creona ---*/
     'stormy woodlands': {
         phrases: {
-            location: [
-                'beneath the overcast',
-                'overlooking the',
-                'beyond the outstretched',
-                'above the'
+            'hamlet': [
+                `spread out among the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `huddled in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `located amid the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `within the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
             ],
-            group: [
-                'relocated to the',
-                'that recently emigrated to the',
-                'that long ago settled among the'
+            'village': [
+                `set among the collecting ponds of the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `protected among the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `far out in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `deep amid the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
             ],
-            nomadic: [
-                'that follows the winds through the',
-                'that guards the trees throughout the',
-                'traversing the'
+            'small town': [
+                `beyond the rise in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `collected in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `sheltered in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `set out in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
             ],
-            neutral: [
-                'in the overcast',
-                'amid the',
-                'beyond the',
-                'in the sanctuary of the'
+            'large township': [
+                `stretching across the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `found amid the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `just beyond the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `segmenting the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
+            ],
+            'small city': [
+                `beneath the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `beyond the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `settled in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `found within the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
+            ],
+            'large city': [
+                `in the sanctuary of the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `sheltered in the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `watching over the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that stands within the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
+            ],
+            'diasporic group': [
+                `relocated to the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that recently emigrated to the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that long ago resettled among the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `resettled on the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
+            ],
+            'nomadic group': [
+                `traversing the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that follows the winds through the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that guards the trees throughout the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`,
+                `that travels through the $["stormy", "overcast", "cloudy", "dreary", "weathered", "misty", "foggy", "overcast", "cloudy"] $["woodlands", "woods", "bosk", "thickets", "groves", "brambles", "woods", "woodlands"]`
             ]
         },
         provincePhrases: [
@@ -2177,26 +2203,53 @@ export const biomesProse = {
     },
     'rocky coasts': {
         phrases: {
-            location: [
-                'in the thickets of the',
-                'beneath the plateaus near the',
-                'under the tall shadows at the',
-                'carved from the'
+            'hamlet': [
+                `found at the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `cloistered at the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `sheltered along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `beyond view of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
             ],
-            group: [
-                'beneath the plateaus near the',
-                'relocated to the',
-                'establishing a new community along the'
+            'village': [
+                `serving the shipwrights of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `at the wharfs of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `closely positioned along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `in the salt winds of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
             ],
-            nomadic: [
-                'that oversees the stretches of the',
-                'that travels from the plateaus to the',
-                'that hunts in the shadow of the plateaus along the'
+            'small town': [
+                `settled along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `at the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `overlooking the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
             ],
-            neutral: [
-                'at the heart of the',
-                'in the central',
-                'along the'
+            'large township': [
+                `serving as the council site for shipwrights of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `bordering the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `at the edge of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `above the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
+            ],
+            'small city': [
+                `of shipbuilders at the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `in the hills above the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `settled by shipwrights along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `found along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
+            ],
+            'large city': [
+                `along the shipbuilders' wharfs of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `in view of the high waves of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `watching over the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `standing over the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
+            ],
+            'diasporic group': [
+                `beneath the plateaus at the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `that recently found a home along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `establishing a new community within the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `resettled on the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
+            ],
+            'nomadic group': [
+                `that oversees the stretches of the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `that travels from the plateaus to the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `that hunts along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`,
+                `that venerates the waves along the $["rocky", "craggy", "jagged", "bluffed", "stony", "limestone", "granite", "gravel", "rocky"] $["coasts", "coastlands", "harbors", "dockyards", "coastlines", "coasts", "coastland", "shores"]`
             ]
         },
         provincePhrases: [
@@ -2205,28 +2258,53 @@ export const biomesProse = {
     },
     'lush river valleys': {
         phrases: {
-            location: [
-                'nestled among the',
-                'located within the',
-                'springing from the',
-                'thriving within the'
+            'hamlet': [
+                `far out among the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `protected within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `barely noticeable in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `beyond the ridges north of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
             ],
-            group: [
-                'settled within the',
-                'central to the',
-                'relocated to the',
-                'that long ago settled the'
+            'village': [
+                `spread out in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `found in the quiet spaces of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `sustainably fishing the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `amid the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
             ],
-            nomadic: [
-                'traveling across the',
-                'that navigates the tall ridges and low waters of the',
-                'that fishes along the great rivers in the'
+            'small town': [
+                `located in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `at the rise above the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `thriving within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `deep within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
             ],
-            neutral: [
-                'in the isolated',
-                'in the hearland',
-                'in the wet and',
-                'at the banks of the'
+            'large township': [
+                `at the gathering of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `found along the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `adjoining the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `encompassing the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
+            ],
+            'small city': [
+                `at the mouth of the plateaus in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `within the tranquil clearings of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `in the hidden spaces of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `deep within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
+            ],
+            'large city': [
+                `standing in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `among the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `thriving within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `watching over the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
+            ],
+            'diasporic group': [
+                `settled within the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `central to the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `relocated to the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `that long ago settled in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
+            ],
+            'nomadic group': [
+                `traveling across the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `that navigates the tall ridges and low waters of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `that fishes along the great rivers of the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`,
+                `that tends to the Joza roots in the $["lush", "rich", "prosperous", "flourishing", "pristine", "placid", "serene", "sacred", "lush"] $["river valleys", "riverlands", "valleys", "river canyons", "river gorges", "gorges", "ravines", "waterfalls"]`
             ]
         },
         provincePhrases: [
