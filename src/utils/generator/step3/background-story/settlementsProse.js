@@ -1,9 +1,9 @@
 export const settlementsProse = {
   'hamlet': [
-    `was raised in $["a sleepy", "an industrious", "a south-facing", "a bustling", "a small"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
-    `came up among $["a central", "a forgotten", "a mystic", "a bright", "a farming"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
-    `is from $["a small", "a sizeable", "a backward", "a longstanding", "an upstart"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`,
-    `was born in $["a sparse", "a dense", "a traditional", "an ancient", "a new"] $["hamlet", "small hamlet", "group of cabins", "collection of huts"]`
+    `was raised in $["a sleepy", "an industrious", "a south-facing", "a bustling", "a small"] $["hamlet", "clanship", "group of cabins", "collection of huts"]`,
+    `came up among $["a central", "a forgotten", "a mystic", "a bright", "a farming"] $["hamlet", "clanship", "group of cabins", "collection of huts"]`,
+    `is from $["a small", "a sizeable", "a backward", "a longstanding", "an upstart"] $["hamlet", "clanship", "group of cabins", "collection of huts"]`,
+    `was born in $["a sparse", "a dense", "a traditional", "an ancient", "a new"] $["hamlet", "clanship", "group of cabins", "collection of huts"]`
   ],
   'village': [
     `grew up in $["a traditional", "a noble", "an abandoned", "a distant", "a small"] $["village", "redoubt", "crossroads", "community"]`,
