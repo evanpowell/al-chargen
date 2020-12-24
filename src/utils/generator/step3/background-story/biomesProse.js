@@ -832,7 +832,7 @@ export const biomesProse = {
             ],
             'small town': [
                 `settled within the $["grassy", "sustainable", "seasonal", "marshy", "cool", "muddy", "pristine", "pure"] $["southern wetlands", "southern glades", "southern sloughs", "southern quags", "austral wetlands", "austral marshes", "sloughs", "wetlands"]`,
-                `found along water's edge of the $["grassy", "sustainable", "seasonal", "marshy", "cool", "muddy", "pristine", "pure"] $["southern wetlands", "southern glades", "southern sloughs", "southern quags", "austral wetlands", "austral marshes", "sloughs", "wetlands"]`,
+                `found along the water's edge of the $["grassy", "sustainable", "seasonal", "marshy", "cool", "muddy", "pristine", "pure"] $["southern wetlands", "southern glades", "southern sloughs", "southern quags", "austral wetlands", "austral marshes", "sloughs", "wetlands"]`,
                 `tucked away in the $["grassy", "sustainable", "seasonal", "marshy", "cool", "muddy", "pristine", "pure"] $["southern wetlands", "southern glades", "southern sloughs", "southern quags", "austral wetlands", "austral marshes", "sloughs", "wetlands"]`,
                 `at the edge of the reeds surrounding the $["grassy", "sustainable", "seasonal", "marshy", "cool", "muddy", "pristine", "pure"] $["southern wetlands", "southern glades", "southern sloughs", "southern quags", "austral wetlands", "austral marshes", "sloughs", "wetlands"]`
             ],
