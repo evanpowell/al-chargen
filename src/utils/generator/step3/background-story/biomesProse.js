@@ -119,8 +119,8 @@ export const biomesProse = {
             ],
             'small city': [
                 `on the lower plateaus of $["the vast tundra", "the endless rocky steppes", "the chilling expanse"]`,
-                `beyond the treeline in $["the boundless tundra", "the frozen wastelands", "the vast steppes"]`,
-                `beyond the cold valley in $["the endless tundra", "the wandering hotsprings", "the bitter arctic steppes"]`,
+                `above the treeline in $["the boundless tundra", "the frozen wastelands", "the vast steppes"]`,
+                `above the cold valley in $["the endless tundra", "the wandering hotsprings", "the bitter arctic steppes"]`,
                 `at the arctic edge of $["the vast frozen wastelands", "the endless steppes", "the expansive tundra"]`
             ],
             'large city': [
