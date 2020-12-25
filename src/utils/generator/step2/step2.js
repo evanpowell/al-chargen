@@ -7,7 +7,7 @@ export class Step2 extends Step1 {
     rollAncestry = () => {
         const { ancestry, adjustments } = this.getRandomArrayValue(ancestries);
         this.character.ancestry = ancestry;
-        this.character.attributes.adjustments = adjustments;
+        this.character.attributes.adjustments = { ...adjustments };
     }
 
     rollSex = (isSecondRoll = false) => {
