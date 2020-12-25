@@ -628,7 +628,7 @@ export const biomesProse = {
                 `located in the clearings of the central $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`
             ],
             'large city': [
-                `in the central $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`,
+                `in the central region of the $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`,
                 `beyond the reaches of the $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`,
                 `deep within the $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`,
                 `overlooking the $["rich", "vibrant", "colorful", "blossoming", "efflorescent", "herbaceous", "vast"] $["meadowlands", "meadows", "pastures", "prairies", "heaths", "gardens", "meadowlands", "highmeadows"]`
