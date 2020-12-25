@@ -27,7 +27,7 @@ export const settlementsProse = {
     `hails from $["a tranquil", "a guarded", "a gleaming", "an ancestral", "a singular"] $["small city", "city", "municipality", "locality"]`,
     `is from $["a disparate", "a densely packed", "a populous", "an isolated", "a withering"] $["small city", "city", "municipality", "locality"]`,
     `comes from $["a traditional", "an energetic", "an ancient", "an upstart", "a difficult to find"] $["small city", "city", "municipality", "locality"]`,
-    `grew up in $["a tourist", "a transient", "a resource-starved", "resource-rich", "wild"] $["small city", "city", "municipality", "locality"]`
+    `grew up in $["a tourist", "a transient", "a resource-starved", "a resource-rich", "a wild"] $["small city", "city", "municipality", "locality"]`
   ],
   'large city': [
     `hails from a community locality within $["a densely populated", "a diverse", "a traditional", "a newly formed", "a Thelean-funded"] $["large city", "great city", "metropolis", "urban center"]`,
