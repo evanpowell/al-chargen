@@ -73,7 +73,7 @@ export default class Character {
   skills = [];
   proficiencies = [];
   inventory = [];
-  titles = [];
+  title = '';
   term = {
     years: 0,
     outcome: {
