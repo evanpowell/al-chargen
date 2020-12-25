@@ -43,7 +43,7 @@ export class Step2 extends Step1 {
             const roll = this.rollDie(100);
             const feature = distinguishingFeatures[featureType][roll];
             if (feature) {
-                features.push(feature);
+                features.push({ ...feature });
             }
         }
         this.character.appearance.distinguishingFeatures = features;

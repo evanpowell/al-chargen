@@ -9,6 +9,7 @@ export default class CharacterGenerator extends Step6 {
     this.rollStep5();
     this.rollStep6();
     this.applyModifications();
+    this.fillDistinguishingFeatures();
   };
 
   applyModifications = () => {
@@ -121,6 +122,16 @@ export default class CharacterGenerator extends Step6 {
 
     return allModifications;
   };
+
+  fillDistinguishingFeatures = () => {
+    this.character.appearance.distinguishingFeatures = this.character.appearance.distinguishingFeatures
+      .map((feature) => {
+        return {
+          ...feature,
+          description: this.fillProse(feature.description)
+        }
+      });
+  }
 
   showPlusHideZerosReducer = (obj, [key, val]) => {
     if (val === 0) {

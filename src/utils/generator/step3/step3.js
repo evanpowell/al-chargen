@@ -248,7 +248,7 @@ export class Step3 extends Step2 {
         pronounType = pronounTypes.genderFlipped;
       }
     }
-    this.pronouns = pronouns[pronounType];
+    this.pronouns = { ... pronouns[pronounType] };
   };
 
   rollCommunity = () => {
