@@ -25,8 +25,7 @@ export class Step3 extends Step2 {
   }
 
   rollProvince = () => {
-    this.character.origins.provincialOrigins = provincialOrigins[this.rollDie(10) - 1];
-    // this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
+    this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
   }
 
   rollLanguages = () => {
