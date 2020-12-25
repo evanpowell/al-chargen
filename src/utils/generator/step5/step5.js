@@ -24,15 +24,21 @@ export default class Step5 extends Step4 {
     const prose = `${sharedExposure} ${discoveryVerb} ${description} ${locale} ${impact}`;
     const filledProse = this.fillProse(prose);
     
-    const encounterResult = this.getOutcomeDiceResults(Object.values(rollResults));
+    // const encounterResult = this.getOutcomeDiceResults(Object.values(rollResults));
+    const encounterResult = 'Sequential Numbers';
     const outcome = { ...palestoneEncounter.outcomes[encounterResult] };
     outcome.description = this.fillProse(outcome.description);
     this.character.palestoneEncounter = {
       prose: filledProse,
       outcome: {
-        ...outcome,
-        modifications: outcome.modifications || []
+        description: outcome.description,
+        modifications: outcome.modifications || [],
+        notes: outcome.notes || null,
       }
+    }
+
+    if (this.character.palestoneEncounter.outcome.modifications.length) {
+      console.log(this.character.palestoneEncounter.outcome.modifications[0].type);
     }
   }
 
