@@ -342,7 +342,7 @@ export const biomesProse = {
                 `in the shimmering reeds of the $["grassy", "verdant", "bountiful", "flourishing", "lush"] $["hills", "rise", "reaches", "slopes"]`,
                 `in the calm and $["grassy", "verdant", "bountiful", "flourishing", "lush"] $["hills", "rise", "reaches", "slopes"]`,
                 `within the fertile $["grassy", "verdant", "bountiful", "flourishing", "lush"] $["hills", "rise", "reaches", "slopes"]`,
-                `grounded within $["the grassy hills", "the arable slopes", "the calm and flowing hills"]`
+                `found within $["the grassy hills", "the arable slopes", "the calm and flowing hills"]`
             ],
             'small city': [
                 `at the bright rich rise of the $["grassy", "verdant", "bountiful", "flourishing", "lush"] $["hills", "rise", "reaches", "slopes"]`,
@@ -432,52 +432,52 @@ export const biomesProse = {
     'woodlands': {
         phrases: {
             'hamlet': [
-                `concealed among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `bordering the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `nestled in the sylvan growth of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `located far within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `concealed among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `bordering the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `nestled in the sylvan growth of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `located far within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'village': [
-                `in the ancestral clearings of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `established in the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `among the outstretched and $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `in the dimness of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `in the ancestral clearings of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `established in the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `among the outstretched and $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `in the dimness of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'small town': [
-                `among the breaking canopies of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `obscured within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `protected beneath the secluded and $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `established far off among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `among the breaking canopies of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `obscured within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `protected beneath the secluded and $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `established far off among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'large township': [
-                `in the brush of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `covered within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `guarded by the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `founded across the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `in the brush of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `covered within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `guarded by the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `founded across the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'small city': [
-                `in the secluded clearings of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `planted deep within $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `hidden throughout the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `nestled in the growth among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `in the secluded clearings of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `planted deep within $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `hidden throughout the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `nestled in the growth among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'large city': [
-                `within the dim brushes of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `at the center of the foreboding and $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `overlooking the clearings of the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `under the protection of the ancestors in the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `within the dim brushes of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `at the center of the foreboding and $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `overlooking the clearings of the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `under the protection of the ancestors in the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'diasporic group': [
-                `sequestered within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `dependent on the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `that migrated within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `guarded among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `sequestered within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `dependent on the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `that migrated within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `guarded among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ],
             'nomadic group': [
-                `hunting among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `guided by the deer among the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `seeking the night of Maros within the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
-                `that camps throughout the $["dense", "shaded", "bleak", "dark", "austere", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
+                `hunting among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `guided by the deer among the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `seeking the night of Maros within the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`,
+                `that camps throughout the $["dense", "shaded", "bleak", "dark", "shaded", "dreary", "shadowed"] $["woodlands", "woods", "ancestral forests", "timberlands", "treelands"]`
             ]
         },
         provincePhrases: [
@@ -1177,7 +1177,7 @@ export const biomesProse = {
             'small city': [
                 `within the $["turbid", "smoggy", "thick", "immense", "murky", "polluted", "dismal", "contaminated", "gloomy"] $["clay fields", "clay deposits", "mineral fields", "clay quarries", "clay pits", "clay quagmires", "mineral deposits", "ore fields"]`,
                 `dependent on the $["turbid", "smoggy", "thick", "immense", "murky", "polluted", "dismal", "contaminated", "gloomy"] $["clay fields", "clay deposits", "mineral fields", "clay quarries", "clay pits", "clay quagmires", "mineral deposits", "ore fields"]`,
-                `grounded in the $["turbid", "smoggy", "thick", "immense", "murky", "polluted", "dismal", "contaminated", "gloomy"] $["clay fields", "clay deposits", "mineral fields", "clay quarries", "clay pits", "clay quagmires", "mineral deposits", "ore fields"]`,
+                `found in the $["turbid", "smoggy", "thick", "immense", "murky", "polluted", "dismal", "contaminated", "gloomy"] $["clay fields", "clay deposits", "mineral fields", "clay quarries", "clay pits", "clay quagmires", "mineral deposits", "ore fields"]`,
                 `settled beneath the gas clouds of the $["turbid", "smoggy", "thick", "immense", "murky", "polluted", "dismal", "contaminated", "gloomy"] $["clay fields", "clay deposits", "mineral fields", "clay quarries", "clay pits", "clay quagmires", "mineral deposits", "ore fields"]`
             ],
             'large city': [
@@ -1651,7 +1651,7 @@ export const biomesProse = {
     'farmlands': {
         phrases: {
             'hamlet': [
-                `grounded in the labors of the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
+                `found within the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
                 `planted within the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
                 `settled out among the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`,
                 `dependent on the $["fertile", "sustainable", "arable", "cultivated", "crop-bearing", "productive", "abundant", "rich", "cultivated"] $["farmlands", "acreage", "landscapes", "fields", "country", "farm fields", "cropfields", "farmlands"]`
