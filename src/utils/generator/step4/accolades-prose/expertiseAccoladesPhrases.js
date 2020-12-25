@@ -52,7 +52,7 @@ export const expertiseAccoladesPhrases = {
       `gained a fearful reputation while training with $PRONOUN_POSSESSIVE peers, and became decried for $PRONOUN_POSSESSIVE cruel tactics`
     ],
     'One Equaled Pair': [ // showed drive/dedication, earned respect
-      `showed a dedication to the practice of technique and tactices during $PRONOUN_POSSESSIVE time training`,
+      `showed a dedication to the practice of technique and tactics during $PRONOUN_POSSESSIVE time training`,
       `worked tirelessly to build a steady, reliable reputation as a skilled combatant during $PRONOUN_POSSESSIVE training`,
       `earned respect among $PRONOUN_POSSESSIVE peers as a skilled combatant in the years $PRONOUN_SUBJECT spent training`,
       `built a lasting and respected practice in combat techniques and tactics while training`
