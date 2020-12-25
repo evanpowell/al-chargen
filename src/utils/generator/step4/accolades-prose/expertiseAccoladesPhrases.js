@@ -49,10 +49,10 @@ export const expertiseAccoladesPhrases = {
       `earned disdain from $PRONOUN_POSSESSIVE peers for $PRONOUN_POSSESSIVE tendency to employ dishonorable techniques in $PRONOUN_POSSESSIVE training`,
       `became rather disrespected as a combatant for $PRONOUN_POSSESSIVE foul fighting techniques during $PRONOUN_POSSESSIVE martial training`,
       `was held with disdain by fellow combatants, primarily because of the unethical techniques $PRONOUN_SUBJECT employed while training`,
-      `gained a fearful reputation while training with $PRONOUN_POSSESSIVE peers, and were denounced for $PRONOUN_POSSESSIVE cruel tactics`
+      `gained a fearful reputation while training with $PRONOUN_POSSESSIVE peers, and became decried for $PRONOUN_POSSESSIVE cruel tactics`
     ],
     'One Equaled Pair': [ // showed drive/dedication, earned respect
-      `showed a dedication to the practice of technique and tactices during $PRONOUN_POSSESSIVE time training`,
+      `showed a dedication to the practice of technique and tactics during $PRONOUN_POSSESSIVE time training`,
       `worked tirelessly to build a steady, reliable reputation as a skilled combatant during $PRONOUN_POSSESSIVE training`,
       `earned respect among $PRONOUN_POSSESSIVE peers as a skilled combatant in the years $PRONOUN_SUBJECT spent training`,
       `built a lasting and respected practice in combat techniques and tactics while training`
@@ -158,7 +158,7 @@ export const expertiseAccoladesPhrases = {
   'Lore': {
     'All Numbers Distinct': [ // lack of motivation
       `found little interest in the lore of the Empire and drew little inspiration from available sources in $PRONOUN_POSSESSIVE time`,
-      `failed to see any lasting importance in the conventional tomes and archives of $PRONOUN_POSSESSIVE field, and were secluded in $PRONOUN_POSSESSIVE studies`,
+      `failed to see any lasting importance in the conventional tomes and archives of $PRONOUN_POSSESSIVE field, and remained secluded in $PRONOUN_POSSESSIVE studies`,
       `never learned more than the basic histories and contexts of Thelean lore, finding a lack of motivation to perform deeper research while studying`,
       `had little support and few resources when undertaking $PRONOUN_POSSESSIVE studies in lore, which impacted $PRONOUN_POSSESSIVE experiences and opportunities`
     ],
@@ -215,7 +215,7 @@ export const expertiseAccoladesPhrases = {
     ],
     'Three Equal Numbers': [ // highly regarded
       `became highly regarded in the realms of the clandestine arts for $PRONOUN_POSSESSIVE clever employment of kits and leveraging of information during $PRONOUN_POSSESSIVE time`,
-      `benefited greatly from $PRONOUN_POSSESSIVE time training in the clandestine arts and felt as if $PRONOUN_SUBJECT were perfectly suited to represent $PRONOUN_POSSESSIVE discipline`,
+      `benefited greatly from $PRONOUN_POSSESSIVE time training in the clandestine arts and $PRONOUN_SUBJECT excelled in representing $PRONOUN_POSSESSIVE discipline admirably`,
       `drew the attention of elite cloaks among the clandestine arts who took $PRONOUN_OBJECT under their tutelage and offered $PRONOUN_OBJECT highly specialized training`,
       `found a strong affinity for the clandestine arts, which became a circulated topic among streetwise cloaks who followed $PRONOUN_POSSESSIVE work`
     ],
