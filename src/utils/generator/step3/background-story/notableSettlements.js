@@ -790,7 +790,7 @@ export const notableSettlements = [
     region: `Siadagal`,
     location: `at the center of the commerce exchange in the rolling fields of Siadagal`,
     prepositions: [
-      `the $["merchant", "bustling", "opportune"] city of`
+      `the $["merchant", "bustling", "Opportune"] city of`
     ],
 
     rangeDescriptions: {
