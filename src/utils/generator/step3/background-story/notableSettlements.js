@@ -619,7 +619,7 @@ export const notableSettlements = [
       ],
       mid: [
         `$["one week's", "over a week's", "two weeks'"] $["boatride", "journey", "ride"] from`,
-        `a $["ten", "eleven", "twelve", "nine"]-day $["journey", "ride", "boatride"] from`
+        `$["a ten", "an eleven", "a twelve", "a nine"]-day $["journey", "ride", "boatride"] from`
       ]
     },
     rangeProbabilities: {
