@@ -12,7 +12,7 @@ export const vocations = {
 'Smith': `A prized crafter who specializes in creating armors, weapons, and personal equipment from refined metals and specialty alloys, both as functional protection and as symbols of social status.`,
 'Forgemaster': `Skilled at making large and heavy, but nonetheless useful items from everyday supplies, and having the know-how to oversee and maintain equipment that will last.`,
 
-'Stalwart': `Serves as a community or organization’s muscle, setting the tone for loyalty in values such as honesty and consistency; the stalwart is well known for being able to garner cooperation from the locals.`,
+'Stalwart': `Serves as a community or organization's muscle, setting the tone for loyalty in values such as honesty and consistency; the stalwart is well known for being able to garner cooperation from the locals.`,
 'Wrangler': `A reliable representative whose presence garners the support of locals, laborers, and liveries, the wrangler is a gatherer of crowds and a source of social and communal stability.`,
 
 'Pilgrim': `A storied traveler, an unrelenting walker and patient climber, either among the teeming cities of Thelea, or in the distant mountains where pilgrims must haul their gear.`,
@@ -22,7 +22,7 @@ export const vocations = {
 'Shipman': `A steady, strong hand, often on the deck of a sailing ship or near the docks, the shipman is able to expertly craft and disassemble a varity of ropes, knots, and levers.`, 
 
 'Awakener': `With a shocking grasp, these spellworkers manipulate transference with unrivaled confrontation, which often affects their countenance and demeanor in intimidating ways.`,
-'Blackguard': `Adept in the magical manipulations that would make another’s skin wilt, these spellworkers dig their hands into their work, often leaving their skin and arms discolored and hard.`, 
+'Blackguard': `Adept in the magical manipulations that would make another's skin wilt, these spellworkers dig their hands into their work, often leaving their skin and arms discolored and hard.`, 
 
 'Stablehand': `Caretakers of the savage, the stablehand is a capable ropemender, vehicle operator, and tack specialist whose care for and handling of domesticated animals facilitates the core of travel and settlement.`,
 'Chamberlain': `Caretakers of the civilized, the chamberlain is a master of procuring and maintaining the necessities in life, building sustainable stores of goods, gear, and supplies for communities and traveling parties.`,
