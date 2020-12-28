@@ -38,7 +38,7 @@ export const settlementsProse = {
   'diasporic group': [
     `was born into $["an ancestral", "a wandering", "a newly founded", "a remote", "a war-torn"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
     `was born among $["a poor", "a populous", "a displaced", "a western", "an eastern"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
-    `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "an little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
+    `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "a little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
     `was raised within $["a longstanding", "a war torn", "a culturally traditional", "a diverse", "a recent"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`
   ],
   'nomadic group': [
