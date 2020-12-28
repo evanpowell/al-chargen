@@ -99,11 +99,23 @@ export default class CharacterGeneratorAbstract extends DiceRoller {
     prose = prose.replaceAll('$VERB_PAST', this.pronouns.verbs.past);
     prose = prose.replaceAll('$NAME', this.character.name);
     prose = prose.replaceAll('$TITLE', `'${this.character.title}'`);
-    prose = prose.replaceAll(/\$\[.*?\]/g, (arrayAsString) => {
-      arrayAsString = arrayAsString.replace('$', '');
-      const parsedArray = JSON.parse(arrayAsString);
-      return this.getRandomArrayValue(parsedArray);
+
+    prose = prose.replaceAll(/\$<.*?>/g, (arrString) => {
+      arrString = arrString.replace('$', '');
+      arrString = arrString.replace('<', '[');
+      arrString = arrString.replace('>', ']');
+      const parsedArray = JSON.parse(arrString);
+      const item = this.getRandomArrayValue(parsedArray);
+      return this.fillProse(item);
     });
+
+    prose = prose.replaceAll(/\$\[.*?\]/g, (arrString) => {
+      arrString = arrString.replace('$', '');
+      const parsedArray = JSON.parse(arrString);
+      const item = this.getRandomArrayValue(parsedArray);
+      return this.fillProse(item);
+    });
+
     return prose;
   };
 
