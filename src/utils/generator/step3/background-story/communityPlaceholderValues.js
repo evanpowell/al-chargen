@@ -1,5 +1,5 @@
 export const communityPlaceholderValues = {
-  'diasporic group': ["cloister", "group"],
+  'diasporic group': ["cloister", "settlement"],
   'hamlet': ["hamlet", "encampment"],
   'village': ["village", "settlement"],
   'small town': ["town", "hometown", ],
