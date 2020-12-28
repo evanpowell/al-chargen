@@ -20,8 +20,8 @@ export const settlementsProse = {
   'large township': [
     `was born into $["a generational", "a widespread", "a contested", "an isolated", "a broadly established"] $["large township", "large town", "township", "district"]`,
     `comes from the descendents of $["a centrally positioned", "a noble", "an abandoned", "a sparsely populated", "a failing"] $["large township", "large town", "township", "district"]`,
-    `hails from $["a sprawling", "a populous", "a lonely", "west", "east"] $["large township", "large town", "township", "district"]`,
-    `is a child of $["an expansive", "a walled", "a guarded", "an empty", "a sparse"] $["large township", "large town", "township", "district"]`
+    `hails from $["a sprawling", "a populous", "a lonely", "a western", "an eastern"] $["town", "large town", "township", "district"]`,
+    `is a child of $["an expansive", "a walled", "a guarded", "an empty", "a sparse"] $["town", "large town", "township", "district"]`
   ],
   'small city': [
     `hails from $["a tranquil", "a guarded", "a gleaming", "an ancestral", "a singular"] $["small city", "city", "municipality", "locality"]`,
