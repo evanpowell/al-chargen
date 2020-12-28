@@ -11,8 +11,9 @@ Examples:
 
 export const titleAccoladesPhrases = {
   'All Numbers Distinct': [ // lack of motivation, NO TITLE
-   `$PRONOUN_POSSESSIVE circumstances offered no title or recognition in $PRONOUN_POSSESSIVE field.`,
-   `The lack of distinction in $PRONOUN_POSSESSIVE field meant that $PRONOUN_SUBJECT would have to set out to make a name for $PRONOUN_SELF.`
+   `$PRONOUN_POSSESSIVE $["circumstances", "lack of resources", "relatively few assets", "experiences"] $["offered", "afforded", "allowed"] no title or recognition in $PRONOUN_POSSESSIVE field.`,
+   `$PRONOUN_POSSESSIVE $["training", "discipline", "practice", "instruction"], while personally $["enriching", "edifying", "beneficial", "advantageous"], $["pressed against convention", "bucked the system", "opposed elder expectations", "went against tradition"] and distanced $PRONOUN_OBJECT from $PRONOUN_POSSESSIVE peers within the field.`,
+   `The lack of distinction in $PRONOUN_POSSESSIVE field meant that $PRONOUN_SUBJECT would have to set out to $["make a name for", "forge a new path for", "find a new direction for", "build a new practice for", "create a new tradition for"] $PRONOUN_SELF.`
   ],
   'Sequential Numbers': [ // disrepected, held in disdain
     `These experiences led $PRONOUN_OBJECT to adopt the unfortunate $["title", "nickname", "handle", "snub"] of $TITLE.`,
@@ -22,7 +23,11 @@ export const titleAccoladesPhrases = {
   ],
   'One Equaled Pair': [ // showed drive/dedication, earned respect, NO TITLE
     `$PRONOUN_POSSESSIVE devotedness was well recieved in $PRONOUN_POSSESSIVE field, but earned $PRONOUN_OBJECT no official $["titles", "nicknames", "epithets", "monikers", "sobriquets"].`,
-    `With no official $["titles", "nicknames", "epithets", "monikers", "sobriquets"] earned during $PRONOUN_POSSESSIVE term, $PRONOUN_SUBJECT realized that $PRONOUN_SUBJECT would need to set out to make a name for $PRONOUN_SELF.`
+    `$["With no $<"issued", "earned", "awarded">", "After $<"earning", "receiving", "being granted"> no", "Since $PRONOUN_SUBJECT $<"received", "were granted", "were awarded"> no"] $["titles", "nicknames", "epithets", "monikers", "sobriquets"] during $PRONOUN_POSSESSIVE term, $PRONOUN_SUBJECT realized that $PRONOUN_SUBJECT would need to set out to $["make a name for", "forge a new path for", "find a new direction for", "build a new practice for", "create a new tradition for"] $PRONOUN_SELF.`, 
+    `$PRONOUN_POSSESSIVE $["experiences", "deeds", "actions", "feats", "known exploits"] within $PRONOUN_POSSESSIVE $["field", "area of expertise", "training"] earned $PRONOUN_OBJECT recognition among $PRONOUN_POSSESSIVE peers.`,
+    `$PRONOUN_SUBJECT had a $["singular experience", "unique time", "privileged time"] training in $PRONOUN_POSSESSIVE field of expertise, and impressed $PRONOUN_POSSESSIVE peers with $PRONOUN_POSSESSIVE single-mindedness.`,
+    `$PRONOUN_SUBJECT never set out to earn $["titles", "honorifics", "official positions", "ranks"] in $PRONOUN_POSSESSIVE field, and focused instead on $["developing", "advancing", "growing", "building", "creating"] $[a useful", "a reliable", "a dependable", "an advanced", "a strong"] $["practice", "skill set", "set of skills", "collection of skills", "training portfolio, "proficiency in the field"].`,
+    `$PRONOUN_SUBJECT favored $["the development of", "the advancement of", "the building of", "the progression of", "the improvement of"] $[a useful", "a reliable", "a dependable", "an advanced", "a strong"] $["practice", "skill set", "set of skills", "collection of skills", "training portfolio, "proficiency in the field"] over any need for an official $["rank", "title", "promotion", "recognition"].`
   ],
   'Three Equal Numbers': [ // highly regarded
     `Through $PRONOUN_POSSESSIVE laurels $PRONOUN_SUBJECT became known as a $TITLE, $["a title", "a nickname", "an epithet", "a moniker", "a sobriquet", "an honorific"] that commands respect.`,
@@ -40,6 +45,6 @@ export const titleAccoladesPhrases = {
     `$PRONOUN_POSSESSIVE distinction earned $PRONOUN_OBJECT regard as a $TITLE.`,
     `As a legend in $PRONOUN_POSSESSIVE field, $PRONOUN_SUBJECT became known as $TITLE.`,
     `Regarded as a $TITLE, $["a title", "an appellation", "a designation", "a delegation", "a cognomen"] of honor, afforded $PRONOUN_OBJECT recognition by the Empire's elite.`,
-    `Grew to be known by the $["title", "appellation", "designation", "delegation", "cognomen"] of $TITLE for $PRONOUN_POSSESSIVE impressive accolades.`
+    `$PRONOUN_SUBJECT grew to be known by the $["title", "appellation", "designation", "delegation", "cognomen"] of $TITLE for $PRONOUN_POSSESSIVE impressive accolades.`
   ]
 }
