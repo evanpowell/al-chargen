@@ -31,7 +31,7 @@ export const settlementsProse = {
   ],
   'large city': [
     `hails from a community locality within $["a densely populated", "a diverse", "a traditional", "a newly formed", "a Thelean-funded"] $["large city", "great city", "metropolis", "urban center"]`,
-    `is from an archaic community in $["an ancestral", "a provincial", "a forgotten", "a conventional", "Torlish-inspired"] $["large city", "great city", "metropolis", "urban center"]`,
+    `is from an archaic community in $["an ancestral", "a provincial", "a forgotten", "a conventional", "a Torlish-inspired"] $["large city", "great city", "metropolis", "urban center"]`,
     `was born into the $["central", "labor", "western", "eastern", "historical"] borough of $["a large city", "a great city", "a metropolis", "an urban center"]`,
     `is from the $["central", "north", "south", "west", "east"] district within $["a large city", "a great city", "a metropolis", "an urban center"]`
   ],
