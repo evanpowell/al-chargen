@@ -455,6 +455,5 @@ export class Step3 extends Step2 {
       this.rollConnection();
       this.rollLiteracy();
       this.rollBackgroundStory();
-      console.log(this.character.backgroundStory);
   };
 }
