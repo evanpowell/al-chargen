@@ -31,19 +31,19 @@ export const settlementsProse = {
   ],
   'large city': [
     `hails from a community locality within $["a densely populated", "a diverse", "a traditional", "a newly formed", "a Thelean-funded"] $["large city", "great city", "metropolis", "urban center"]`,
-    `is from an archaic community in $["an ancestral", "a provincial", "a forgotten", "a conventional", "Torlish-inspired"] $["large city", "great city", "metropolis", "urban center"]`,
+    `is from an archaic community in $["an ancestral", "a provincial", "a forgotten", "a conventional", "a Torlish-inspired"] $["large city", "great city", "metropolis", "urban center"]`,
     `was born into the $["central", "labor", "western", "eastern", "historical"] borough of $["a large city", "a great city", "a metropolis", "an urban center"]`,
     `is from the $["central", "north", "south", "west", "east"] district within $["a large city", "a great city", "a metropolis", "an urban center"]`
   ],
   'diasporic group': [
     `was born into $["an ancestral", "a wandering", "a newly founded", "a remote", "a war-torn"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
     `was born among $["a poor", "a populous", "a displaced", "a western", "an eastern"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
-    `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "an little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
+    `is from the $["first", "second", "third"] generation of $["a proud", "a disenfranchised", "a resilient", "an isolated", "a little known"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`,
     `was raised within $["a longstanding", "a war torn", "a culturally traditional", "a diverse", "a recent"] $["diasporic group", "refugee camp", "cultural redoubt", "diasporic citadel"]`
   ],
   'nomadic group': [
     `was born into $["an intentional", "a hidden", "a sustainable", "a hardy", "a communal"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-    `is a member of $["a traditional", "a singular", "an little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
+    `is a member of $["a traditional", "a singular", "a little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `was raised hunting with $["the ancestral", "the agrarian", "a disheveled", "an overpopulated", "a dissolving"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `hails from $["the inspirational", "a wandering", "a generational", "a successful", "a resilient"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`
   ]
