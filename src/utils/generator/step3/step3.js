@@ -18,6 +18,7 @@ import { notableSettlementMatchProbabilities } from "./background-story/notableS
 import { notableSettlementVerbs } from "./background-story/notableSettlementVerbs";
 import { communityPlaceholderValues } from "./background-story/communityPlaceholderValues";
 import { reputationProse } from "./background-story/reputationProse";
+import { regionPrepositions } from "./background-story/regionPrepositions";
 
 export class Step3 extends Step2 {
 
@@ -294,16 +295,36 @@ export class Step3 extends Step2 {
       regionPhrase
     } = this.rollBiomeAndRegionPhrases();
 
-    // const roll = this.rollDie(100);
-    // const { settlement } = this.character.origins;
-    // const nonStructuralSettlements = ['diasporic group', 'nomadic group'];
-    // const isNonStructuralSettlement = nonStructuralSettlements.includes(settlement);
+    const { region } = this.character.origins.provincialOrigins;
+
+    const startingRegionPrepositions = regionPrepositions[region];
+    const startingRegionPreposition = this.getRandomArrayValue(startingRegionPrepositions);
+    const startingRegionPhrase = `${startingRegionPreposition} ${region}`;
+
+    const roll = this.rollDie(100);
+    const { settlement } = this.character.origins;
+    const nonStructuralSettlements = ['diasporic group', 'nomadic group'];
+    const isNonStructuralSettlement = nonStructuralSettlements.includes(settlement);
     let locationsProse;
 
+
     if (notablePhrase) {
-      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
+      if (roll <= 20 && !isNonStructuralSettlement) {
+        locationsProse = `${notablePhrase}, ${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
+      } else if (roll <= 45) {
+
+        locationsProse = `${startingRegionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
+      } else {
+        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
+      }
     } else {
-      locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
+      if (roll <= 20 && !isNonStructuralSettlement) {
+        locationsProse = `${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
+      } else if (roll <= 45) {
+        locationsProse = `${startingRegionPhrase}, ${settlementPhrase} ${biomePhrase}.`
+      } else {
+        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
+      }
     }
 
     try {
@@ -434,5 +455,6 @@ export class Step3 extends Step2 {
       this.rollConnection();
       this.rollLiteracy();
       this.rollBackgroundStory();
+      console.log(this.character.backgroundStory);
   };
 }

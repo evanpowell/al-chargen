@@ -270,7 +270,11 @@ export class Step4 extends Step3 {
     const sentence1 = this.fillProse(`$NAME ${part1Phrase}.`);
     const part2Sentences = titleAccoladesPhrases[this.termDiceResult];
     let sentence2 = this.getRandomArrayValue(part2Sentences);
-    sentence2 = this.fillProse(sentence2);
+    try {
+      sentence2 = this.fillProse(sentence2);
+    } catch {
+      console.log('FAILED TO FILL PROSE FOR SENTENCE 2:', sentence2);
+    }
     sentence2 = this.capitalizeString(sentence2);
     
     this.character.accolades = `${sentence1} ${sentence2}`;
