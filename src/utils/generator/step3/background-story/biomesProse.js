@@ -242,7 +242,7 @@ export const biomesProse = {
                 `centrally located within $["the windswept plains", "the great flatlands", "the grass covered savannah"]`,
                 `located amid the rise of the Gangona ridge in $["the grassy meadows", "the great plains", "the great savannah"]`,
                 `found isolated among $["the windy savannah", "the whispering grasslands", "the expansive grasses"]`,
-                `built in the north plains of $["the whispering meadows", "the boundless savannah, "the savannah grasslands"]`
+                `built in the north plains of $["the whispering meadows", "the boundless savannah", "the savannah grasslands"]`
             ],
             'diasporic group': [
                 `within the lower oasis of $["the windy grasslands", "the expansive savannah", "the windswept meadows"]`,
@@ -299,7 +299,7 @@ export const biomesProse = {
                 `sheltered amid $["the stormswept plains", "the stormy flatlands", "the vast rolling storm lands"]`,
                 `central to $["the thunderous and harsh storm lands", "the rolling storm plains", "the storm plains"]`,
                 `proudly bordering the cloudhills of $["the lightning fields", "the storm plains", "the expansive storm lands"]`,
-                `situated within $["the harsh storm lands", "the tempestuous stormy regions, "the rolling storm plains"]`
+                `situated within $["the harsh storm lands", "the tempestuous stormy regions", "the rolling storm plains"]`
             ],
             'diasporic group': [
                 `in the heart of $["the rainy storm lands", "the thunderous storm fields", "the overcast storm plains"]`,

@@ -16,6 +16,8 @@ import { settlementsProse } from "./background-story/settlementsProse";
 import { notableSettlements } from "./background-story/notableSettlements";
 import { notableSettlementMatchProbabilities } from "./background-story/notableSettlementMatch";
 import { notableSettlementVerbs } from "./background-story/notableSettlementVerbs";
+import { communityPlaceholderValues } from "./background-story/communityPlaceholderValues";
+import { reputationProse } from "./background-story/reputationProse";
 
 export class Step3 extends Step2 {
 
@@ -276,6 +278,7 @@ export class Step3 extends Step2 {
 
   rollBackgroundStory = () => {
     this.rollLocationsProse();
+    this.rollReputationProse();
   };
 
   rollLocationsProse = () => {
@@ -303,9 +306,16 @@ export class Step3 extends Step2 {
       locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
     }
 
+    try {
+      this.fillProse(locationsProse);
+    } catch {
+      console.log('FAILED LOCATIONS PROSE:', locationsProse);
+      locationsProse = '';
+    }
+
 
     const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
-    this.character.backgroundStory += filledLocationsProse;
+    this.character.backgroundStory = filledLocationsProse;
   };
 
   rollSettlementPhrase = () => {
@@ -392,6 +402,21 @@ export class Step3 extends Step2 {
     }
 
     return {};
+  }
+
+  rollReputationProse = () => {
+    const communityWords = communityPlaceholderValues[this.character.origins.settlement];
+    const communityWord = this.getRandomArrayValue(communityWords);
+    const reputationSentences = reputationProse[this.character.origins.reputation];
+    let reputationSentence = this.getRandomArrayValue(reputationSentences);
+    reputationSentence = reputationSentence.replaceAll('$COMMUNITY', communityWord);
+    try {
+      reputationSentence = this.fillProse(reputationSentence);
+    } catch {
+      console.log('FAILED:', reputationSentence);
+      reputationSentence = '';
+    }
+    this.character.backgroundStory = `${this.character.backgroundStory} ${reputationSentence}`;
   }
 
   rollStep3 = () => {
