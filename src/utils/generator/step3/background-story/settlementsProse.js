@@ -8,7 +8,7 @@ export const settlementsProse = {
   'village': [
     `grew up in $["a traditional", "a noble", "an abandoned", "a distant", "a small"] $["village", "redoubt", "crossroads", "community"]`,
     `was raised in $["a central", "a northern", "a southern", "a western", "an eastern"] $["village", "redoubt", "crossroads", "community"]`,
-    `found their home outside a $["well positioned", "stone ", "walled", "separated", "newly formed"] $["village", "redoubt", "crossroads", "community"]`,
+    `found $PRONOUN_POSSESSIVE home outside a $["well positioned", "stone ", "walled", "separated", "newly formed"] $["village", "redoubt", "crossroads", "community"]`,
     `is a child of $["a traditional", "a walled", "a guarded", "an empty", "a sparse"] $["village", "redoubt", "crossroads", "community"]`
   ],
   'small town': [
