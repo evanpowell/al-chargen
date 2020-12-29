@@ -1,4 +1,4 @@
-export const communityAdjectives = {
+export const culturalValueCommunityDescriptors = {
   'wealthProsperity': `$["an industrious", "a hardworking", "a productive", "a commerce-oriented", "a wealthy", "a prosperous", "an affluent", "a dedicated"]`,
   'generosityCharity': `$["a generous", "a caring", "a kindly", "a charitable", "an accommodating", "an altrusitic", "a magnanimous", "a giving", "a benevolent"]`,
   'religiousPietyDevotion': `$["a religious", "a pious", "a spiritually-devoted", "a devoted", "a clerical", "a devout", "a sectarian", "a blessed", "a sacred"]`,
@@ -19,4 +19,4 @@ export const communityAdjectives = {
   'selfRelianceAutonomy': `$["an autonomous", "a loose", "an expedient", "an unusual", "a remote", "a confined", "a resourceful", "a challenging", "an unforgiving"]`,
   'dutyService': `$["a dutiful", "a service-oriented", "a conscientious", "a diligent", "a fastidious", "a compulsory", "an obedient", "a rigorous", "law abiding"]`,
   'ancestryLocalHistory': `$["a heralded", "a historical", "a storied", "a well-storied", "a reverent", "a venerable", "a deeply rooted"]`
-}
+};
