@@ -43,15 +43,7 @@ export const settlementsProse = {
   ],
   'nomadic group': [
     `was born into $["an intentional", "a hidden", "a sustainable", "a hardy", "a communal"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-<<<<<<< Updated upstream
-    `is a member of $["a traditional", "a singular", "a little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-=======
-<<<<<<< Updated upstream
-    `is a member of $["a traditional", "a singular", "an little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
-=======
     `was born as a member of $["a traditional", "a singular", "a little known", "a remote", "a well known"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     `was raised hunting with $["the ancestral", "the agrarian", "a disheveled", "an overpopulated", "a dissolving"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`,
     `hails from $["the inspirational", "a wandering", "a generational", "a successful", "a resilient"] $["nomadic group", "hunting party", "group of nomads", "nomadic community"]`
   ]
