@@ -290,6 +290,7 @@ export class Step3 extends Step2 {
     }
 
     const settlementPhrase = this.rollSettlementPhrase();
+    const pastOnlySettlementPhrase = this.rollSettlementPhrase(true);
     const {
       biomePhrase,
       regionPhrase
@@ -310,18 +311,18 @@ export class Step3 extends Step2 {
 
     if (notablePhrase) {
       if (roll <= 20 && !isNonStructuralSettlement) {
-        locationsProse = `${notablePhrase}, ${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
+        locationsProse = `${notablePhrase}, ${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`
       } else if (roll <= 45) {
 
-        locationsProse = `${startingRegionPhrase}, ${settlementPhrase} ${biomePhrase}, ${notablePhrase}.`
+        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}, ${notablePhrase}.`
       } else {
         locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
       }
     } else {
       if (roll <= 20 && !isNonStructuralSettlement) {
-        locationsProse = `${biomePhrase}, ${settlementPhrase} ${regionPhrase}.`
+        locationsProse = `${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`
       } else if (roll <= 45) {
-        locationsProse = `${startingRegionPhrase}, ${settlementPhrase} ${biomePhrase}.`
+        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}.`
       } else {
         locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
       }
@@ -337,13 +338,17 @@ export class Step3 extends Step2 {
 
     const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
     this.character.backgroundStory = filledLocationsProse;
+    console.log(filledLocationsProse);
   };
 
-  rollSettlementPhrase = () => {
+  rollSettlementPhrase = (isPastOnly) => {
     const { settlement } = this.character.origins;
-    const settlementPhrases = settlementsProse[settlement];
-    const settlementPhrase = this.getRandomArrayValue(settlementPhrases);
-    const settlementsProseString = `${this.character.name} ${settlementPhrase}`;
+    const { phrases, verbs } = settlementsProse[settlement]; 
+    const settlementPhrase = this.getRandomArrayValue(phrases);
+
+    const actionPhrases = isPastOnly ? verbs.past : verbs.past.concat(verbs.present);
+    const actionPhrase = this.getRandomArrayValue(actionPhrases);
+    const settlementsProseString = `${this.character.name} ${actionPhrase} ${settlementPhrase}`;
     return settlementsProseString;
   };
   
