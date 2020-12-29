@@ -26,8 +26,12 @@ export class Step4 extends Step3 {
 
   rollAptitudeSkills = (skillPoints = this.rollDie(4)) => {
     for (let i = 0; i < skillPoints; i++) {
-      const skillName = this.getRandomArrayValue(this.aptitude.skillsPool);
-      this.addSkillPoint(skillName);
+      if (this.character.skills.length >= 3 && this.rollDie(100) <= 75) {
+        this.addPointToExisting('skills');
+      } else {
+        const skillName = this.getRandomArrayValue(this.aptitude.skillsPool);
+        this.addSkillPoint(skillName);
+      }
     }
   };
   
@@ -95,10 +99,19 @@ export class Step4 extends Step3 {
       .map((skill) => {
         const attributeVal = this.character.attributes.final[skill.baseAttribute];
         let probability = Math.floor(attributeVal * (attributeVal / 10));
-        if (attributeVal < 10) {
+        let probabilityModifier = Math.floor(Math.abs(attributeVal - 10) / 2);
+        if (attributeVal - 10 < 0) {
+          probabilityModifier = -(probabilityModifier);
+        }
+
+        probability += probabilityModifier;
+
+        if (probability < 10) {
           probability -= 1;
-        } else if (attributeVal >=12 ) {
-          probability += 1;
+        }
+
+        if (probability <= 0) {
+          probability = 1;
         }
 
         return {
@@ -110,7 +123,13 @@ export class Step4 extends Step3 {
     const sides = skillsPool.reduce((sides, skill) => (sides + skill.probability), 0);
 
     for (let i = 0; i < skillPoints; i++) {
-      const skillName = this.rollAuxiliarySkillProficiency(skillsPool, sides);
+      const existingAuxSkills = this.character.skills.filter((skill) => skillsPool.some((name) => name === skill.name));
+      let skillName;
+      if (this.character.skills.length >= 4 && existingAuxSkills.length > 0 && this.rollDie(100) <= 75) {
+        skillName = this.getRandomArrayValue(existingAuxSkills);
+      } else {
+        skillName = this.rollAuxiliarySkillProficiency(skillsPool, sides);
+      }
       this.addSkillPoint(skillName);
     }
   }
@@ -131,7 +150,8 @@ export class Step4 extends Step3 {
   }
 
   rollProficiencies = (proficiencyPoints = this.rollDie(4)) => {
-    this.character.proficiencies = Object.entries(this.expertise.proficiencies)
+    if (!this.character.proficiencies.length) {
+      this.character.proficiencies = Object.entries(this.expertise.proficiencies)
       .filter(([, points]) => points !== 0)
       .map(([name, points]) => {
         return {
@@ -139,6 +159,7 @@ export class Step4 extends Step3 {
           points
         }
       });
+    }
 
     const expertiseProficiencies = Object.keys(this.expertise.proficiencies)
       .map((name) => proficiencies[name]);
@@ -150,10 +171,19 @@ export class Step4 extends Step3 {
       .map((proficiency) => {
         const attributeVal = this.character.attributes.final[proficiency.baseAttribute];
         let probability = Math.floor(attributeVal * (attributeVal / 10));
-        if (attributeVal < 10) {
+        let probabilityModifier = Math.floor(Math.abs(attributeVal - 10) / 2);
+        if (attributeVal - 10 < 0) {
+          probabilityModifier = -(probabilityModifier);
+        }
+
+        probability += probabilityModifier;
+
+        if (probability < 10) {
           probability -= 1;
-        } else if (attributeVal >=12 ) {
-          probability += 1;
+        }
+
+        if (probability < 0) {
+          probability = 1;
         }
 
         return {
@@ -273,7 +303,7 @@ export class Step4 extends Step3 {
     try {
       sentence2 = this.fillProse(sentence2);
     } catch {
-      console.log('FAILED TO FILL PROSE FOR SENTENCE 2:', sentence2);
+      console.error('Failed to Fill Prose:', sentence2);
     }
     sentence2 = this.capitalizeString(sentence2);
     

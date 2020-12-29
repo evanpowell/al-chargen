@@ -331,14 +331,13 @@ export class Step3 extends Step2 {
     try {
       this.fillProse(locationsProse);
     } catch {
-      console.log('FAILED LOCATIONS PROSE:', locationsProse);
+      console.error('Failed to Fill Prose:', locationsProse);
       locationsProse = '';
     }
 
 
     const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
     this.character.backgroundStory = filledLocationsProse;
-    console.log(filledLocationsProse);
   };
 
   rollSettlementPhrase = (isPastOnly) => {
@@ -439,7 +438,7 @@ export class Step3 extends Step2 {
     try {
       reputationSentence = this.fillProse(reputationSentence);
     } catch {
-      console.log('FAILED:', reputationSentence);
+      console.error('Failed to Fill Prose:', reputationSentence);
       reputationSentence = '';
     }
     this.character.backgroundStory = `${this.character.backgroundStory} ${reputationSentence}`;
