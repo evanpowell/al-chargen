@@ -132,12 +132,13 @@ export const settlementsProse = {
     verbs: {
       past: [
         `was born into`,
+        `was born as a member of`,
         `was raised $["hunting with", "on the move by"]`,
         `grew up $["hunting with", "on the move with", "traveling with"]`
       ],
       present: [
         `hails from`,
-        `is a member of`
+        `comes from`
       ]
     },
     phrases: [
