@@ -293,7 +293,7 @@ export const expertiseAccoladesPhrases = {
     ],
     'Three Equal Numbers': [ // highly regarded
       `became highly regarded among $PRONOUN_POSSESSIVE community for $PRONOUN_POSSESSIVE impressive command of the flow and function of $PRONOUN_POSSESSIVE labors`,
-      `was acknowledged with respect and praise for $PRONOUN_POSSESSIVE tireless labors and skillful expertise during $PRONOUN_POSSESSIVE labors`,
+      `was acknowledged with respect and praise for $PRONOUN_POSSESSIVE tireless diligence and skillful expertise during $PRONOUN_POSSESSIVE labors`,
       `showed a rare talent and promise through the labors of $PRONOUN_POSSESSIVE community, demonstrating an ease and awareness that earned $PRONOUN_OBJECT respect for $PRONOUN_POSSESSIVE labors`,
       `was recognized as an impressive steward within $PRONOUN_POSSESSIVE community, which opened many doors of opportunity and experience in $PRONOUN_POSSESSIVE labors`
     ],
