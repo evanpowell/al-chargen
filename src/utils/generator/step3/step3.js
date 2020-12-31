@@ -389,8 +389,7 @@ export class Step3 extends Step2 {
 
     const communityAdjective = culturalValueCommunityDescriptors[culturalValues];
 
-    // const communityValue = this.getValueForCommunityPlaceholder();
-
+    
     const communityTypesByBiome = communityTypesBiomeSpecific[biome];
     const communityType = communityTypesByBiome[community.description] || communityTypesGeneric[community.description];
     
@@ -400,7 +399,9 @@ export class Step3 extends Step2 {
     } catch {
       console.error('Failed to Fill Prose:', parentageCommunitySentence);
     }
-
+    
+    const communityValue = this.getValueForCommunityPlaceholder();
+    parentageCommunitySentence = parentageCommunitySentence.replaceAll('$COMMUNITY', communityValue);
     parentageCommunitySentence = this.capitalizeString(parentageCommunitySentence);
 
     this.character.backgroundStory = `${this.character.backgroundStory} ${parentageCommunitySentence}`;
