@@ -26,10 +26,7 @@ export default class Character {
       biomes: []
     },
     settlement: '',
-    parentage: {
-      type: '',
-      statuses: {}
-    },
+    parentage: '',
     relations: {},
     reputation: '',
     community: {

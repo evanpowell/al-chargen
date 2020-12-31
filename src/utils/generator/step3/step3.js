@@ -19,6 +19,9 @@ import { notableSettlementVerbs } from "./background-story/notableSettlementVerb
 import { communityPlaceholderValues } from "./background-story/communityPlaceholderValues";
 import { reputationProse } from "./background-story/reputationProse";
 import { regionPrepositions } from "./background-story/regionPrepositions";
+import { parentageProse } from "./background-story/parentageProse";
+import { culturalValueCommunityDescriptors } from "./background-story/culturalValueCommunityDescriptors";
+import { communityTypesBiomeSpecific, communityTypesGeneric } from "./background-story/communityProseValues";
 
 export class Step3 extends Step2 {
 
@@ -28,7 +31,8 @@ export class Step3 extends Step2 {
   }
 
   rollProvince = () => {
-    this.character.origins.provincialOrigins = this.getRandomArrayValue(provincialOrigins);
+    this.character.origins.provincialOrigins = { ...this.getRandomArrayValue(provincialOrigins) };
+    this.character.origins.provincialOrigins.biome = this.getRandomArrayValue(this.character.origins.provincialOrigins.biomes);
   }
 
   rollLanguages = () => {
@@ -121,61 +125,9 @@ export class Step3 extends Step2 {
     this.character.origins.settlement = this.getRandomArrayValue(settlements);
   }
 
-  // Deprecated
-  // rollParentage = () => {
-  //   const parentObj = this.getRandomArrayValue(parentage);
-  //   const { type } = parentObj;
-  //   let numberOfParents = 0;
-  //   if (parentObj.max) {
-  //     numberOfParents = this.rollDie(parentObj.max);
-  //   } else if (parentObj.fixed) {
-  //     numberOfParents = parentObj.fixed;
-  //   }
-
-  //   const statuses = this.rollStatuses(numberOfParents, relationStatuses);
-    
-  //   this.character.origins.parentage = {
-  //     type,
-  //     statuses
-  //   };
-  // }
-
-  // Deprecated
-  // rollRelations = () => {
-  //   this.character.origins.relations = relations
-  //     .filter(() => this.rollDie(100) <= 75)
-  //     .reduce((relationsObj,rel) => {
-  //       const numOfRelations = this.rollDie(rel.max) - 1;
-  //       let statuses;
-  //       if (rel.type === 'pets') {
-  //           statuses = this.rollStatuses(numOfRelations, petTypes);
-  //       } else {
-  //           statuses = this.rollStatuses(numOfRelations, relationStatuses);
-  //       }
-
-  //       if (numOfRelations) {
-  //           relationsObj[rel.type] = statuses;
-  //       }
-        
-  //       return relationsObj;
-  //     }, {});
-  // }
-
-  // Deprecated
-  // rollStatuses(quantity, statuses) {
-  //   return [...Array(quantity)]
-  //     .map(() => {
-  //       return this.getRandomArrayValue(statuses);
-  //     })
-  //     .reduce((statusObj, status) => {
-  //       if (statusObj[status]) {
-  //         statusObj[status] += 1;
-  //       } else {
-  //         statusObj[status] = 1;
-  //       }
-  //       return statusObj;
-  //     }, {});
-  // }
+  rollParentage = () => {
+    this.character.origins.parentage = this.getRandomArrayValue(parentage);
+  }
 
   rollName = () => {
     let namesPool = [];
@@ -279,6 +231,7 @@ export class Step3 extends Step2 {
 
   rollBackgroundStory = () => {
     this.rollLocationsProse();
+    this.rollParentageCommunityProse();
     this.rollReputationProse();
   };
 
@@ -353,8 +306,7 @@ export class Step3 extends Step2 {
   
   rollBiomeAndRegionPhrases = () => {
     const { provincialOrigins, settlement } = this.character.origins;
-    const { region, biomes } = provincialOrigins;
-    const biome = this.getRandomArrayValue(biomes);
+    const { region, biome } = provincialOrigins;
 
     const biomePhrases = biomesProse[biome].phrases[settlement];
     const biomePhrase = this.getRandomArrayValue(biomePhrases);
@@ -429,12 +381,41 @@ export class Step3 extends Step2 {
     return {};
   }
 
+  rollParentageCommunityProse = () => {
+    const { parentage, provincialOrigins, culturalValues, community } = this.character.origins;
+    const { biome } = provincialOrigins;
+    const parentagePhrases = parentageProse[parentage];
+    const parentagePhrase = this.getRandomArrayValue(parentagePhrases);
+
+    const communityAdjective = culturalValueCommunityDescriptors[culturalValues];
+
+    // const communityValue = this.getValueForCommunityPlaceholder();
+
+    const communityTypesByBiome = communityTypesBiomeSpecific[biome];
+    const communityType = communityTypesByBiome[community.description] || communityTypesGeneric[community.description];
+    
+    let parentageCommunitySentence = `${parentagePhrase} $["among", "within", "amid", "in"] ${communityAdjective} $["community", "group", "association"] of ${communityType}.`;
+    try {
+      parentageCommunitySentence = this.fillProse(parentageCommunitySentence);
+    } catch {
+      console.error('Failed to Fill Prose:', parentageCommunitySentence);
+    }
+
+    parentageCommunitySentence = this.capitalizeString(parentageCommunitySentence);
+
+    this.character.backgroundStory = `${this.character.backgroundStory} ${parentageCommunitySentence}`;
+  }
+
+  getValueForCommunityPlaceholder = () => {
+    const communityValues = communityPlaceholderValues[this.character.origins.settlement];
+    return this.getRandomArrayValue(communityValues);
+  }
+
   rollReputationProse = () => {
-    const communityWords = communityPlaceholderValues[this.character.origins.settlement];
-    const communityWord = this.getRandomArrayValue(communityWords);
+    const communityValue = this.getValueForCommunityPlaceholder();
     const reputationSentences = reputationProse[this.character.origins.reputation];
     let reputationSentence = this.getRandomArrayValue(reputationSentences);
-    reputationSentence = reputationSentence.replaceAll('$COMMUNITY', communityWord);
+    reputationSentence = reputationSentence.replaceAll('$COMMUNITY', communityValue);
     try {
       reputationSentence = this.fillProse(reputationSentence);
     } catch {
@@ -449,8 +430,7 @@ export class Step3 extends Step2 {
       this.rollProvince();
       this.rollLanguages();
       this.rollSettlement();
-      // this.rollParentage();
-      // this.rollRelations();
+      this.rollParentage();
       this.rollCommunity();
       this.rollName();
       this.rollPronouns();
@@ -459,5 +439,6 @@ export class Step3 extends Step2 {
       this.rollConnection();
       this.rollLiteracy();
       this.rollBackgroundStory();
+      console.log(this.character.backgroundStory);
   };
 }

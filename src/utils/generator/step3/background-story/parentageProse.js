@@ -5,7 +5,7 @@ Examples:   [A foundling, he was raised by adoptive parents]
 */
 
 export const parentageProse = {
-  'orphan': [		// (abandoned, or no memory, GM rolls status) 
+    'orphan': [		// (abandoned, or no memory, GM rolls status) 
         `Being $["orphaned", "abandoned", "deserted", "lost", "estranged"] $["at a young age", "as an infant", "as a child"], but having no memory of $["where $PRONOUN_SUBJECT came from", "$PRONOUN_POSSESSIVE past", "$PRONOUN_POSSESSIVE true origins"], $PRONOUN_SUBJECT $["lived", "came up", "wandered"]`,
         `$PRONOUN_SUBJECT $VERB_PAST $["orphaned", "abandoned", "deserted", "lost", "estranged"] $["at a young age", "as an infant", "as a child"] and $["made $PRONOUN_POSSESSIVE own way", "$VERB_PAST brought up communally", "$VERB_PAST taken in", "$VERB_PAST sheltered"]`
     ],
@@ -27,7 +27,7 @@ export const parentageProse = {
 
     'spiritualTutelage': [ 	// (raised by [d6] spiritual leaders) 
         `$["Maturing", "Growing", "Being raised", "As a student"] under the $["tutelage", "guidance", "fostership", "care"] of $["respected", "traditional", "enigmatic", "conventional", "Thelean", "cryptic"] $["spiritual leaders", "priests", "shamans", "clerics", "spritual elders", "spiritual guardians", "ritual guardians"], $PRONOUN_SUBJECT $["found $PRONOUN_SELF", "$VERB_PAST indoctrinated", "$VERB_PAST educated", "spent $PRONOUN_POSSESSIVE $<"early", "formative", "developing", "impressionable"> years"]`,
-        `$PRONOUN_SUBJECT spent $PRONOUN_POSSESSIVE $["early", "formative", "developing", "impressionable"] years" under the $["tutelage", "guidance", "fostership", "care"] of $["respected", "traditional", "enigmatic", "conventional", "Thelean", "cryptic"] $["spiritual leaders", "priests", "shamans", "clerics", "spritual elders", "spiritual guardians", "ritual guardians"] and $["$VERB_PAST raised", "matured", "$VERB_PAST brought up", "studied", "grew", "learned"]`
+        `$PRONOUN_SUBJECT spent $PRONOUN_POSSESSIVE $["early", "formative", "developing", "impressionable"] years under the $["tutelage", "guidance", "fostership", "care"] of $["respected", "traditional", "enigmatic", "conventional", "Thelean", "cryptic"] $["spiritual leaders", "priests", "shamans", "clerics", "spritual elders", "spiritual guardians", "ritual guardians"] and $["$VERB_PAST raised", "matured", "$VERB_PAST brought up", "studied", "grew", "learned"]`
     ],
 
     'foundling': [ 	// ([d6] parents of no biological relation) 
