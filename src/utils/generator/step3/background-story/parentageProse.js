@@ -22,7 +22,7 @@ export const parentageProse = {
 
     'singleParentage': [ 	// (roll single parent’s characteristics)
         `$["As a child of", "Raised by", "Reared by", "Brought up by", "The child of", "Looked after by", "Cared for by"] $["a single", "a solitary", "a sole", "a singular", "one"] $["parent", "guardian", "caretaker", "attendant", "keeper"], $PRONOUN_SUBJECT $["$VERB_PAST secluded", "$VERB_PAST spoiled", "$VERB_PAST ostracized", "$VERB_PAST sheltered", "$VERB_PAST ostracized", "$VERB_PAST well known", "$VERB_PAST honored"]`,
-        `$PRONOUN_SUBJECT $VERB_PAST $["born to", "raised by", "reared by", "cared for by", "the child of", "looked after by"] $["a single", "a solitary", "a sole", "a singular", "one"] $["parent", "guardian", "caretaker", "attendant", "keeper"], spending $PRONOUN_POSSESSIVE $["early", "formative", "developing", "impressionable"] $["years", "days", "upbringing", "experiences"]"`
+        `$PRONOUN_SUBJECT $VERB_PAST $["born to", "raised by", "reared by", "cared for by", "the child of", "looked after by"] $["a single", "a solitary", "a sole", "a singular", "one"] $["parent", "guardian", "caretaker", "attendant", "keeper"], spending $PRONOUN_POSSESSIVE $["early", "formative", "developing", "impressionable"] $["years", "days", "upbringing", "experiences"]`
     ],
 
     'spiritualTutelage': [ 	// (raised by [d6] spiritual leaders) 

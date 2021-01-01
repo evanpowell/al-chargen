@@ -21,7 +21,7 @@ import { reputationProse } from "./background-story/reputationProse";
 import { regionPrepositions } from "./background-story/regionPrepositions";
 import { parentageProse } from "./background-story/parentageProse";
 import { culturalValueCommunityDescriptors } from "./background-story/culturalValueCommunityDescriptors";
-import { communityTypesBiomeSpecific, communityTypesGeneric } from "./background-story/communityProseValues";
+import { communityTypesBiomeSpecific, communityTypesGeneric, groupValues } from "./background-story/communityProseValues";
 
 export class Step3 extends Step2 {
 
@@ -392,8 +392,18 @@ export class Step3 extends Step2 {
     
     const communityTypesByBiome = communityTypesBiomeSpecific[biome];
     const communityType = communityTypesByBiome[community.description] || communityTypesGeneric[community.description];
+
+    let groupValue = groupValues[community.description];
+    let middle;
+    if (this.rollDie(100) <= 35) {
+      groupValue = groupValue.replaceAll('a ', '').replaceAll('an ', '');
+      middle = `${communityAdjective} ${groupValue}`;
+    } else {
+      middle = groupValue;
+    }
+
     
-    let parentageCommunitySentence = `${parentagePhrase} $["among", "within", "amid", "in"] ${communityAdjective} $["community", "group", "association"] of ${communityType}.`;
+    let parentageCommunitySentence = `${parentagePhrase} $["among", "within", "amid", "in"] ${middle} of ${communityType}.`;
     try {
       parentageCommunitySentence = this.fillProse(parentageCommunitySentence);
     } catch {
@@ -440,6 +450,5 @@ export class Step3 extends Step2 {
       this.rollConnection();
       this.rollLiteracy();
       this.rollBackgroundStory();
-      console.log(this.character.backgroundStory);
   };
 }

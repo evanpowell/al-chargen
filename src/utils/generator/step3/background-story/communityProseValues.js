@@ -1,3 +1,26 @@
+export const groupValues = {
+  'caretakers and healers': `$["a group", "an order"]`,
+  'cultists and mystics': `$["a sect", "an order", "a group", "a community"]`,
+  'entertainers and artists': `$["a company", "a band", "a troupe", "a group"]`,
+  'farmers and fishers': `$["a group", "a community"]`,
+  'gardeners and shepherds': `$["a group", "a community"]`,
+  'guardians and sellswords': `$["a company", "a band", "a fellowship"]`,
+  'laborers and servants': `$["a group", "a community"]`,
+  'dyers and weavers': `$["a group", "a community"]`,
+  'paupers and beggars': `$["a group", "a community"]`,
+  'veterans and enforcers': `$["a band", "a company", "a group", "a community"]`,
+  'fortune tellers and diviners': `$["a group", "a community"]`,
+  'dock workers and cargo haulers': `$["a group", "a community"]`,
+  'artisans and makers': `$["a cooperation", "a guild", "a group", "a community"]`,
+  'intellectuals and architects': `$["a fellowship", "a group", "a community"]`,
+  'luminaries and nobles': `$["an affiliation", "a group", "a community"]`,
+  'merchants and curio peddlers': `$["a guild", "an affiliation", "a group"]`,
+  'philosophers and scholars': `$["an affiliation", "a group", "a community"]`,
+  'curio traders and smugglers': `$["an organization", "a group"]`,
+  'traders and innkeepers': `$["an organization", "a group"]`,
+  'travelers and adventurers': `$["a band", "a company", "a group"]`,
+}
+
 export const communityTypesGeneric = {
   'caretakers and healers': `$["caretakers", "healers", "physicians", "caretakers and healers", "healers and physicians"]`,
   'cultists and mystics': `$["cultists", "mystics", "ritualists", "cultists and mystics", "Finojan worshippers"]`,
