@@ -54,6 +54,8 @@ export default {
       axios
         .get(characterSheetURL, { responseType: "arraybuffer" })
         .then(({ data }) => {
+          // const fields = pdfform().listFields(data);
+          // console.log("fields", fields);
           const filledForm = pdfform().transform(
             data,
             this.charGen.mapToPdfFields()
