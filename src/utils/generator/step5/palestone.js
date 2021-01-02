@@ -25,7 +25,7 @@ export const palestoneEncounter = {
   },
   impact: {
     1: (sharedExposureRoll) => {
-      if (sharedExposureRoll === 1 || sharedExposureRoll === 2) {
+      if (sharedExposureRoll === 1 || sharedExposureRoll === 6) {
         return ``
       } else {
         return `Those who were present during the encounter shared the same outcome.`
@@ -36,7 +36,7 @@ export const palestoneEncounter = {
     4: `As $PRONOUN_SUBJECT inspected the stone, it suddenly burst into fragments.`,
     5: `$NAME closed $PRONOUN_POSSESSIVE eyes for only a moment, but when $PRONOUN_SUBJECT opened them, $PRONOUN_SUBJECT strangely found $PRONOUN_SELF miles from home.`,
     6: (sharedExposureRoll) => {
-      if (sharedExposureRoll === 1 || sharedExposureRoll === 2) {
+      if (sharedExposureRoll === 1 || sharedExposureRoll === 6) {
         return ``
       } else {
         return `Those who were present during the encounter shared the same outcome.`
@@ -83,11 +83,7 @@ export const palestoneEncounter = {
   
     'Three Equal Numbers': {
       description: `$NAME's exposure caused painful lesions, internal bleeding, then death.`,
-      modifications: [
-        {
-          type: 'death'
-        }
-      ]
+      rollDeathChart: true,
     },
   
     'Two Equaled Pairs': {
