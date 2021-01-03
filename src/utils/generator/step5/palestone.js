@@ -53,6 +53,14 @@ export const palestoneEncounter = {
     'noticed',
     'layed eyes upon'
   ],
+  connectingPhrases: {
+    negative: [
+      `In a sudden turn, the interaction with the stone caused $PRONOUN_OBJECT $["unprecedented", "indescribable", "intense"] pain, burrowing lesions into her skin, seeming to devour $PRONOUN_OBJECT from the inside.`
+    ],
+    positive: [
+      `$PRONOUN_SUBJECT felt a surge of $["energy", "power", "power and emotion", "energy and displacement"] as $PRONOUN_SUBJECT $["became one with", "bonded with", "linked with"] the primordial source, and then returned, renewed.`
+    ]
+  },
   outcomes: {
     'All Numbers Distinct': {
       description: `$NAME's encounter was painful, haunting, and traumatic.`,
