@@ -4,7 +4,7 @@ export const deathChart = [
       `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a 'Halekar.' $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
     ],
     masteries: [
-      '+2 healing'
+      '+2 healing rate (Pale Stone Encounter)'
     ],
     notes: [
       `$NAME is a Halekar: $PRONOUN_SUBJECT will never age`
@@ -170,7 +170,7 @@ export const deathChart = [
       `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a 'Halekar.' $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
     ],
     masteries: [
-      '+2 healing'
+      '+2 healing rate (Pale Stone Encounter)'
     ],
     notes: [
       `$NAME is a Halekar: $PRONOUN_SUBJECT will never age`
