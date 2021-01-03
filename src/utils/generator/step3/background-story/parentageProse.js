@@ -20,7 +20,7 @@ export const parentageProse = {
         `$PRONOUN_SUBJECT $VERB_PAST $["raised", "reared", "brought up", "fostered", "parented", "guarded", "instructed"] $["by $PRONOUN_POSSESSIVE community", "in the communal way", "in the traditional way", "on the streets of $PRONOUN_POSSESSIVE $COMMUNITY", "by $PRONOUN_POSSESSIVE extended family", "by $PRONOUN_POSSESSIVE local community"] and $["lived", "matured", "came up", "developed", "grew", "learned"]`
     ],
 
-    'singleParentage': [ 	// (roll single parent’s characteristics)
+    'singleParentage': [ 	// (roll single parent's characteristics)
         `$["As a child of", "Raised by", "Reared by", "Brought up by", "The child of", "Looked after by", "Cared for by"] $["a single", "a solitary", "a sole", "a singular", "one"] $["parent", "guardian", "caretaker", "attendant", "keeper"], $PRONOUN_SUBJECT $["$VERB_PAST secluded", "$VERB_PAST spoiled", "$VERB_PAST ostracized", "$VERB_PAST sheltered", "$VERB_PAST ostracized", "$VERB_PAST well known", "$VERB_PAST honored"]`,
         `$PRONOUN_SUBJECT $VERB_PAST $["born to", "raised by", "reared by", "cared for by", "the child of", "looked after by"] $["a single", "a solitary", "a sole", "a singular", "one"] $["parent", "guardian", "caretaker", "attendant", "keeper"], spending $PRONOUN_POSSESSIVE $["early", "formative", "developing", "impressionable"] $["years", "days", "upbringing", "experiences"]`
     ],

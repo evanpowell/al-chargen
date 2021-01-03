@@ -3,7 +3,7 @@
 To be used for locational prose sentence structure type B:
 
 [In the north of] the Ommultic Front, Kiva was born among the refugees of a
-populous diasporic citadel at the heartof the dark spruce groves two days’
+populous diasporic citadel at the heartof the dark spruce groves two days'
 ride from the city of Raelian.
 
 */

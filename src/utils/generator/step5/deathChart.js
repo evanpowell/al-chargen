@@ -96,7 +96,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `As $NAME lay dying, $PRONOUN_SUBJECT attempted to call out to $["a stranger nearby", "a trusted friend", "a blurry figure before them"]. Unfortunately $["$PRONOUN_SUBJECT couldn't muster the strength to speak", "$PRONOUN_POSSESSIVE injuries were too great"], and $PRONOUN_SUBJECT $VERB_PAST unable to make a sound as $PRONOUN_SUBJECT slipped into Maros’s grasp, leaving behind only a cold, blank stare.`
+      `As $NAME lay dying, $PRONOUN_SUBJECT attempted to call out to $["a stranger nearby", "a trusted friend", "a blurry figure before them"]. Unfortunately $["$PRONOUN_SUBJECT couldn't muster the strength to speak", "$PRONOUN_POSSESSIVE injuries were too great"], and $PRONOUN_SUBJECT $VERB_PAST unable to make a sound as $PRONOUN_SUBJECT slipped into Maros's grasp, leaving behind only a cold, blank stare.`
     ],
     isDeath: true
   },
@@ -149,7 +149,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `As $NAME succumbed to agonizing pain, $PRONOUN_SUBJECT cried out for Maros’s mercy. Lightning struck the earth, the ground shook, and $NAME's body fell limp. Miles away, $PRONOUN_SUBJECT opened $PRONOUN_POSSESSIVE eyes again, awakening in the form of an animal.`
+      `As $NAME succumbed to agonizing pain, $PRONOUN_SUBJECT cried out for Maros's mercy. Lightning struck the earth, the ground shook, and $NAME's body fell limp. Miles away, $PRONOUN_SUBJECT opened $PRONOUN_POSSESSIVE eyes again, awakening in the form of an animal.`
     ],
     isDeath: true
   },
@@ -161,7 +161,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `As $NAME lay dying, $PRONOUN_SUBJECT recognized someone standing nearby. As $PRONOUN_POSSESSIVE breathing began to fail, $NAME handed them parchment to the closest person near them. This 'Letter of Whispers,' is a sacred writ blessed by Caretakers that bequeaths the deceased’s belongings to another.`
+      `As $NAME lay dying, $PRONOUN_SUBJECT recognized someone standing nearby. As $PRONOUN_POSSESSIVE breathing began to fail, $NAME handed them parchment to the closest person near them. This 'Letter of Whispers,' is a sacred writ blessed by Caretakers that bequeaths the deceased's belongings to another.`
     ],
     isDeath: true
   },
