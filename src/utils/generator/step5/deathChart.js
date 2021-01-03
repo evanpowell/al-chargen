@@ -102,7 +102,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `A healer found their way to the dying $NAME, and in a taboo display cut and twisted at the $PRONOUN_POSSESSIVE injury. The healer managed to saved the $PRONOUN_POSSESSIVE life, but at the expense $PRONOUN_POSSESSIVE`
+      `A healer found their way to the dying $NAME, and in a taboo display cut and twisted at $PRONOUN_POSSESSIVE injury. The healer managed to saved $PRONOUN_POSSESSIVE life, but at the expense $PRONOUN_POSSESSIVE`
     ],
     limbs: [
       `left arm`,
