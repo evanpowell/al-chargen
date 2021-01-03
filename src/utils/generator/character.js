@@ -88,5 +88,6 @@ export default class Character {
       notes: ''
     }
   }
+  notes = [];
   wealth = 0;
 }

@@ -78,7 +78,7 @@ export const palestoneEncounter = {
   
     'One Equaled Pair': {
       description: `$NAME formed a deep connection to Pale Stone and can now harness its energy.`,
-      notes: '+1 healing'
+      masteries: ['+1 healing']
     },
   
     'Three Equal Numbers': {
@@ -88,12 +88,13 @@ export const palestoneEncounter = {
   
     'Two Equaled Pairs': {
       description: `$NAME discovered an affinity for Pale Stone and can now harness its energy.`,
-      notes: '+2 healing'
+      masteries: ['+2 healing']
     },
   
     'All Equal Numbers': {
-      description: `$NAME formed an intrinsic bond with Pale Stone, and has since ceased to age.`,
-      notes: `+2 healing, never ages`
+      description: `$NAME formed an intrinsic bond with Pale Stone`,
+      masteries: [`+2 healing`],
+      notes: [`$NAME is a Halekar: $PRONOUN_SUBJECT will never age`]
     }
   }
 };

@@ -86,14 +86,13 @@ export default class CharacterGenerator extends Step6 {
         this.character.attributes.adjustments[name] += modification.points
         break;
       }
-      case 'death': {
-        //TODO: roll death chart
-        // console.log('------------DEATH----------------');
-        break;
-      }
       case 'wealth': {
         const [numberOfDice, sides] = modification.amount.split('d');
         this.character.wealth += this.rollDice(numberOfDice, sides);
+        break;
+      }
+      case 'age': {
+        this.character.appearance.final.age += modification.years;
         break;
       }
       default: {
@@ -116,8 +115,8 @@ export default class CharacterGenerator extends Step6 {
     
     allModifications = [
       ...allModifications,
-      ...this.character.term.outcome.modifications,
-      ...this.character.palestoneEncounter.outcome.modifications
+      ...(this.character.term.outcome.modifications || []),
+      ...(this.character.palestoneEncounter.outcome.modifications || [])
     ];
 
     return allModifications;
@@ -142,6 +141,14 @@ export default class CharacterGenerator extends Step6 {
 
     obj[key] = val;
     return obj;
+  }
+
+  getCharacterName = () => {
+    let name = this.character.name;
+    if (this.character.deathDate) {
+      name = `${name} (Died ${this.character.deathDate.dateString})`
+    }
+    return name;
   }
 
   convertInchesToFeet = (inches) => {
@@ -229,7 +236,7 @@ export default class CharacterGenerator extends Step6 {
     const appearance = this.character.appearance.final;
 
     return {
-      "Character Name": [this.character.name],
+      "Character Name": [this.getCharacterName()],
       "Adventurer Level": "1",
 
       // CHARACTERISTICS

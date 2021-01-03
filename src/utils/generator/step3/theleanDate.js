@@ -1,12 +1,12 @@
 import { DiceRoller } from "../../diceRoller";
 import { calendar } from "./calendar";
 
-export class Birthdate {
+export class TheleanDate {
     constructor() {
         this.diceRoller = new DiceRoller();
     }
 
-    rollBirthDate = () => {
+    rollDate = () => {
         const isLeapDay = this.diceRoller.rollDie(1461) === 1461;
         const isMoonDay = this.rollIsMoonDay(monthRoll === 13);
 

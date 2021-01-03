@@ -1,4 +1,4 @@
-import { Birthdate } from "./birthdate";
+import { TheleanDate } from "./theleanDate";
 import { provincialOrigins } from "./provincialOrigins";
 import { settlements } from "./settlements";
 import { parentage } from "./parentage";
@@ -27,7 +27,7 @@ export class Step3 extends Step2 {
 
 
   rollBirthDate = () => {
-    this.character.origins.birthdate = new Birthdate().rollBirthDate();
+    this.character.origins.birthdate = new TheleanDate().rollDate();
   }
 
   rollProvince = () => {

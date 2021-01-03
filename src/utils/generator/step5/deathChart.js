@@ -1,7 +1,7 @@
 export const deathChart = [
   {
     phrases: [
-      `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a “Halekar.” $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
+      `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a 'Halekar.' $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
     ],
     masteries: [
       '+2 healing'
@@ -18,7 +18,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `$NAME had found $PRONOUN_SUBJECT way to a lonely death. $["Even though $PRONOUN_SUBJECT passed while surrounded by others,", "No one was there to mourn $PRONOUN_POSSESSIVE passing, and"] in the weeks that followed $PRONOUN_POSSESSIVE death few if anyone continued to speak the name of $NAME.`
+      `$NAME had found $PRONOUN_POSSESSIVE way to a lonely death. $["Even though $PRONOUN_SUBJECT passed while surrounded by others,", "No one was there to mourn $PRONOUN_POSSESSIVE passing, and"] in the weeks that followed $PRONOUN_POSSESSIVE death few if anyone continued to speak the name of $NAME.`
     ],
     isDeath: true
   },
@@ -30,7 +30,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `$NAME succumbed, painfully, and once unconscious was left for dead. $PRONOUN_SUBJECT awakened groggily in the bed of a kindly citizen who happened to see there was life still within $PRONOUN_OBJECT. The coma lasted for ten years.`
+      `$NAME succumbed, painfully, and once unconscious was left for dead. However sometime later, $PRONOUN_SUBJECT awakened groggily in the bed of a kindly citizen who happened to see there was life still within $PRONOUN_OBJECT. The coma lasted for ten years.`
     ],
     modifications: [
       {
@@ -53,35 +53,39 @@ export const deathChart = [
       {
         type: 'sight',
         phrase: `lost $PRONOUN_POSSESSIVE sight`,
-        notes: [
-          `Blind (Pale Stone outcome)`
-        ]
+        feature: `Blind`
       },
       {
         type: 'hearing',
         phrase: `lost $PRONOUN_POSSESSIVE hearing`,
-        notes: [
-          `Deaf (Pale Stone outcome)`
-        ]
+        feature: `Deaf`
       },
       {
         type: 'smellTaste',
-        phrase: `lost $PRONOUN_POSSESSIVE $["sense of smell", "ability to taste", "abilities to smell and taste"]`
+        smell: {
+          phrase: `lost $PRONOUN_POSSESIVE sense of smell`,
+          feature: `No sense of smell`
+        },
+        taste: {
+          phrase: `lost $PRONOUN_POSSESIVE ability to taste`,
+          feature: `No ability to taste`
+        },
+        both: {
+          phrase: `lost $PRONOUN_POSSESIVE ability to taste and smell`,
+          feature: `No sense of smell or taste`
+        }
       },
       {
-        type: 'touch',
-        phrase: `lost $PRONOUN_POSSESSIVE sense of touch`,
-        notes: [
-          `No sense of touch (Pale Stone outcome)`
-        ]
+        type: 'touchPain',
+        touch: {
+          phrase: `lost $PRONOUN_POSSESSIVE sense of touch`,
+          feature: `No sense of touch`
+        },
+        pain: {
+          phrase: `lost the ability to feel pain`,
+          feature: `Can't feel pain`
+        }
       },
-      {
-        type: 'pain',
-        phrase: `lost the ability to feel pain`,
-        notes: [
-          `Can't feel pain (Pale Stone outcome)`
-        ]
-      }
     ]
   },
   {
@@ -133,7 +137,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `In a suffocating panic, $NAME seemed to disappear into $PRONOUN_POSSESSIVE own mind where $PRONOUN_SUBJECT witnessed $PRONOUN_POSSESSIVE own gruesome death. $PRONOUN_SUBJECT come back to $PRONOUN_POSSESSIVE awareness moments before it is about to happen.`
+      `In a suffocating panic, $NAME seemed to disappear into $PRONOUN_POSSESSIVE own mind where $PRONOUN_SUBJECT witnessed $PRONOUN_POSSESSIVE own gruesome death. Moments before it was about to happen, $PRONOUN_SUBJECT came back to awareness...`
     ],
     rollAgain: true
   },
@@ -157,13 +161,13 @@ export const deathChart = [
   },
   {
     phrases: [
-      `As $NAME lay dying, $PRONOUN_SUBJECT recognized someone standing nearby. As $PRONOUN_POSSESSIVE breathing began to fail, $NAME handed them parchment to the closest person near them. This “Letter of Whispers,” is a sacred writ blessed by Caretakers that bequeaths the deceased’s belongings to another.`
+      `As $NAME lay dying, $PRONOUN_SUBJECT recognized someone standing nearby. As $PRONOUN_POSSESSIVE breathing began to fail, $NAME handed them parchment to the closest person near them. This 'Letter of Whispers,' is a sacred writ blessed by Caretakers that bequeaths the deceased’s belongings to another.`
     ],
     isDeath: true
   },
   {
     phrases: [
-      `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a “Halekar.” $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
+      `$NAME died under the physical trauma of $PRONOUN_POSSESSIVE Pale Stone encounter, yet as $PRONOUN_SUBJECT rested in the hand of Maros, the Pale Stone merged within $PRONOUN_POSSESSIVE consciousness, resurrecting $PRONOUN_OBJECT as a 'Halekar.' $PRONOUN_SUBJECT $VERB_PRESENT now aware of $PRONOUN_POSSESSIVE intrisic connection to Pale Stone.`
     ],
     masteries: [
       '+2 healing'

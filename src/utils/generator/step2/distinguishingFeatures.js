@@ -19,7 +19,10 @@ const quirks = {
     '26': { description: `$["Whispers", "Vocalizes"] to self` },
     '27': { description: `A disarming stoicism` },
     '28': { description: `Uses animated gesticulations` },
-    '29': { description: `Has a habit of staring` },
+    '29': {
+        description: `Has a habit of staring`,
+        type: `sight`
+    },
     '30': { description: `Soft-spoken` },
     '31': { description: `Curses excessively` },
     '32': { description: `Consistently polite` },
@@ -31,7 +34,10 @@ const quirks = {
     '38': { description: `Speaks very slowly` },
     '39': { description: `Fast talker` },
     '40': { description: `Takes many pauses when speaking` },
-    '41': { description: `Typically avoids eye contact` },
+    '41': {
+        description: `Typically avoids eye contact`,
+        type: `sight`
+    },
     '42': { description: `Seems always to be joking` },
     '43': { description: `Frequent habitual coughing` },
     '44': { description: `Speaks excessively loudly` },
@@ -50,10 +56,30 @@ const proportions = {
     '16': { description: `Remarkably close-set facial features` },
     '17': { description: `Remarkably wide-set facial features` },
     '18': { description: `One eye is higher than the other` },
-    '19': { description: `Very small hands` },
+    '19': {
+        description: `Very small hands`,
+        type: `limb`,
+        alternatives: {
+            arm: `Very small $SIDE hand`
+        }
+    },
     '20': { description: `Very large hands` },
-    '21': { description: `Very long $["arms", "legs", "arms and legs"]` },
-    '22': { description: `Very short $["arms", "legs", "arms and legs"]` },
+    '21': {
+        description: `Very long $["arms", "legs", "arms and legs"]`,
+        type: `limb`,
+        alternatives: {
+            arm: `Very long $["$SIDE arm", "legs", "$SIDE arm and legs"]`,
+            leg: `Very long $["arms", "$SIDE leg", "$SIDE leg and arms"]`
+        }
+    },
+    '22': {
+        description:`Very short $["arms", "legs", "arms and legs"]`,
+        type: `limb`,
+        alternatives: {
+            arm: `Very short $["$SIDE arm", "legs", "$SIDE arm and legs"]`,
+            leg: `Very short $["arms", "$SIDE leg", "$SIDE leg and arms"]`
+        }
+    },
     '23': { description: `$["Knobby", "Spurred"] elbows` },
     '24': { description: `Beady eyes` },
     '25': { description: `Rounded, jutting chin` },
@@ -68,9 +94,21 @@ const proportions = {
     '34': { description: `Upturned nose` },
     '35': { description: `Gaping, flared nostrils` },
     '36': { description: `Incredibly wide set shoulders` },
-    '37': { description: `$["Crooked", "Bowed"] legs` },
+    '37': {
+        description: `$["Crooked", "Bowed"] legs`,
+        type: `limb`,
+        alternatives: {
+            leg: `Crooked $SIDE leg`
+        }
+    },
     '38': { description: `Extremely thick hair` },
-    '39': { description: `Very $["large feet", "long toes"]` },
+    '39': {
+        description: `Very $["large feet", "long toes"]`,
+        type: `limb`,
+        alternatives: {
+            leg: `Very $["large $SIDE foot", "long toes"]`
+        }
+    },
     '40': { description: `Noticeably $["tall", "wide"] forehead` },
     '41': { description: `Protruding, high cheekbones` },
     '42': { description: `Pointed ear $["lobes", "tips"]` },
@@ -82,11 +120,29 @@ const scarsWeathering = {
     '13': { description: `Deep scar across right cheek` },
     '14': { description: `Missing several teeth` },
     '15': { description: `Burn scars on $["face", "shoulder", "face and shoulder"]` },
-    '16': { description: `Burn scars on $["arms", "body", "arms and body"]` },
+    '16': {
+        description: `Burn scars on $["arms", "body", "arms and body"]`,
+        type: `limb`,
+        alternatives:   {
+            arm: `Burn scars on $["$SIDE arm", "body", "body and $SIDE arm"]`,
+        }
+    },
     '17': { description: `$["Cauliflower", "Torn"] ear` },
     '18': { description: `$["Two", "Three", "Four", "Five"] noticeable stabbing scars` },
-    '19': { description: `Missing two fingers from right hand` },
-    '20': { description: `Missing two fingers from left hand` },
+    '19': {
+        description: `Missing two fingers from right hand`,
+        type: `limb`,
+        alternatives:   {
+            arm: `Missing two fingers from $SIDE hand`,
+        }
+    },
+    '20': {
+        description: `Missing two fingers from left hand`,
+        type: `limb`,
+        alternatives:   {
+            arm: `Missing two fingers from $SIDE hand`,
+        }
+    },
     '21': { description: `$["Clouded", "Scarred", "Damaged"] right eye` },
     '22': { description: `$["Clouded", "Scarred", "Damaged"] left eye` },
     '23': { description: `Whip scars across back` },
@@ -121,7 +177,13 @@ const modificationsAdornments = {
     '20': { description: `Shaved head` },
     '21': { description: `Pierced nasal bridge` },
     '22': { description: `$["Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen"] ear piercings` },
-    '23': { description: `$["Ritual", "Symbolic"] branding on arms` },
+    '23': {
+        description: `$["Ritual", "Symbolic"] branding on arms`,
+        type: `limb`,
+        alternatives: {
+            arm: `$["Ritual", "Symbolic"] branding on $SIDE arm`
+        }
+    },
     '24': { description: `Scarification on $["body", "face", "body and face"]` },
     '25': { description: `Colored nails` },
     '26': { description: `Dyed hair and/or fur` },
@@ -137,7 +199,13 @@ const modificationsAdornments = {
     '36': { description: `Wears elaborate body paints` },
     '37': { description: `Wears numerous decorative pendants` },
     '38': { description: `Wears very loose, baggy clothing` },
-    '39': { description: `Tattooed $["hands", "fingers", "hands and fingers"]` },
+    '39': {
+        description: `Tattooed $["hands", "fingers", "hands and fingers"]`,
+        type: `limb`,
+        alternatives: {
+            arm: `Tattooed $["$SIDE hand", "fingers", "$SIDE hand and fingers"]`
+        }
+    },
     '40': { description: `Always wears a head covering` },
     '50': { description: `Controversial symbolic tattoos` }
 }
@@ -174,7 +242,14 @@ const anomalies = {
     },
     '22': { description: `Chimerism (multicolored hair/skin)` },
     '23': { description: `Deeply curved spine` },
-    '24': { description: `Extra digit on $["right hand", "left hand", "both hands", "right foot", "left foot", "both feet"]` },
+    '24': {
+        description: `Extra digit on $["right hand", "left hand", "both hands", "right foot", "left foot", "both feet"]`,
+        type: `limb`,
+        alternatives: {
+            arm: `Extra digit on $["$SIDE hand", "right foot", "left foot", "both feet"]`,
+            leg: `Extra digit on $["right hand", "left hand", "both hands", "$SIDE foot"]`,
+        }
+    },
     '25': { description: `Elongated, protruding canine teeth` },
     '26': { description: `Skin is tinted $["dark gray", "blue"]` },
     '27': { description: `$["Wide neck", "Sloped shoulders", "Wide neck and sloped shoulders"]` },
