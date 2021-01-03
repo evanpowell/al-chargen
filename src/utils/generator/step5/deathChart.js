@@ -12,7 +12,7 @@ export const deathChart = [
   },
   {
     phrases: [
-      `Death came slowly, and several times $NAME slipped away only to awaken again in pain. Finally, after nearly a month of struggling at the brink, $NAME dies in the arms of $PRONOUN_POSSESSIVE caretaker.`
+      `Death came slowly, and several times $NAME slipped away only to awaken again in pain. Finally, after nearly a month of struggling at the brink, $NAME died in the arms of $PRONOUN_POSSESSIVE caretaker.`
     ],
     isDeath: true
   },
