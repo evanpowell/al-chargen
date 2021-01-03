@@ -28,10 +28,9 @@ export default class Step5 extends Step4 {
     
     const encounterResult = this.getOutcomeDiceResults(Object.values(rollResults));
     let outcome = { ...palestoneEncounter.outcomes[encounterResult] };
-    // if (outcome.rollDeathChart) {
-    //   outcome = this.rollDeathChart();
-    // }
-    outcome = this.rollDeathChart();
+    if (outcome.rollDeathChart) {
+      outcome = this.rollDeathChart();
+    }
     outcome.description = this.fillProse(outcome.description);
     this.character.palestoneEncounter = {
       prose: filledProse,
