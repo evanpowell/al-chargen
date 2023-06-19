@@ -1,0 +1,22 @@
+export const culturalValueCommunityDescriptors = {
+  'wealthProsperity': `$["an industrious", "a dedicated"]`,
+  'generosityCharity': `$["a generous", "a charitable", "an altrusitic"]`,
+  'religiousPietyDevotion': `$["a religious", "a pious", "a devout"]`,
+  'knowledgeDiscovery': `$["an inventive", "an insightful"]`,
+  'disciplineTraining': `$["a strict", "a hardened"]`,
+  'hospitalityCommunity': `$["a tight-knit", "a hospitable"]`,
+  'compassionAnimalHusbandry': `$["a compassionate", "a connected", "a gentle"]`,
+  'individualityOpportunism': `$["a competitive", "an individualistic"]`,
+  'innovationExperimentation': `$["an original", "an inventive"]`,
+  'curiousityExploration': `$["an inquisitive", "an observant", "a meddlesome"]`,
+  'authoritarianismSpectacle': `$["a ceremonious", "an isolationist", "an ordered"]`,
+  'acquisitionEnterprise': `$["an enterprising", "a volatile"]`,
+  'creationExpression': `$["a creative", "an expressive", "a prolific"]`,
+  'craftsmanshipStatus': `$["a crafty", "a clever"]`,
+  'animismRitual': `$["an animistic", "a ritualistic", "a superstitious"]`,
+  'hierarchyEducation': `$["a hierarchical", "an educated"]`,
+  'communityGrowthCommerce': `$["a diplomatic"]`,
+  'selfRelianceAutonomy': `$["an autonomous", "a loose", "an unusual", "a resourceful"]`,
+  'dutyService': `$["a diligent", "a fastidious", "a rigorous"]`,
+  'ancestryLocalHistory': `$["a reverent", "an ancestral"]`
+};
