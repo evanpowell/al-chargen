@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/al-chargen/static/css/main.29706a55.css",
+    "main.js": "/al-chargen/static/js/main.2e537192.js",
+    "static/js/787.6f7c96a3.chunk.js": "/al-chargen/static/js/787.6f7c96a3.chunk.js",
+    "static/media/character-sheet.pdf": "/al-chargen/static/media/character-sheet.1263d1ace63f2ab957fc.pdf",
+    "index.html": "/al-chargen/index.html",
+    "main.29706a55.css.map": "/al-chargen/static/css/main.29706a55.css.map",
+    "main.2e537192.js.map": "/al-chargen/static/js/main.2e537192.js.map",
+    "787.6f7c96a3.chunk.js.map": "/al-chargen/static/js/787.6f7c96a3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29706a55.css",
+    "static/js/main.2e537192.js"
+  ]
+}
