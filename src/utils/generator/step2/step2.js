@@ -2,6 +2,7 @@ import { appearance } from "./appearance";
 import { distinguishingFeatures } from "./distinguishingFeatures";
 import { ancestries } from "./ancestries";
 import Step1 from "../step1/step1";
+import { presentations } from "./presentation";
 
 export class Step2 extends Step1 {
   rollAncestry = () => {
@@ -44,10 +45,17 @@ export class Step2 extends Step1 {
     this.character.appearance.distinguishingFeatures = features;
   };
 
+  rollPresentation = () => {
+    const presentationBinary = this.getRandomArrayValue(presentations);
+    this.character.appearance.presentation =
+      this.getRandomArrayValue(presentationBinary);
+  };
+
   rollStep2 = () => {
     this.rollAncestry();
     this.rollSex();
     this.rollAppearance();
+    this.rollPresentation();
     this.rollDistinguishingFeatures();
   };
 }
