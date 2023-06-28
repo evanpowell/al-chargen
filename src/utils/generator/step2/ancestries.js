@@ -1,18 +1,5 @@
 export const ancestries = [
   {
-    ancestry: `Human`,
-    adjustments: {
-      str: -1,
-      end: 1,
-      agi: 0,
-      acc: 1,
-      int: 0,
-      wis: -1,
-      per: 0,
-      cha: 1,
-    },
-  },
-  {
     ancestry: `Ais'lun`,
     adjustments: {
       str: 0,
@@ -22,19 +9,6 @@ export const ancestries = [
       int: -1,
       wis: 1,
       per: 2,
-      cha: 0,
-    },
-  },
-  {
-    ancestry: `Viantu`,
-    adjustments: {
-      str: -2,
-      end: -1,
-      agi: 2,
-      acc: 2,
-      int: 1,
-      wis: 0,
-      per: 0,
       cha: 0,
     },
   },
@@ -49,6 +23,19 @@ export const ancestries = [
       wis: 0,
       per: 1,
       cha: 0,
+    },
+  },
+  {
+    ancestry: `Human`,
+    adjustments: {
+      str: -1,
+      end: 1,
+      agi: 0,
+      acc: 1,
+      int: 0,
+      wis: -1,
+      per: 0,
+      cha: 1,
     },
   },
   {
@@ -74,6 +61,19 @@ export const ancestries = [
       int: 1,
       wis: -1,
       per: -1,
+      cha: 0,
+    },
+  },
+  {
+    ancestry: `Viantu`,
+    adjustments: {
+      str: -2,
+      end: -1,
+      agi: 2,
+      acc: 2,
+      int: 1,
+      wis: 0,
+      per: 0,
       cha: 0,
     },
   },
