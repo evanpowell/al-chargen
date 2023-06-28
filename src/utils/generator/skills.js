@@ -80,27 +80,27 @@ export const skills = {
   // PRE-based
   [`Aim`]: {
     name: `Aim`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
   [`Bandage Injury`]: {
     name: `Bandage Injury`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
   [`Forgery`]: {
     name: `Forgery`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
   [`Play Musical Instrument`]: {
     name: `Play Musical Instrument`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
   [`Repair/Mend`]: {
     name: `Repair/Mend`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
   [`Tie Knot`]: {
     name: `Tie Knot`,
-    baseAttribute: `pre`,
+    baseAttribute: `acc`,
   },
 
   // INT-based
