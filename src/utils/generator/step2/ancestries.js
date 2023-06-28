@@ -1,3 +1,5 @@
+// TODO: Remove attribute adjustments (to be established in Step 3 - Community Reputation)
+
 export const ancestries = [
   {
     ancestry: `Ais'lun`,
