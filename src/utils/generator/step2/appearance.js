@@ -3,17 +3,17 @@ export const appearance = {
     height: {
       number: 3,
       sides: 6,
-      modifier: 36,
+      modifier: 40,
     },
     weight: {
       number: 5,
       sides: 20,
-      modifier: 70,
+      modifier: 60,
     },
     baseAge: {
       number: 1,
-      sides: 20,
-      modifier: 30,
+      sides: 12,
+      modifier: 19,
     },
   },
   [`Djenndan`]: {
@@ -25,12 +25,12 @@ export const appearance = {
     weight: {
       number: 6,
       sides: 20,
-      modifier: 280,
+      modifier: 250,
     },
     baseAge: {
       number: 1,
       sides: 8,
-      modifier: 12,
+      modifier: 13,
     },
   },
   [`Human`]: {
@@ -46,7 +46,7 @@ export const appearance = {
     },
     baseAge: {
       number: 1,
-      sides: 8,
+      sides: 10,
       modifier: 15,
     },
   },
@@ -63,8 +63,8 @@ export const appearance = {
     },
     baseAge: {
       number: 1,
-      sides: 12,
-      modifier: 15,
+      sides: 10,
+      modifier: 17,
     },
   },
   [`Pulnagá`]: {
@@ -76,7 +76,7 @@ export const appearance = {
     weight: {
       number: 5,
       sides: 20,
-      modifier: 90,
+      modifier: 100,
     },
     baseAge: {
       number: 1,
@@ -91,14 +91,14 @@ export const appearance = {
       modifier: 36,
     },
     weight: {
-      number: 5,
+      number: 3,
       sides: 20,
-      modifier: 70,
+      modifier: 40,
     },
     baseAge: {
       number: 1,
-      sides: 6,
-      modifier: 5,
+      sides: 8,
+      modifier: 11,
     },
   },
 };
