@@ -12,16 +12,15 @@
 
 // settlements correspond to 'SETTLEMENT'
 export const settlements = [
-    'diasporic group',
-    'hamlet',
-    'village',
-    'small town',
-    'large township',
-    'small city',
-    'large city',
-    'nomadic group'
+  "hamlet",
+  "redoubt",
+  "village",
+  "small town",
+  "large township",
+  "small city",
+  "large city",
+  "nomadic group",
 ];
-
 
 //     'diasporic group': {
 //         type: 'group'
@@ -48,7 +47,6 @@ export const settlements = [
 //         type: 'nomadic'
 //     }
 // }
-
 
 // // settlementPrepositions correspond to 'VERB/SETTLEMENT PREPOSITION'
 // // -- prepositions that work well for any settlement type are 'neutral'.

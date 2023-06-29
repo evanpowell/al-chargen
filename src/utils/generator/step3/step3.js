@@ -21,121 +21,91 @@ import { reputationProse } from "./background-story/reputationProse";
 import { regionPrepositions } from "./background-story/regionPrepositions";
 import { parentageProse } from "./background-story/parentageProse";
 import { culturalValueCommunityDescriptors } from "./background-story/culturalValueCommunityDescriptors";
-import { communityTypesBiomeSpecific, communityTypesGeneric, groupValues } from "./background-story/communityProseValues";
+import {
+  communityTypesBiomeSpecific,
+  communityTypesGeneric,
+  groupValues,
+} from "./background-story/communityProseValues";
+import { diasporicRegions, lineage } from "./lineage";
 
 export class Step3 extends Step2 {
-
-
   rollBirthDate = () => {
     this.character.origins.birthdate = new TheleanDate().rollDate();
-  }
+  };
 
-  rollProvince = () => {
-    this.character.origins.provincialOrigins = { ...this.getRandomArrayValue(provincialOrigins) };
-    this.character.origins.provincialOrigins.biome = this.getRandomArrayValue(this.character.origins.provincialOrigins.biomes);
-  }
+  rollDiasporicRegionAndLanguage = () => {
+    // For Diasporic and Valiarch Bloodline
+    const { region, languages } = this.getRandomArrayValue(diasporicRegions);
+    this.character.origins.region = region;
+    this.character.origins.primaryLanguage =
+      this.getRandomArrayValue(languages);
+  };
 
-  rollLanguages = () => {
-    const { regionalLanguages } = this.character.origins.provincialOrigins;
-    const { int: intelligence } = this.character.attributes.final;
-    let languages = regionalLanguages.map((languageObj) => {
-        return {... languageObj};
-    });
-
-    const characterLanguages = [];
-
-    // 95% chance character knows Thelean plus another language
-    const isSpeaksTwoLanguages = this.rollDie(100) <= 95;
-
-    let isTheleanPrimary = false;
-
-    if (isSpeaksTwoLanguages) {
-      characterLanguages.push('Thelean');
-      languages = languages.filter(({ language }, i) => {
-        if (language === 'Thelean') {
-          if (i === 0) {
-            isTheleanPrimary = true;
-          }
-          return false;
-        }
-        return true;
-      });
-    }
-
-    let firstRolledLanguage = this.rollLanguage(languages);
-    if (isTheleanPrimary) {
-      characterLanguages.push(firstRolledLanguage);
+  rollStandardLineage = (ancestry) => {
+    const lineagePossibilities = lineage[ancestry];
+    const lineageResult = this.getRandomArrayValue(lineagePossibilities);
+    if (lineageResult === "DIASPORIC") {
+      this.character.origins.lineage = "Diasporic";
+      this.rollDiasporicRegionAndLanguage();
     } else {
-      characterLanguages.unshift(firstRolledLanguage);
+      this.character.origins.lineage = lineageResult.lineage;
+      this.character.origins.region = lineageResult.region;
+      this.character.origins.primaryLanguage = this.getRandomArrayValue(
+        lineageResult.languages
+      );
     }
-    languages = languages.filter(({ language }) =>  {
-      return (!characterLanguages.includes(language)) && language !== 'Thelean';
-    });
+  };
 
-    // if INT is 16 or higher & 50% chance
-    if (intelligence >= 16 && this.rollDie(100) <= 50) {
-      // add another language (from regional non-thelean languages)
-      characterLanguages.push(this.rollLanguage(languages));
-      languages = languages.filter(({ language }) => !characterLanguages.includes(language));
-    }
-
-    // if INT is 18 or higher & 50% chance
-    if (intelligence >= 18 && this.rollDie(100) <= 50) {
-      // add another language
-
-      if (this.rollDie(100) <= 70) {
-        // 70% chance regional non-thelean
-        characterLanguages.push(this.rollLanguage(languages));
-
-      } else {
-        // 30% chance empire-wide non-thelean languages
-        const empireWideLanguages = allLanguages.filter((language) => {
-          return language !== 'Thelean' && !characterLanguages.includes(language);
-        });
-
-        const language = this.getRandomArrayValue(empireWideLanguages);
-        characterLanguages.push(language);
+  rollPulnagaLineage = () => {
+    const dieRoll = this.rollDie(4);
+    switch (dieRoll) {
+      case 1: {
+        this.rollStandardLineage("Human");
+        break;
+      }
+      case 2: {
+        this.rollStandardLineage(`Kahlnissá`);
+        break;
+      }
+      case 3: {
+        this.character.origins.lineage = "Valiarch Bloodline";
+        this.rollDiasporicRegionAndLanguage();
+        break;
+      }
+      case 4: {
+        this.character.origins.lineage = "Diasporic";
+        this.rollDiasporicRegionAndLanguage();
+        break;
+      }
+      default: {
+        console.error(`Expected die roll of 1 - 4, but got ${dieRoll}.`);
       }
     }
+  };
 
-
-    this.character.languages = characterLanguages;
-  }
-
-  rollLanguage = (languages) => {
-    const sides = languages.reduce((sides, languageObj) => {
-      return sides + languageObj.probability;
-    }, 0);
-
-    const roll = this.rollDie(sides);
-
-    let min = 0;
-    let max = 0;
-
-    for (const langObj of languages) {
-      min = max;
-      max += langObj.probability;
-      if (roll > min && roll <= max) {
-        return langObj.language;
-      }
+  rollLineage = () => {
+    if (this.character.ancestry === `Pulnagá`) {
+      this.rollPulnagaLineage();
+    } else {
+      this.rollStandardLineage(this.character.ancestry);
     }
-  }
+  };
 
   rollSettlement = () => {
     this.character.origins.settlement = this.getRandomArrayValue(settlements);
-  }
+  };
 
   rollParentage = () => {
     this.character.origins.parentage = this.getRandomArrayValue(parentage);
-  }
+  };
 
   rollName = () => {
     let namesPool = [];
     let language = this.character.languages[0];
     if (language.includes(`Es'ahn`)) {
-      language =  `Es'ahn`;
+      language = `Es'ahn`;
     }
-    
+
     const nameObj = names[language];
 
     // Es'ahn names are shared between different dialects.
@@ -145,31 +115,42 @@ export class Step3 extends Step2 {
       const nameCategory = communityNameInfluences[communityId][language];
       namesPool = nameObj.nameList[nameCategory];
     } else if (nameObj.isGendered) {
-      if (nameObj.genderedProbability && this.rollDie(100) >= nameObj.genderedProbability) {
+      if (
+        nameObj.genderedProbability &&
+        this.rollDie(100) >= nameObj.genderedProbability
+      ) {
         namesPool = nameObj.nameList[nameObj.nonGenderedType];
       } else {
-        const genderedNameAssignmentType = this.rollNameType(nameObj.probabilities);
-        const alignsWithSex = (genderedNameAssignmentType === 'standard' && !nameObj.isReversed)
-          || (genderedNameAssignmentType === 'genderFlip' && nameObj.isReversed);
+        const genderedNameAssignmentType = this.rollNameType(
+          nameObj.probabilities
+        );
+        const alignsWithSex =
+          (genderedNameAssignmentType === "standard" && !nameObj.isReversed) ||
+          (genderedNameAssignmentType === "genderFlip" && nameObj.isReversed);
 
         let nameCategory;
         if (alignsWithSex) {
-          nameCategory = this.character.sex === 'Male' ? 'masculine' : 'feminine';
+          nameCategory =
+            this.character.sex === "Male" ? "masculine" : "feminine";
         } else {
-          nameCategory = this.character.sex === 'Male' ? 'feminine' : 'masculine';
+          nameCategory =
+            this.character.sex === "Male" ? "feminine" : "masculine";
         }
-        namesPool = nameObj.nameList[nameCategory]
+        namesPool = nameObj.nameList[nameCategory];
       }
     } else {
       const nameType = this.rollNameType(nameObj.probabilities);
       namesPool = nameObj.nameList[nameType];
     }
-    
+
     this.character.name = this.getRandomArrayValue(namesPool);
   };
 
   rollNameType = (probabilities) => {
-    const sides = probabilities.reduce((total, probabilityObj) => (total + probabilityObj.probability), 0);
+    const sides = probabilities.reduce(
+      (total, probabilityObj) => total + probabilityObj.probability,
+      0
+    );
 
     const roll = this.rollDie(sides);
 
@@ -183,27 +164,30 @@ export class Step3 extends Step2 {
         return probabilityObj.type;
       }
     }
-  }
+  };
 
   rollPronouns = () => {
     let pronounType;
     const rollResult = this.rollDie(100);
-    if (this.character.sex === 'Intersex') {
-      pronounType = rollResult <= 85 ? 'neutral' : this.getRandomArrayValue(['masculine', 'feminine']);
+    if (this.character.sex === "Intersex") {
+      pronounType =
+        rollResult <= 85
+          ? "neutral"
+          : this.getRandomArrayValue(["masculine", "feminine"]);
     } else {
       const pronounTypes = {
-        genderAligned: this.character.sex === 'Male' ? 'masculine' : 'feminine',
-        genderFlipped: this.character.sex === 'Male' ? 'feminine' : 'masculine'
+        genderAligned: this.character.sex === "Male" ? "masculine" : "feminine",
+        genderFlipped: this.character.sex === "Male" ? "feminine" : "masculine",
       };
       if (rollResult <= 5) {
-        pronounType = 'neutral';
+        pronounType = "neutral";
       } else if (rollResult <= 95) {
         pronounType = pronounTypes.genderAligned;
       } else {
         pronounType = pronounTypes.genderFlipped;
       }
     }
-    this.pronouns = { ... pronouns[pronounType] };
+    this.pronouns = { ...pronouns[pronounType] };
   };
 
   rollCommunity = () => {
@@ -211,7 +195,8 @@ export class Step3 extends Step2 {
   };
 
   rollCulturalValues = () => {
-    this.character.origins.culturalValues = this.getRandomArrayValue(culturalValues);
+    this.character.origins.culturalValues =
+      this.getRandomArrayValue(culturalValues);
   };
 
   rollReputation = () => {
@@ -225,8 +210,9 @@ export class Step3 extends Step2 {
   };
 
   rollLiteracy = () => {
-    this.character.isLiterate = this.character.origins.community.id >= 13
-      || (this.character.attributes.final.int >= 13 && this.rollDie(100) <= 40);
+    this.character.isLiterate =
+      this.character.origins.community.id >= 13 ||
+      (this.character.attributes.final.int >= 13 && this.rollDie(100) <= 40);
   };
 
   rollBackgroundStory = () => {
@@ -236,7 +222,8 @@ export class Step3 extends Step2 {
   };
 
   rollLocationsProse = () => {
-    const { isMatch, phrase: notablePhrase } = this.rollNotableSettlementPhrase();
+    const { isMatch, phrase: notablePhrase } =
+      this.rollNotableSettlementPhrase();
     if (isMatch) {
       this.character.backgroundStory += notablePhrase;
       return;
@@ -244,66 +231,67 @@ export class Step3 extends Step2 {
 
     const settlementPhrase = this.rollSettlementPhrase();
     const pastOnlySettlementPhrase = this.rollSettlementPhrase(true);
-    const {
-      biomePhrase,
-      regionPhrase
-    } = this.rollBiomeAndRegionPhrases();
+    const { biomePhrase, regionPhrase } = this.rollBiomeAndRegionPhrases();
 
     const { region } = this.character.origins.provincialOrigins;
 
     const startingRegionPrepositions = regionPrepositions[region];
-    const startingRegionPreposition = this.getRandomArrayValue(startingRegionPrepositions);
+    const startingRegionPreposition = this.getRandomArrayValue(
+      startingRegionPrepositions
+    );
     const startingRegionPhrase = `${startingRegionPreposition} ${region}`;
 
     const roll = this.rollDie(100);
     const { settlement } = this.character.origins;
-    const nonStructuralSettlements = ['diasporic group', 'nomadic group'];
-    const isNonStructuralSettlement = nonStructuralSettlements.includes(settlement);
+    const nonStructuralSettlements = ["diasporic group", "nomadic group"];
+    const isNonStructuralSettlement =
+      nonStructuralSettlements.includes(settlement);
     let locationsProse;
-
 
     if (notablePhrase) {
       if (roll <= 20 && !isNonStructuralSettlement) {
-        locationsProse = `${notablePhrase}, ${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`
+        locationsProse = `${notablePhrase}, ${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`;
       } else if (roll <= 45) {
-
-        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}, ${notablePhrase}.`
+        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}, ${notablePhrase}.`;
       } else {
-        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`
+        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}, ${notablePhrase}.`;
       }
     } else {
       if (roll <= 20 && !isNonStructuralSettlement) {
-        locationsProse = `${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`
+        locationsProse = `${biomePhrase}, ${pastOnlySettlementPhrase} ${regionPhrase}.`;
       } else if (roll <= 45) {
-        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}.`
+        locationsProse = `${startingRegionPhrase}, ${pastOnlySettlementPhrase} ${biomePhrase}.`;
       } else {
-        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`
+        locationsProse = `${settlementPhrase} ${biomePhrase} ${regionPhrase}.`;
       }
     }
 
     try {
       this.fillProse(locationsProse);
     } catch {
-      console.error('Failed to Fill Prose:', locationsProse);
-      locationsProse = '';
+      console.error("Failed to Fill Prose:", locationsProse);
+      locationsProse = "";
     }
 
-
-    const filledLocationsProse = this.capitalizeString(this.fillProse(locationsProse));
+    const filledLocationsProse = this.capitalizeString(
+      this.fillProse(locationsProse)
+    );
     this.character.backgroundStory = filledLocationsProse;
   };
 
   rollSettlementPhrase = (isPastOnly) => {
     const { settlement } = this.character.origins;
-    const { phrases, verbs } = settlementsProse[settlement]; 
+    const { phrases, verbs } = settlementsProse[settlement];
     const settlementPhrase = this.getRandomArrayValue(phrases);
 
-    const actionPhrases = isPastOnly ? verbs.past : verbs.past.concat(verbs.present);
+    const actionPhrases = isPastOnly
+      ? verbs.past
+      : verbs.past.concat(verbs.present);
     const actionPhrase = this.getRandomArrayValue(actionPhrases);
     const settlementsProseString = `${this.character.name} ${actionPhrase} ${settlementPhrase}`;
     return settlementsProseString;
   };
-  
+
   rollBiomeAndRegionPhrases = () => {
     const { provincialOrigins, settlement } = this.character.origins;
     const { region, biome } = provincialOrigins;
@@ -324,23 +312,26 @@ export class Step3 extends Step2 {
     const { provincialOrigins, settlement } = this.character.origins;
     const { region } = provincialOrigins;
 
-    const notableSettlementsInRegion = notableSettlements
-      .filter((settlement) => settlement.region === region);
-    const notableSettlement = this.getRandomArrayValue(notableSettlementsInRegion);
-    
+    const notableSettlementsInRegion = notableSettlements.filter(
+      (settlement) => settlement.region === region
+    );
+    const notableSettlement = this.getRandomArrayValue(
+      notableSettlementsInRegion
+    );
+
     if (notableSettlement && settlement === notableSettlement.type) {
       const chanceOfMatch = notableSettlementMatchProbabilities[settlement];
       if (this.rollDie(100) <= chanceOfMatch) {
         const { location, prepositions, name } = notableSettlement;
         const settlementPreposition = this.getRandomArrayValue(prepositions);
-        const verbType = settlement === 'large city' ? 'large city' : 'other';
-        const verbs  = notableSettlementVerbs[verbType];
+        const verbType = settlement === "large city" ? "large city" : "other";
+        const verbs = notableSettlementVerbs[verbType];
         const verb = this.getRandomArrayValue(verbs);
-        let phrase = `$NAME ${verb} ${settlementPreposition} ${name}, ${location}.`
+        let phrase = `$NAME ${verb} ${settlementPreposition} ${name}, ${location}.`;
         phrase = this.fillProse(phrase);
-        return  {
+        return {
           isMatch: true,
-          phrase
+          phrase,
         };
       }
     }
@@ -361,94 +352,109 @@ export class Step3 extends Step2 {
     if (roll <= close) {
       const descriptions = notableSettlement.rangeDescriptions.close;
       const description = this.getRandomArrayValue(descriptions);
-      const preposition = this.getRandomArrayValue(notableSettlement.prepositions);
+      const preposition = this.getRandomArrayValue(
+        notableSettlement.prepositions
+      );
       const phrase = `${description} ${preposition} ${notableSettlement.name}`;
       return {
-        phrase
+        phrase,
       };
     }
 
     if (roll <= close + mid) {
       const descriptions = notableSettlement.rangeDescriptions.mid;
       const description = this.getRandomArrayValue(descriptions);
-      const preposition = this.getRandomArrayValue(notableSettlement.prepositions);
+      const preposition = this.getRandomArrayValue(
+        notableSettlement.prepositions
+      );
       const phrase = `${description} ${preposition} ${notableSettlement.name}`;
       return {
-        phrase
+        phrase,
       };
     }
 
     return {};
-  }
+  };
 
   rollParentageCommunityProse = () => {
-    const { parentage, provincialOrigins, culturalValues, community } = this.character.origins;
+    const { parentage, provincialOrigins, culturalValues, community } =
+      this.character.origins;
     const { biome } = provincialOrigins;
     const parentagePhrases = parentageProse[parentage];
     const parentagePhrase = this.getRandomArrayValue(parentagePhrases);
 
-    const communityAdjective = culturalValueCommunityDescriptors[culturalValues];
+    const communityAdjective =
+      culturalValueCommunityDescriptors[culturalValues];
 
-    
     const communityTypesByBiome = communityTypesBiomeSpecific[biome];
-    const communityType = communityTypesByBiome[community.description] || communityTypesGeneric[community.description];
+    const communityType =
+      communityTypesByBiome[community.description] ||
+      communityTypesGeneric[community.description];
 
     let groupValue = groupValues[community.description];
     let middle;
     if (this.rollDie(100) <= 35) {
-      groupValue = groupValue.replaceAll('a ', '').replaceAll('an ', '');
+      groupValue = groupValue.replaceAll("a ", "").replaceAll("an ", "");
       middle = `${communityAdjective} ${groupValue}`;
     } else {
       middle = groupValue;
     }
 
-    
     let parentageCommunitySentence = `${parentagePhrase} $["among", "within", "amid", "in"] ${middle} of ${communityType}.`;
     try {
       parentageCommunitySentence = this.fillProse(parentageCommunitySentence);
     } catch {
-      console.error('Failed to Fill Prose:', parentageCommunitySentence);
+      console.error("Failed to Fill Prose:", parentageCommunitySentence);
     }
-    
+
     const communityValue = this.getValueForCommunityPlaceholder();
-    parentageCommunitySentence = parentageCommunitySentence.replaceAll('$COMMUNITY', communityValue);
-    parentageCommunitySentence = this.capitalizeString(parentageCommunitySentence);
+    parentageCommunitySentence = parentageCommunitySentence.replaceAll(
+      "$COMMUNITY",
+      communityValue
+    );
+    parentageCommunitySentence = this.capitalizeString(
+      parentageCommunitySentence
+    );
 
     this.character.backgroundStory = `${this.character.backgroundStory} ${parentageCommunitySentence}`;
-  }
+  };
 
   getValueForCommunityPlaceholder = () => {
-    const communityValues = communityPlaceholderValues[this.character.origins.settlement];
+    const communityValues =
+      communityPlaceholderValues[this.character.origins.settlement];
     return this.getRandomArrayValue(communityValues);
-  }
+  };
 
   rollReputationProse = () => {
     const communityValue = this.getValueForCommunityPlaceholder();
-    const reputationSentences = reputationProse[this.character.origins.reputation];
+    const reputationSentences =
+      reputationProse[this.character.origins.reputation];
     let reputationSentence = this.getRandomArrayValue(reputationSentences);
-    reputationSentence = reputationSentence.replaceAll('$COMMUNITY', communityValue);
+    reputationSentence = reputationSentence.replaceAll(
+      "$COMMUNITY",
+      communityValue
+    );
     try {
       reputationSentence = this.fillProse(reputationSentence);
     } catch {
-      console.error('Failed to Fill Prose:', reputationSentence);
-      reputationSentence = '';
+      console.error("Failed to Fill Prose:", reputationSentence);
+      reputationSentence = "";
     }
     this.character.backgroundStory = `${this.character.backgroundStory} ${reputationSentence}`;
-  }
+  };
 
   rollStep3 = () => {
-      this.rollBirthDate();
-      this.rollProvince();
-      this.rollLanguages();
-      this.rollSettlement();
-      this.rollParentage();
-      this.rollCommunity();
-      this.rollName();
-      this.rollPronouns();
-      this.rollCulturalValues();
-      this.rollReputation();
-      this.rollConnection();
-      this.rollLiteracy();
-      this.rollBackgroundStory();
+    this.rollBirthDate();
+    this.rollLineage();
+    this.rollSettlement();
+    this.rollCommunity();
+    // this.rollParentage();
+    // this.rollName();
+    // this.rollPronouns();
+    // this.rollCulturalValues();
+    // this.rollReputation();
+    // this.rollConnection();
+    // this.rollLiteracy();
+    // this.rollBackgroundStory();
   };
 }

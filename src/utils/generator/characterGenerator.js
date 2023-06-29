@@ -5,11 +5,11 @@ export default class CharacterGenerator extends Step6 {
     this.rollStep1();
     this.rollStep2();
     this.rollStep3();
-    this.rollStep4();
-    this.rollStep5();
-    this.rollStep6();
-    this.applyModifications();
-    this.fillDistinguishingFeatures();
+    // this.rollStep4();
+    // this.rollStep5();
+    // this.rollStep6();
+    // this.applyModifications();
+    // this.fillDistinguishingFeatures();
   };
 
   applyModifications = () => {

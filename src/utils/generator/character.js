@@ -21,11 +21,10 @@ export default class Character {
   };
   backgroundStory = "";
   origins = {
-    provincialOrigins: {
-      region: "",
-      regionalLanguages: [],
-      biomes: [],
-    },
+    birthdate: "",
+    lineage: "",
+    region: "",
+    primaryLanguage: "",
     settlement: "",
     parentage: "",
     relations: {},

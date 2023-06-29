@@ -7,23 +7,23 @@ export const generateCharacter = async () => {
     const charGen = new CharacterGenerator();
     charGen.rollAll();
     charGen.logToConsole();
-    const data = await fetch(characterSheetURL).then((res) =>
-      res.arrayBuffer()
-    );
-    const fields = charGen.mapToPdfFields();
-    const pdfDoc = await PDFDocument.load(data);
-    const form = pdfDoc.getForm();
-    Object.entries(fields).forEach(([fieldName, fieldValue]) => {
-      const valueAsString = fieldValue[0].toString();
-      form.getTextField(fieldName).setText(valueAsString);
-    });
-    form.flatten();
+    // const data = await fetch(characterSheetURL).then((res) =>
+    //   res.arrayBuffer()
+    // );
+    // const fields = charGen.mapToPdfFields();
+    // const pdfDoc = await PDFDocument.load(data);
+    // const form = pdfDoc.getForm();
+    // Object.entries(fields).forEach(([fieldName, fieldValue]) => {
+    //   const valueAsString = fieldValue[0].toString();
+    //   form.getTextField(fieldName).setText(valueAsString);
+    // });
+    // form.flatten();
 
-    const pdfBytes = await pdfDoc.save();
-    const blob = new Blob([pdfBytes]);
-    const pdfUrl = window.webkitURL.createObjectURL(blob);
-    const { character } = charGen;
-    return { character, pdfUrl };
+    // const pdfBytes = await pdfDoc.save();
+    // const blob = new Blob([pdfBytes]);
+    // const pdfUrl = window.webkitURL.createObjectURL(blob);
+    // const { character } = charGen;
+    // return { character, pdfUrl };
   } catch (err) {
     console.error(err);
   }
